@@ -6,7 +6,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
-        //My Version. Timeout
+        /// <summary>
+        /// 3Sum (My Version. Timeout)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public static IList<IList<int>> ThreeSum(int[] nums)
         {
             IList<IList<int>> list = new List<IList<int>>();
@@ -33,6 +37,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return list;
         }
 
+        /// <summary>
+        /// 3Sum
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public static IList<IList<int>> ThreeSumBetter(int[] nums)
         {
             IList<IList<int>> list = new List<IList<int>>();

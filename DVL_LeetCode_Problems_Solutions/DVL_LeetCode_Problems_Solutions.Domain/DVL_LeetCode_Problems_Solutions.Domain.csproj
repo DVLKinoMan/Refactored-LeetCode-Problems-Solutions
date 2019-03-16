@@ -40,13 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />
+    <Compile Include="Medium\Integer to Roman.cs" />
+    <Compile Include="Medium\Generate Parentheses.cs" />
+    <Compile Include="Medium\Divide Two Integers.cs" />
+    <Compile Include="Medium\Container With Most Water.cs" />
+    <Compile Include="Medium\4Sum.cs" />
+    <Compile Include="Medium\3Sum Closest.cs" />
+    <Compile Include="Classes\ListNode.cs" />
+    <Compile Include="Easy\Implement strStr%28%29.cs" />
+    <Compile Include="Easy\Longest Common Prefix.cs" />
     <Compile Include="Medium\3Sum.cs" />
+    <Compile Include="Easy\Merge Two Sorted Lists.cs" />
+    <Compile Include="Easy\Palindrome Number.cs" />
+    <Compile Include="Hard\Merge k Sorted Lists.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Easy\Remove Duplicates from Sorted Array.cs" />
+    <Compile Include="Easy\Remove Element.cs" />
+    <Compile Include="Easy\Reverse Integer.cs" />
+    <Compile Include="Easy\Roman to Integer.cs" />
+    <Compile Include="Easy\Valid Parentheses.cs" />
+    <Compile Include="Hard\Regular Expression Matching.cs" />
+    <Compile Include="Hard\Reverse Nodes in k-Group.cs" />
+    <Compile Include="Medium\Remove Nth Node From End of List.cs" />
+    <Compile Include="Medium\String to Integer %28atoi%29.cs" />
+    <Compile Include="Medium\Swap Nodes in Pairs.cs" />
+    <Compile Include="Medium\ZigZag Conversion.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Easy\" />
-    <Folder Include="Hard\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

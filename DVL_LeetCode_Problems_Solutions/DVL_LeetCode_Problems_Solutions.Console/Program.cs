@@ -17,7 +17,12 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //ThreeSum(new int[] {4, 4, 4, 4, 4, 3, 23, 2, 2});
 
             //Solve N Queens
-            SolveNQueensTester(8);
+            //SolveNQueensTester(10);
+
+
+            //Solve N Queens II
+            SolveNQueens2TesterNotMine(10);
+
 
             ReadKey();
         }

@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolveNQueens2Tester.cs" />
     <Compile Include="SolveNQueensTester.cs" />
+    <Compile Include="Sudoku Solver.cs" />
     <Compile Include="Tester.cs" />
   </ItemGroup>
   <ItemGroup>

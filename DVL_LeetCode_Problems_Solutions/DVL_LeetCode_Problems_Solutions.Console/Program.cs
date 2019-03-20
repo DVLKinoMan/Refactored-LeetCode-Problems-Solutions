@@ -38,7 +38,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //};
             //SolveSudokuTester(board);
 
-            FirstMissingPositiveSolver(new int[] {0, 3, 4, 2, 1, 5, 6});
+            //FirstMissingPositiveSolver(new int[] {0, 3, 4, 2, 1, 5, 6});
+
+            MultiplyStringsTester("140", "721");
 
             ReadKey();
         }

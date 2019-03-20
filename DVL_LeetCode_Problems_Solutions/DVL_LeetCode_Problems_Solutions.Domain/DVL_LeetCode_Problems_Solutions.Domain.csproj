@@ -58,6 +58,7 @@
     <Compile Include="Easy\Merge Two Sorted Lists.cs" />
     <Compile Include="Easy\Palindrome Number.cs" />
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
+    <Compile Include="Medium\Multiply Strings.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted Array.cs" />

@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Easy\Length of Last Word.cs" />
+    <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />

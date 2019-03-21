@@ -40,7 +40,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //FirstMissingPositiveSolver(new int[] {0, 3, 4, 2, 1, 5, 6});
 
-            MultiplyStringsTester("140", "721");
+            //MultiplyStringsTester("140", "721");
+
+            int len = LengthOfLastWordTester("kldfleja  oldjfj  ");
 
             ReadKey();
         }

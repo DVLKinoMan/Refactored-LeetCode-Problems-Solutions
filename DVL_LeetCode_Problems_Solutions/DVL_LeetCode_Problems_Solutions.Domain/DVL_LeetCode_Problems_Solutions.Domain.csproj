@@ -46,6 +46,7 @@
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />
+    <Compile Include="Hard\Trapping Rain Water.cs" />
     <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />
     <Compile Include="Medium\Integer to Roman.cs" />
     <Compile Include="Medium\Generate Parentheses.cs" />

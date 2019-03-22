@@ -42,8 +42,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //MultiplyStringsTester("140", "721");
 
-            int len = LengthOfLastWordTester("kldfleja  oldjfj  ");
+            //int len = LengthOfLastWordTester("kldfleja  oldjfj  ");
 
+            TrapTester(new int[] {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
             ReadKey();
         }
     }

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
-namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
-        public ListNode DeleteDuplicatesInNonSortedList(ListNode head)
+        public static ListNode DeleteDuplicatesInNonSortedList(ListNode head)
         {
             if (head == null)
                 return head;
@@ -33,7 +33,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
         /// </summary>
         /// <param name="head"></param>
         /// <returns></returns>
-        public ListNode DeleteDuplicates(ListNode head)
+        public static ListNode DeleteDuplicates(ListNode head)
         {
             if (head == null)
                 return head;

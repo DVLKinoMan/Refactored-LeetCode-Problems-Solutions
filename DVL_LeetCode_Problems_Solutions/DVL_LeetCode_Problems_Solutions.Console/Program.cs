@@ -44,7 +44,10 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //int len = LengthOfLastWordTester("kldfleja  oldjfj  ");
 
-            TrapTester(new int[] {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
+            //TrapTester(new int[] {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
+
+            WildCardMatchingTetser();
+
             ReadKey();
         }
     }

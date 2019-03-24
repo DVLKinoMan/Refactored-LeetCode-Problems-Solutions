@@ -46,9 +46,11 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //TrapTester(new int[] {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1});
 
-            WildCardMatchingTetser();
+            //WildCardMatchingTetser();
 
-            ReadKey();
+            ProblemSolver.CanThreePartsEqualSum(new int[]{3, 3, 6, 5, -2, 2, 5, 1, -9, 4 });
+
+        ReadKey();
         }
     }
 }

@@ -48,9 +48,11 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //WildCardMatchingTetser();
 
-            ProblemSolver.CanThreePartsEqualSum(new int[]{3, 3, 6, 5, -2, 2, 5, 1, -9, 4 });
+            //ProblemSolver.CanThreePartsEqualSum(new int[]{3, 3, 6, 5, -2, 2, 5, 1, -9, 4 });
 
-        ReadKey();
+            PermutationIITester(new int[] {1, 1, 2});
+
+            ReadKey();
         }
     }
 }

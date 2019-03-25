@@ -63,6 +63,7 @@
     <Compile Include="Easy\Palindrome Number.cs" />
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
+    <Compile Include="Medium\Permutations II.cs" />
     <Compile Include="Medium\Permutations.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

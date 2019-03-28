@@ -45,6 +45,7 @@
     <Compile Include="First Missing Positive.cs" />
     <Compile Include="Length of Last Word.cs" />
     <Compile Include="Multiply Strings Tester.cs" />
+    <Compile Include="MyPowTester.cs" />
     <Compile Include="Permutation_II_Tester.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

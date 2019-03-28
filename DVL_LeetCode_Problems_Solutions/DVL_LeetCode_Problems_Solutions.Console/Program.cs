@@ -50,7 +50,10 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //ProblemSolver.CanThreePartsEqualSum(new int[]{3, 3, 6, 5, -2, 2, 5, 1, -9, 4 });
 
-            PermutationIITester(new int[] {1, 1, 2});
+            //PermutationIITester(new int[] {1, 1, 2});
+
+            MyPowTester(2.00000,
+                        -10);
 
             ReadKey();
         }

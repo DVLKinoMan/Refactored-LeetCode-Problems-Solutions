@@ -45,6 +45,7 @@
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
+    <Compile Include="Hard\Jump Game II.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />

@@ -55,12 +55,14 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //MyPowTester(2.00000,
             //            -10);
 
-            RotateImageTester(new int[3][]
-            {
-                new int[3] {1, 2, 3},
-                new int[3] {4, 5, 6},
-                new int[3] {7, 8, 9}
-            });
+            //RotateImageTester(new int[3][]
+            //{
+            //    new int[3] {1, 2, 3},
+            //    new int[3] {4, 5, 6},
+            //    new int[3] {7, 8, 9}
+            //});
+
+            JumpGameTester(new int[]{2, 3, 1, 1, 4});
 
             ReadKey();
         }

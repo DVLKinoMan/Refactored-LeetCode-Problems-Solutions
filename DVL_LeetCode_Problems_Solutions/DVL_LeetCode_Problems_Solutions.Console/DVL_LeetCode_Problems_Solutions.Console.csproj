@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="First Missing Positive.cs" />
+    <Compile Include="Jump Game II Tester.cs" />
     <Compile Include="Length of Last Word.cs" />
     <Compile Include="Multiply Strings Tester.cs" />
     <Compile Include="MyPowTester.cs" />

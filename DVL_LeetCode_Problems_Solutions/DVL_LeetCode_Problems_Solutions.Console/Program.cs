@@ -62,7 +62,14 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //    new int[3] {7, 8, 9}
             //});
 
-            JumpGameTester(new int[]{2, 3, 1, 1, 4});
+            //JumpGameTester(new int[]{2, 3, 1, 1, 4});
+
+            SpiralMatrixTeseter(new int[][]
+            {
+                new int[]{1,2,3,4},
+                new int[]{1,2,3,4},
+                new int[]{1,2,3,4},
+            });
 
             ReadKey();
         }

@@ -71,6 +71,7 @@
     <Compile Include="Medium\Permutations.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
+    <Compile Include="Medium\Spiral Matrix.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted Array.cs" />

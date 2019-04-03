@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
+    <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
     <Compile Include="Hard\Jump Game II.cs" />

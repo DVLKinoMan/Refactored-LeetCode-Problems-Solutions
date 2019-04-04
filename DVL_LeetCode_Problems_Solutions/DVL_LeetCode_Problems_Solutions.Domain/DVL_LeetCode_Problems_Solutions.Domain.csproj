@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Easy\Merge Two Sorted Lists.cs" />
     <Compile Include="Easy\Palindrome Number.cs" />
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
+    <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
     <Compile Include="Medium\Permutations II.cs" />
     <Compile Include="Medium\Permutations.cs" />

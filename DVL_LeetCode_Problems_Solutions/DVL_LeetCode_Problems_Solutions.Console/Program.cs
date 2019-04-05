@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DVL_LeetCode_Problems_Solutions.Domain;
-
+using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 using static DVL_LeetCode_Problems_Solutions.Console.Tester;
 using static System.Console;
 
@@ -64,12 +64,17 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //JumpGameTester(new int[]{2, 3, 1, 1, 4});
 
-            SpiralMatrixTeseter(new int[][]
+            //SpiralMatrixTeseter(new int[][]
+            //{
+            //    new int[]{1,2,3,4},
+            //    new int[]{1,2,3,4},
+            //    new int[]{1,2,3,4},
+            //});
+
+            InsertIntervalTester(new List<Interval>()
             {
-                new int[]{1,2,3,4},
-                new int[]{1,2,3,4},
-                new int[]{1,2,3,4},
-            });
+                new Interval(1,5),
+            }, new Interval(2,3));
 
             ReadKey();
         }

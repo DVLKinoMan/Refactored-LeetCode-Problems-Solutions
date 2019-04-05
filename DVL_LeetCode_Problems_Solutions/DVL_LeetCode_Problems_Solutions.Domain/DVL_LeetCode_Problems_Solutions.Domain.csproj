@@ -48,6 +48,7 @@
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
+    <Compile Include="Hard\Insert Interval.cs" />
     <Compile Include="Hard\Jump Game II.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />

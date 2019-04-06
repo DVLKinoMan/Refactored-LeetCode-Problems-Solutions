@@ -54,6 +54,7 @@
     <Compile Include="RotateImageTester.cs" />
     <Compile Include="SolveNQueens2Tester.cs" />
     <Compile Include="SolveNQueensTester.cs" />
+    <Compile Include="Spiral Matrix II Tester.cs" />
     <Compile Include="Spiral Matrix.cs" />
     <Compile Include="Sudoku Solver.cs" />
     <Compile Include="Tester.cs" />

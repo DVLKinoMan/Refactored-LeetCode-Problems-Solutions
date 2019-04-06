@@ -71,10 +71,12 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //    new int[]{1,2,3,4},
             //});
 
-            InsertIntervalTester(new List<Interval>()
-            {
-                new Interval(1,5),
-            }, new Interval(2,3));
+            //InsertIntervalTester(new List<Interval>()
+            //{
+            //    new Interval(1,5),
+            //}, new Interval(2,3));
+
+            SpiralMatrixIITester(3);
 
             ReadKey();
         }

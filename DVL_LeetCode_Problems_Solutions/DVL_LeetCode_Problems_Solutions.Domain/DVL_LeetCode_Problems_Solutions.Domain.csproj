@@ -77,6 +77,7 @@
     <Compile Include="Medium\Permutations.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
+    <Compile Include="Medium\Rotate List.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
     <Compile Include="ProblemSolver.cs" />

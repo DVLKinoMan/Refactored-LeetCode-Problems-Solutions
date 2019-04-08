@@ -73,6 +73,7 @@
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
+    <Compile Include="Medium\Permutation Sequence.cs" />
     <Compile Include="Medium\Permutations II.cs" />
     <Compile Include="Medium\Permutations.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />

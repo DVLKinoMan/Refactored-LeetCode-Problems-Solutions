@@ -81,6 +81,7 @@
     <Compile Include="Medium\Rotate List.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
+    <Compile Include="Medium\Unique Paths II.cs" />
     <Compile Include="Medium\Unique Paths.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -76,7 +76,12 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //    new Interval(1,5),
             //}, new Interval(2,3));
 
-            SpiralMatrixIITester(3);
+            //SpiralMatrixIITester(3);
+
+            UniquePathIITester(new int[][]
+            {
+                new int[]{1,0}
+            });
 
             ReadKey();
         }

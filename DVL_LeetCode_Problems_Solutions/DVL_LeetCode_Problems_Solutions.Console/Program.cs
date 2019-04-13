@@ -78,9 +78,19 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //SpiralMatrixIITester(3);
 
-            UniquePathIITester(new int[][]
+            //UniquePathIITester(new int[][]
+            //{
+            //    new int[]{1,0}
+            //});
+
+            MaximalRectangleTester(new char[][]
             {
-                new int[]{1,0}
+                new char[]{'1', '0', '1', '1', '0', '1'},
+                new char[]{'1', '1', '1', '1', '1', '1'},
+                new char[]{'0', '1', '1', '0', '1', '1'},
+                new char[]{'1', '1', '1', '0', '1', '0'},
+                new char[]{'0', '1', '1', '1', '1', '1'},
+                new char[]{'1', '1', '0', '1', '1', '1' }
             });
 
             ReadKey();

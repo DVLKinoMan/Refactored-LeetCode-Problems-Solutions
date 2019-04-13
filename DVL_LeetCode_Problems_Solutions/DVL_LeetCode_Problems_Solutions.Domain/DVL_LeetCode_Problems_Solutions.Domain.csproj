@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\TreeNode.cs" />
+    <Compile Include="Easy\Add Binary.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Hard\First Missing Positive.cs" />
     <Compile Include="Hard\Insert Interval.cs" />
     <Compile Include="Hard\Jump Game II.cs" />
+    <Compile Include="Hard\Maximal Rectangle.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />

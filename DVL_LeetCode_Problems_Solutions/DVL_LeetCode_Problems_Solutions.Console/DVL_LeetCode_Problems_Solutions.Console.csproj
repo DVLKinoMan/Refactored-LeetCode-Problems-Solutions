@@ -46,6 +46,7 @@
     <Compile Include="Insert Interval Tester.cs" />
     <Compile Include="Jump Game II Tester.cs" />
     <Compile Include="Length of Last Word.cs" />
+    <Compile Include="Maximal Rectangle Tester.cs" />
     <Compile Include="Multiply Strings Tester.cs" />
     <Compile Include="MyPowTester.cs" />
     <Compile Include="Permutation_II_Tester.cs" />

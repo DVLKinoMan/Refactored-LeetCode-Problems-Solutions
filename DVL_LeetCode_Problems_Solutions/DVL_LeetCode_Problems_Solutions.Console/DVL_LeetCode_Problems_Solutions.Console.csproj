@@ -53,6 +53,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotateImageTester.cs" />
+    <Compile Include="Search In Matrix II Tester.cs" />
     <Compile Include="SolveNQueens2Tester.cs" />
     <Compile Include="SolveNQueensTester.cs" />
     <Compile Include="Spiral Matrix II Tester.cs" />

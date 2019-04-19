@@ -83,16 +83,18 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //    new int[]{1,0}
             //});
 
-            MaximalRectangleTester(new char[][]
-            {
-                new char[]{'0','0','1','0'},
-                new char[]{'1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '1'},
-                new char[]{'1', '1', '1', '0'},
-                new char[]{'1', '1', '0', '0'},
-                new char[]{ '1', '1', '1', '1' },
-                new char[]{ '1', '1', '1', '0' }
-            });
+            //MaximalRectangleTester(new char[][]
+            //{
+            //    new char[]{'0','0','1','0'},
+            //    new char[]{'1', '1', '1', '1'},
+            //    new char[]{'1', '1', '1', '1'},
+            //    new char[]{'1', '1', '1', '0'},
+            //    new char[]{'1', '1', '0', '0'},
+            //    new char[]{ '1', '1', '1', '1' },
+            //    new char[]{ '1', '1', '1', '0' }
+            //});
+
+            SearchA2DMatrixIITester();
 
             ReadKey();
         }

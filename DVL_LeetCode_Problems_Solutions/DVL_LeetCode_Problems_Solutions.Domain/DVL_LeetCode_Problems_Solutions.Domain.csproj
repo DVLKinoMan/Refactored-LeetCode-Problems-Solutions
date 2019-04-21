@@ -107,6 +107,7 @@
     <Compile Include="Medium\Swap Nodes in Pairs.cs" />
     <Compile Include="Medium\ZigZag Conversion.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 129.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 133.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

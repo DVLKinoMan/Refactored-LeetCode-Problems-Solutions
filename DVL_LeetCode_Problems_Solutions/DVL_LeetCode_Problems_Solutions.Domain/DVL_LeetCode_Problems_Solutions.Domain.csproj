@@ -63,6 +63,7 @@
     <Compile Include="Hard\Text Justification.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
+    <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Jump Game.cs" />
     <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />

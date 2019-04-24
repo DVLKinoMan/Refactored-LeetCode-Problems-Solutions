@@ -46,6 +46,7 @@
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Add Binary.cs" />
+    <Compile Include="Easy\Divisor Game.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />

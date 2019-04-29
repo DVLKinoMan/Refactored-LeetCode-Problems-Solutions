@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorBorderTester.cs" />
     <Compile Include="First Missing Positive.cs" />
     <Compile Include="Insert Interval Tester.cs" />
     <Compile Include="Jump Game II Tester.cs" />

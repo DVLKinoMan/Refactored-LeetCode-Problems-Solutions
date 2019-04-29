@@ -94,7 +94,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //    new char[]{ '1', '1', '1', '0' }
             //});
 
-            SearchA2DMatrixIITester();
+            //SearchA2DMatrixIITester();
+
+            ColorBorderTester();
 
             ReadKey();
         }

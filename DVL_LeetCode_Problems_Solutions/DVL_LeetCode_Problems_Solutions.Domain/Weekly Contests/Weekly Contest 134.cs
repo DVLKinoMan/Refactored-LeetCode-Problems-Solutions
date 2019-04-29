@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
@@ -28,7 +24,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
         }
 
         /// <summary>
-        /// Do not works
+        /// Coloring a Border
         /// </summary>
         /// <param name="grid"></param>
         /// <param name="r0"></param>
@@ -37,40 +33,59 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
         /// <returns></returns>
         public static int[][] ColorBorder(int[][] grid, int r0, int c0, int color)
         {
-            Rec(grid, new int[grid.Length, grid[0].Length], r0, c0, color, grid.Length, grid[0].Length, -1, -1, grid[r0][c0]);
-            return grid;
+            var resGrid = new int[grid.Length][];
+            for (int i = 0; i < grid.Length; i++)
+            {
+                resGrid[i]=new int[grid[i].Length];
+                for (int j = 0; j < grid[i].Length; j++)
+                    resGrid[i][j] = grid[i][j];
+            }
+            ColorBorderHelper(grid, resGrid,  new bool[grid.Length, grid[0].Length], r0, c0, color,  grid[r0][c0]);
+            return resGrid;
         }
 
-        private static void Rec(int[][] grid, int[,] grid2, int i, int j, int color, int m, int n, int previ, int prevj,
-            int prevValue)
+        private static void ColorBorderHelper(int[][] grid, int[][] resGrid, bool[,] grid2, int i, int j, int color, int value)
         {
-            if (grid2[i, j]==-1)
-                return;
+            grid2[i, j] = true;
+            bool isBorder = false;
 
-            grid2[i, j] = -1;
+            if (i == 0 || j == 0 || i == grid.Length - 1 || j == grid[0].Length - 1)
+                isBorder = true;
 
-            if (i == 0 || j == 0 || i == m - 1 || j == n - 1)
-                grid[i][j] = color;
+            if (i - 1 >= 0)
+            {
+                if (grid[i - 1][j] != value)
+                    isBorder = true;
+                else if (!grid2[i-1,j])
+                    ColorBorderHelper(grid, resGrid, grid2, i - 1, j, color, value);
+            }
 
-            if (i-1>=0 && grid[i - 1][j] != prevValue && i - 1 != previ && j != prevj)
-                grid[i][j] = color;
-            else if (i-1>=0 && i - 1 != previ && j != prevj)
-                Rec(grid, grid2, i - 1, j, color, m, n, i, j, prevValue);
+            if (i + 1 < grid.Length)
+            {
+                if (grid[i + 1][j] != value)
+                    isBorder = true;
+                else if (!grid2[i + 1,j])
+                    ColorBorderHelper(grid, resGrid, grid2, i + 1, j, color, value);
+            }
 
-            if (i+1<m && grid[i + 1][j] != prevValue && i + 1 != previ && j != prevj)
-                grid[i][j] = color;
-            else if (i + 1 < m && i + 1 != previ && j != prevj)
-                Rec(grid, grid2, i + 1, j, color, m, n, i, j, prevValue);
+            if (j - 1 >= 0)
+            {
+                if (grid[i][j - 1] != value)
+                    isBorder = true;
+                else if (!grid2[i,j-1])
+                    ColorBorderHelper(grid, resGrid, grid2, i, j - 1, color, value);
+            }
 
-            if (j-1>=0 && grid[i][j - 1] != prevValue && i != previ && j - 1 != prevj)
-                grid[i][j] = color;
-            else if (j - 1 >= 0 && i != previ && j - 1 != prevj)
-                Rec(grid, grid2, i, j - 1, color, m, n, i, j, prevValue);
+            if (j + 1 < grid[0].Length)
+            {
+                if (grid[i][j + 1] != value)
+                    isBorder = true;
+                else if (!grid2[i, j + 1])
+                    ColorBorderHelper(grid, resGrid, grid2, i, j + 1, color, value);
+            }
 
-            if (j + 1 < n && grid[i][j + 1] != prevValue && i != previ && j + 1 != prevj)
-                grid[i][j] = color;
-            else if (j + 1 < n && i != previ && j + 1 != prevj)
-                Rec(grid, grid2, i, j + 1, color, m, n, i, j, prevValue);
+            if (isBorder)
+                resGrid[i][j] = color;
         }
 
         /// <summary>

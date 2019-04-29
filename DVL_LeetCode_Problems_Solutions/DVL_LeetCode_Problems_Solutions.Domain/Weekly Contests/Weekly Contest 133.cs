@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
@@ -44,7 +44,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
         /// </summary>
         /// <param name="costs"></param>
         /// <returns></returns>
-        public int TwoCitySchedCost(int[][] costs)
+        public static int TwoCitySchedCost(int[][] costs)
         {
             int N = costs.Length / 2;
             int[][] dp = new int[N + 1][];

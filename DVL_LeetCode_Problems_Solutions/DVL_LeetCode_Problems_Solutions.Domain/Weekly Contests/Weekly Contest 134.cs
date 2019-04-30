@@ -89,29 +89,23 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Do not works
+        /// Uncrossed Lines (My Solution)
         /// </summary>
         /// <param name="A"></param>
         /// <param name="B"></param>
         /// <returns></returns>
         public static int MaxUncrossedLines(int[] A, int[] B)
         {
-            int result = 0;
-            int i = 0;
-            int j = 0;
-            int count = 0;
-            while (j != B.Length || i!=A.Length)
+            int[,] m = new int[A.Length, B.Length];
+            for (int i = 0; i < A.Length; i++)
+            for (int j = 0; j < B.Length; j++)
             {
                 if (A[i] == B[j])
-                {
-                    i++;
-                    count++;
-                }
-
-                j++;
+                    m[i, j] = i - 1 >= 0 && j - 1 >= 0 ? m[i - 1, j - 1] + 1 : 1;
+                else m[i, j] = Math.Max(i - 1 >= 0 ? m[i - 1, j] : 0, j - 1 >= 0 ? m[i, j - 1] : 0);
             }
 
-            return result;
+            return m[A.Length - 1, B.Length - 1];
         }
     }
 }

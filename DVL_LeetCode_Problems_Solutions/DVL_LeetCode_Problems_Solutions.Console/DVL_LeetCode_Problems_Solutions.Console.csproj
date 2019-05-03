@@ -63,6 +63,7 @@
     <Compile Include="Tester.cs" />
     <Compile Include="Trapping Rain Water Tester.cs" />
     <Compile Include="UniquePathIITester.cs" />
+    <Compile Include="VideoStitchingTester.cs" />
     <Compile Include="Wild Card Matching Tester.cs" />
   </ItemGroup>
   <ItemGroup>

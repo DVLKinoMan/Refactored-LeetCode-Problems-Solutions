@@ -96,7 +96,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //SearchA2DMatrixIITester();
 
-            ColorBorderTester();
+            //ColorBorderTester();
+
+            VideoStitchingTester();
 
             ReadKey();
         }

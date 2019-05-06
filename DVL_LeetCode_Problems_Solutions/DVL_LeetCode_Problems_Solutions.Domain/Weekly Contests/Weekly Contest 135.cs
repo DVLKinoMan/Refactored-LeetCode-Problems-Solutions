@@ -45,29 +45,26 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Minimum Score Triangulation of Polygon (Not Works)
+        /// Minimum Score Triangulation of Polygon (Not Mine)
         /// </summary>
         /// <param name="A"></param>
         /// <returns></returns>
         public static int MinScoreTriangulation(int[] A)
         {
-            Array.Sort(A);
-            int sum = 0, count = 0, n = A.Length;
-            for (int i = 0; i < A.Length; i++)
+            int n = A.Length;
+            int[,] dp = new int[n,n];
+            for (int d = 2; d < n; ++d)
             {
-                for (int j = i + 1; j < A.Length; j++)
+                for (int i = 0; i + d < n; ++i)
                 {
-                    for (int k = j + 1; k < A.Length; k++)
-                    {
-                        if (count == n - 2)
-                            return sum;
-                        sum += (A[i] * A[j] * A[k]);
-                        count++;
-                    }
+                    int j = i + d;
+                    dp[i,j] = int.MaxValue;
+                    for (int k = i + 1; k < j; ++k)
+                        dp[i,j] = Math.Min(dp[i,j], dp[i,k] + dp[k,j] + A[i] * A[j] * A[k]);
                 }
             }
 
-            return sum;
+            return dp[0,n - 1];
         }
     }
 }

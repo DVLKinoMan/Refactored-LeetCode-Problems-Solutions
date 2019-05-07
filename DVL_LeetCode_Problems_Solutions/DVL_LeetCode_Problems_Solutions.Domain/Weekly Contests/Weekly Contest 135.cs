@@ -51,20 +51,19 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int MinScoreTriangulation(int[] A)
         {
-            int n = A.Length;
-            int[,] dp = new int[n,n];
-            for (int d = 2; d < n; ++d)
-            {
-                for (int i = 0; i + d < n; ++i)
-                {
-                    int j = i + d;
-                    dp[i,j] = int.MaxValue;
-                    for (int k = i + 1; k < j; ++k)
-                        dp[i,j] = Math.Min(dp[i,j], dp[i,k] + dp[k,j] + A[i] * A[j] * A[k]);
-                }
-            }
+            return MinScoreTriangulationHelper(A, new int[A.Length, A.Length], 0, A.Length - 1);
+        }
 
-            return dp[0,n - 1];
+        private static int MinScoreTriangulationHelper(int[] A, int[,] dp, int i, int j, int res = 0)
+        {
+            if (dp[i, j] != 0)
+                return dp[i, j];
+
+            for (int k = i + 1; k < j; k++)
+                res = Math.Min(res == 0 ? int.MaxValue : res, MinScoreTriangulationHelper(A, dp, k, j) + MinScoreTriangulationHelper(A, dp, i, k) +
+                                                              (A[i] * A[j] * A[k]));
+
+            return dp[i, j] = res;
         }
     }
 }

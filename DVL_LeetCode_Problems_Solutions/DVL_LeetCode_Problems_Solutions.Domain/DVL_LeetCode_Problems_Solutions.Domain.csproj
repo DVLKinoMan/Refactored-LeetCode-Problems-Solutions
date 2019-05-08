@@ -64,6 +64,7 @@
     <Compile Include="Hard\Text Justification.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
+    <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\Boats to Save People.cs" />
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />

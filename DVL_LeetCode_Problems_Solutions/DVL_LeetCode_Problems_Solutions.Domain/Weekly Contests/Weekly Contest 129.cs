@@ -39,14 +39,22 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }
         }
 
+        /// <summary>
+        /// Best Sightseeing Pair (Not mine)
+        /// </summary>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public static int MaxScoreSightseeingPair(int[] A)
         {
-            int max = 0;
-            for(int i=0;i<A.Length;i++)
-            for (int j = i + 1; j < A.Length; j++)
-                max = Math.Max(max, A[j] + A[i] - (j - i));
+            int res = 0, curr = 0;
 
-            return max;
+            foreach (var a in A)
+            {
+                res = Math.Max(res, curr + a);
+                curr = Math.Max(curr, a) - 1;
+            }
+
+            return res;
         }
     }
 }

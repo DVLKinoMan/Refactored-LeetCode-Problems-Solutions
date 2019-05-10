@@ -100,7 +100,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //VideoStitchingTester();
 
-            AdditiveNumberTester();
+            //AdditiveNumberTester();
+
+            SmallestIntegerDevisableByKTester();
 
             ReadKey();
         }

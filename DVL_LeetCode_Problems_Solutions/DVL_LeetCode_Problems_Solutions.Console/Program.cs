@@ -102,7 +102,9 @@ namespace DVL_LeetCode_Problems_Solutions.Console
 
             //AdditiveNumberTester();
 
-            SmallestIntegerDevisableByKTester();
+            //SmallestIntegerDevisableByKTester();
+
+            ProblemSolver.GardenNoAdj(3, new int[][]{new int[]{1, 2},new int[]{2,3},new int[]{3,1}});
 
             ReadKey();
         }

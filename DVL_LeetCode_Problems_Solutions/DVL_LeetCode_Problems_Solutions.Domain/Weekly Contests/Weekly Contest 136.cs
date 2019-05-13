@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -112,9 +109,26 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                GardenNoAdjDFS(gard, dic, colors, answers);
         }
 
+        /// <summary>
+        /// Partition Array for Maximum Sum (Almost Mine)
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="K"></param>
+        /// <returns></returns>
         public static int MaxSumAfterPartitioning(int[] A, int K)
         {
-            throw new NotImplementedException();
+            int[] dp=new int[A.Length];
+            for (int i = 0; i < dp.Length; i++)
+            {
+                int currMax = 0;
+                for (int j = 0; j < K && i - j>=0; j++)
+                {
+                    currMax = Math.Max(currMax, A[i - j]);
+                    dp[i] = Math.Max(dp[i], (i - j - 1 >= 0 ? dp[i - j - 1] : 0) + currMax * (j + 1));
+                }
+            }
+
+            return dp[A.Length - 1];
         }
     }
 }

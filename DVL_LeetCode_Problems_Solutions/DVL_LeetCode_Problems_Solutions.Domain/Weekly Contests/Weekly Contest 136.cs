@@ -6,44 +6,29 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+
+        /// <summary>
+        /// Robot Bounded In Circle (Not Works)
+        /// </summary>
+        /// <param name="instructions"></param>
+        /// <returns></returns>
         public static bool IsRobotBounded(string instructions)
         {
-            int[] arr=new int[]{0, 1,2, 3};
-            int d = 0, i = 0;
-            char curr = instructions[0];
-            while (i < instructions.Length && curr != 'G')
-            {
-                curr = instructions[i];
-                if (curr == 'L')
-                {
-                    if (d + 1 > arr.Length)
-                        d = 0;
-                    else d++;
-                }
-                else if (curr == 'R')
-                {
-                    if (d - 1 < 0)
-                        d = arr.Length - 1;
-                    else d--;
-                }
-
-                i++;
-            }
-
-            if (i == instructions.Length)
+            if (!instructions.Contains('G'))
                 return true;
 
-            int first = arr[d];
+            int[] arr = new int[] {0, 1, 2, 3};
+            int d = 0, i = 0;
+
             while (i < instructions.Length)
             {
-                curr = instructions[i];
-                if (curr == 'L')
+                if (instructions[i] == 'L')
                 {
                     if (d + 1 == arr.Length)
                         d = 0;
                     else d++;
                 }
-                else if (curr == 'R')
+                else if (instructions[i] == 'R')
                 {
                     if (d - 1 < 0)
                         d = arr.Length - 1;
@@ -53,7 +38,27 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 i++;
             }
 
-            return first != arr[d];
+            return 0 == arr[d];
+        }
+
+        /// <summary>
+        /// Robot Bounded In Circle (Not mine)
+        /// </summary>
+        /// <param name="instructions"></param>
+        /// <returns></returns>
+        public static bool IsRobotBounded2(string instructions)
+        {
+            int x = 0, y = 0, i = 0;
+            int[][] d = new int[][]{new int[] {0, 1}, new int[] { 1, 0}, new int[] { 0, -1}, new int[] { -1, 0}};
+            for (int j = 0; j< instructions.Length; ++j)
+                if (instructions[j] == 'R')
+                    i = (i + 1) % 4;
+                else if (instructions[j] == 'L')
+                    i = (i + 3) % 4;
+                else {
+                    x += d[i][0]; y += d[i][1];
+                }
+            return x == 0 && y == 0 || i > 0;
         }
 
         /// <summary>

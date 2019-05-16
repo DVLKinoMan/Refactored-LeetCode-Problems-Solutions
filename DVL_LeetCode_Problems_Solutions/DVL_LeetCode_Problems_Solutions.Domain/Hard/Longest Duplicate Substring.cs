@@ -48,7 +48,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             while (lo < hi)
             {
                 int mid = lo + (hi - lo) / 2;
-                int index = test(S, mid);
+                int index = LongestDupSubStringTest(S, mid);
                 if (index < 0) hi = mid;
                 else
                 {
@@ -58,13 +58,13 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             // lo-1 is the LARGEST length of string that CAN pass test
             int checkLen = lo - 1;
             if (checkLen <= 0) return "";
-            int start = test(S, checkLen);
+            int start = LongestDupSubStringTest(S, checkLen);
             return S.Substring(start, checkLen);
         }
 
         private static readonly long q = 2147483647;
 
-        private static long hash(string key, int m)
+        private static long LongestDupSubStringHash(string key, int m)
         {
             long h = 0;
             for (int j = 0; j < m; j++)
@@ -74,7 +74,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return h;
         }
 
-        private static bool compare(string s, int i1, int i2, int m)
+        private static bool LongestDupSubStringCompare(string s, int i1, int i2, int m)
         {
             for (int i = 0; i < m; i++)
             {
@@ -83,18 +83,16 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return true;
         }
 
-        private static int test(string s, int m)
+        private static int LongestDupSubStringTest(string s, int m)
         {
             var map = new Dictionary<long, List<int>>();
-            long h = hash(s, m);
+            long h = LongestDupSubStringHash(s, m);
             map.Add(h, new List<int>());
             map[h].Add(0);
 
             long RM = 1; // R^(m-1) % q
             for (int i = 1; i <= m - 1; i++)
-            {
                 RM = (256 * RM) % q;
-            }
 
             // NOTE i is the ending index of current string
             for (int i = m; i < s.Length; i++)
@@ -104,16 +102,12 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 h = (h * 256 + s[i]) % q;
                 int startIndex = i - m + 1;
                 if (map.ContainsKey(h))
-                {
                     foreach (int prev in map[h])
-                    {
-                        if (compare(s, startIndex, prev, m)) return startIndex;
-                    }
-                }
+                        if (LongestDupSubStringCompare(s, startIndex, prev, m))
+                            return startIndex;
                 else
-                {
                     map.Add(h, new List<int>());
-                }
+                
                 map[h].Add(startIndex);
             }
 

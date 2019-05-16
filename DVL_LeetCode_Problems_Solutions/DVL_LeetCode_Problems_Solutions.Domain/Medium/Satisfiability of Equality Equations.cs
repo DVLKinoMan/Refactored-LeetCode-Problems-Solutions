@@ -9,10 +9,15 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Satisfiability of Equality Equations (Do not Works)
+        /// </summary>
+        /// <param name="equations"></param>
+        /// <returns></returns>
         public static bool EquationsPossible(string[] equations)
         {
-            var equalDic=new ConcurrentDictionary<char,HashSet<char>>();
-            var notEqualDic=new ConcurrentDictionary<char, HashSet<char>>();
+            var equalDic = new ConcurrentDictionary<char, HashSet<char>>();
+            var notEqualDic = new ConcurrentDictionary<char, HashSet<char>>();
 
             foreach (var equation in equations)
             {
@@ -21,13 +26,15 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 {
                     if (notEqualDic.ContainsKey(first) && notEqualDic[first].Contains(second))
                         return false;
-                    EquationsPossibleAddOrUpdate(first, second, equalDic, true);
+                    EquationsPossibleAddOrUpdate(first, second, equalDic, true, notEqualDic.ContainsKey(first) ? notEqualDic[first] : null,
+                        notEqualDic.ContainsKey(second) ? notEqualDic[second] : null);
                 }
                 else
                 {
-                    if (equalDic.ContainsKey(first) && equalDic[first].Contains(second))
+                    if (first == second || (equalDic.ContainsKey(first) && equalDic[first].Contains(second)))
                         return false;
-                    EquationsPossibleAddOrUpdate(first, second, notEqualDic, true);
+                    EquationsPossibleAddOrUpdate(first, second, notEqualDic, true, equalDic.ContainsKey(first) ? equalDic[first] : null, 
+                        equalDic.ContainsKey(second) ? equalDic[second] : null);
                 }
             }
 
@@ -35,27 +42,86 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         public static void EquationsPossibleAddOrUpdate(char first, char second,
-            ConcurrentDictionary<char, HashSet<char>> equalDic, bool root)
+            ConcurrentDictionary<char, HashSet<char>> equalDic, bool root, HashSet<char> firstsSet = null,
+            HashSet<char> secondsSet = null)
         {
-            equalDic.AddOrUpdate(first, new HashSet<char>() { second }, (c, set) =>
+            //Add first's neighbor second and first's neighbors second
+            equalDic.AddOrUpdate(first, new HashSet<char>() {second}, (c, set) =>
             {
                 if (root)
-                    foreach (var ch in equalDic[first])
+                {
+                   var arr = equalDic[first].ToArray();
+                    foreach (var ch in arr)
                         EquationsPossibleAddOrUpdate(ch, second, equalDic, false);
-                equalDic[first].Add(second);
+                }
+                set.Add(second);
 
-                return equalDic[first];
+                return set;
             });
+            if (secondsSet != null)
+                foreach (var secondsChar in secondsSet)
+                {
+                    equalDic[first].Add(secondsChar);
+                    equalDic.AddOrUpdate(secondsChar, new HashSet<char>() {first}, (c, set) =>
+                    {
+                        set.Add(first);
+                        return set;
+                    });
+                }
 
-            equalDic.AddOrUpdate(second, new HashSet<char>() { first }, (c, set) =>
+            //Add second's neighbor first and second's neigbors firsts
+            equalDic.AddOrUpdate(second, new HashSet<char>() {first}, (c, set) =>
             {
                 if (root)
-                    foreach (var ch in equalDic[second])
+                {
+                    var arr = equalDic[second].ToArray();
+                    foreach (var ch in arr)
                         EquationsPossibleAddOrUpdate(ch, first, equalDic, false);
-                equalDic[second].Add(first);
+                }
+                set.Add(first);
 
-                return equalDic[second];
+                return set;
             });
+
+            if (firstsSet != null)
+                foreach (var firstsChar in firstsSet)
+                {
+                    equalDic[second].Add(firstsChar);
+                    equalDic.AddOrUpdate(firstsChar, new HashSet<char>() {second}, (c, set) =>
+                    {
+                        set.Add(second);
+                        return set;
+                    });
+                }
+        }
+
+        /// <summary>
+        /// Satisfiability of Equality Equations (Not mine)
+        /// </summary>
+        /// <param name="equations"></param>
+        /// <returns></returns>
+        public static bool EquationsPossible2(string[] equations)
+        {
+            int[] arr = new int[26].Select((_, i) => i).ToArray();
+            foreach (var equation in equations)
+                if (equation[1] == '=')
+                    arr[EquationPossible2HelperFind(equation[0] - 'a', arr)] =
+                        EquationPossible2HelperFind(equation[3] - 'a', arr);
+
+            foreach (var equation in equations)
+                if (equation[1] == '!' && EquationPossible2HelperFind(equation[0] - 'a', arr) ==
+                    EquationPossible2HelperFind(equation[3] -
+                                                'a', arr))
+                    return false;
+
+            return true;
+        }
+
+        private static int EquationPossible2HelperFind(int x, int[] arr)
+        {
+            if (x != arr[x])
+                arr[x] = EquationPossible2HelperFind(arr[x], arr);
+            return arr[x];
         }
     }
 }

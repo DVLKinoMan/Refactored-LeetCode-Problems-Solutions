@@ -101,6 +101,7 @@
     <Compile Include="Medium\Pow%28x,n%29.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
     <Compile Include="Medium\Rotate List.cs" />
+    <Compile Include="Medium\Satisfiability of Equality Equations.cs" />
     <Compile Include="Medium\Search a 2D Matrix II.cs" />
     <Compile Include="Medium\Search a 2D Matrix.cs" />
     <Compile Include="Medium\Set Matrix Zeroes.cs" />

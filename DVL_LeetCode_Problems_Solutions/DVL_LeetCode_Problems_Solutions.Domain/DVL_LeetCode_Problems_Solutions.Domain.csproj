@@ -70,6 +70,7 @@
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\Boats to Save People.cs" />
+    <Compile Include="Medium\Broken Calculator.cs" />
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />

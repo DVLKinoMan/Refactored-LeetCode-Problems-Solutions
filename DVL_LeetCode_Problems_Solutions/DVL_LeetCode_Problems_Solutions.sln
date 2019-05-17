@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVL_LeetCode_Problems_Solut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVL_LeetCode_Problems_Solutions.Console", "DVL_LeetCode_Problems_Solutions.Console\DVL_LeetCode_Problems_Solutions.Console.csproj", "{CDBABD0F-0E89-4C7F-9DFD-C8294E6161F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVL_LC_Problems.Tests", "DVL_LC_Problems.Tests\DVL_LC_Problems.Tests.csproj", "{2324BE84-96AE-4F52-AA94-8194C335A8E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CDBABD0F-0E89-4C7F-9DFD-C8294E6161F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDBABD0F-0E89-4C7F-9DFD-C8294E6161F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDBABD0F-0E89-4C7F-9DFD-C8294E6161F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2324BE84-96AE-4F52-AA94-8194C335A8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2324BE84-96AE-4F52-AA94-8194C335A8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2324BE84-96AE-4F52-AA94-8194C335A8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2324BE84-96AE-4F52-AA94-8194C335A8E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,6 +49,7 @@
     <Compile Include="Easy\Divisor Game.cs" />
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
+    <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />

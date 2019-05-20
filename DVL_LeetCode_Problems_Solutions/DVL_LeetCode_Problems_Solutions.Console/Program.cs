@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,7 +106,7 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //SmallestIntegerDevisableByKTester();
 
             //ProblemSolver.GardenNoAdj(3, new int[][]{new int[]{1, 2},new int[]{2,3},new int[]{3,1}});
-            EquationsPossibleTester();
+            //EquationsPossibleTester();
 
             //var res =ProblemSolver. SumEvenAfterQueries(new int[] { -10, 2, -4, 5, -3, 3 },
             //    new int[][]
@@ -113,6 +114,8 @@ namespace DVL_LeetCode_Problems_Solutions.Console
             //        new int[] {-4, 2}, new int[] {9, 0}, new int[] {-8, 1}, new int[] {5, 4}, new int[] {1, 4},
             //        new int[] {9, 0}
             //    });
+
+            ProblemSolver.LongestStrChain(new String[] {"a", "b", "ba", "bca", "bda", "bdca"});
 
             ReadKey();
         }

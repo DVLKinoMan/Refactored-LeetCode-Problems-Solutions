@@ -121,7 +121,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Last Stone Weight (Not Mine)
+        /// Last Stone Weight II (Not Mine)
         /// </summary>
         /// <param name="stones"></param>
         /// <returns></returns>

@@ -120,23 +120,25 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return dic.Values.Max();
         }
 
-
+        /// <summary>
+        /// Last Stone Weight (Not Mine)
+        /// </summary>
+        /// <param name="stones"></param>
+        /// <returns></returns>
         public static int LastStoneWeightII(int[] stones)
         {
-            var list = stones.ToList();
-
-            while (list.Count > 1)
+            bool[] dp = new bool[1501];
+            dp[0] = true;
+            int sumA = 0;
+            foreach (var a in stones)
             {
-                list.Sort();
-                int f = list[list.Count - 2];
-                int s = list[list.Count - 1];
-                list.RemoveAt(list.Count - 2);
-                list.RemoveAt(list.Count - 1);
-                if (f != s)
-                    list.Add(s - f);
+                sumA += a;
+                for (int i = 1500; i >= a; --i)
+                    dp[i] |= dp[i - a];
             }
-
-            return list.Count == 0 ? 0 : list[0];
+            for (int i = sumA / 2; i > 0; --i)
+                if (dp[i]) return sumA - i - i;
+            return 0;
         }
     }
 }

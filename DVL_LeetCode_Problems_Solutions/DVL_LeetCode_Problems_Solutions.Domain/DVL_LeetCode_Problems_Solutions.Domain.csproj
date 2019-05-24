@@ -95,6 +95,7 @@
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />
+    <Compile Include="Medium\Maximum Length of Repeated Subarray.cs" />
     <Compile Include="Medium\Maximum Sum of Two Non-Overlapping Subarrays.cs" />
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />

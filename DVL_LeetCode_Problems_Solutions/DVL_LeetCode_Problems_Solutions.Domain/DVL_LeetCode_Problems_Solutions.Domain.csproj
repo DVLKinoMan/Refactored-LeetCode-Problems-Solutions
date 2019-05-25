@@ -56,6 +56,7 @@
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
+    <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />

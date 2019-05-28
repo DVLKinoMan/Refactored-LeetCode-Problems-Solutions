@@ -51,6 +51,7 @@
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
+    <Compile Include="Easy\Monotonic Array.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Same Tree.cs" />

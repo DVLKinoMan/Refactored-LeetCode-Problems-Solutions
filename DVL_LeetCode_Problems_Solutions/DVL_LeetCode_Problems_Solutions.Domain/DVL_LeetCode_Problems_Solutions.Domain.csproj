@@ -84,6 +84,7 @@
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Jump Game.cs" />
+    <Compile Include="Medium\Largest Number.cs" />
     <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />
     <Compile Include="Medium\Integer to Roman.cs" />
     <Compile Include="Medium\Generate Parentheses.cs" />

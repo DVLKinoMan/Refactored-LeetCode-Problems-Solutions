@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Largest Number (Not mine, but almost)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public static string LargestNumber(int[] nums)
         {
             if (nums.Length == 0)
@@ -27,39 +29,10 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         {
             public int Compare(string x, string y)
             {
-                if (x == y)
-                    return 0;
+                string str1 = x + y;
+                string str2 = y + x;
 
-                int len = Math.Min(x.Length, y.Length);
-                for(int i=0; i<len; i++)
-                    if (x[i] != y[i])
-                        return x.CompareTo(y);
-
-                if (x.Length == len)
-                {
-                    if (y.Length > len)
-                    {
-                        if (y[len] == '0')
-                            return 1;
-                        if (y[len - 1] < y[len])
-                            return -1;
-                        return 1;
-                    }
-                }
-
-                if (y.Length == len)
-                {
-                    if (x.Length > len)
-                    {
-                        if (x[len] == '0')
-                            return -1;
-                        if (x[len - 1] < x[len])
-                            return 1;
-                        return -1;
-                    }
-                }
-
-                return x.CompareTo(y);
+                return str1.CompareTo(str2);
             }
         }
     }

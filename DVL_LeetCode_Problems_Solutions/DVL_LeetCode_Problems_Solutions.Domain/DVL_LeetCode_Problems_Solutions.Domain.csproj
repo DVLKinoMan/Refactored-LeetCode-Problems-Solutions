@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Add Binary.cs" />

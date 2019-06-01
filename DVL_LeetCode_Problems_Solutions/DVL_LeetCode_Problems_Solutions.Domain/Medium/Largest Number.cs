@@ -19,7 +19,6 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             foreach (var num in nums)
                 list.Add(num.ToString());
 
-
             var comp = new Comparer();
             var res = string.Join("", list.OrderByDescending(n => n, comp).SkipWhile(n=>n=="0"));
             return string.IsNullOrEmpty(res) ? "0" : res;

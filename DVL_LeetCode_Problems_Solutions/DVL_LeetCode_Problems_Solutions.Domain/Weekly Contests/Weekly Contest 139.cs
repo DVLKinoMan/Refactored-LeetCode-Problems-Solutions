@@ -1,4 +1,8 @@
-﻿namespace DVL_LeetCode_Problems_Solutions.Domain
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
@@ -53,10 +57,31 @@
 
         //}
 
-        //public int[] AddNegabinary(int[] arr1, int[] arr2)
-        //{
+        /// <summary>
+        /// Adding Two Negabinary Numbers (Not Mine)
+        /// </summary>
+        /// <param name="arr1"></param>
+        /// <param name="arr2"></param>
+        /// <returns></returns>
+        public static int[] AddNegabinary(int[] arr1, int[] arr2)
+        {
+            var res = new List<int>();
+            int bit = 0, carry = 0, sz = Math.Max(arr1.Length, arr2.Length);
+            for (bit = 0; bit < sz || carry != 0; ++bit)
+            {
+                int b1 = bit < arr1.Length ? arr1[arr1.Length - bit - 1] : 0;
+                int b2 = bit < arr2.Length ? arr2[arr2.Length - bit - 1] : 0;
+                int sum = b1 + b2 + carry;
+                res.Add(Math.Abs(sum) % 2);
+                carry = sum < 0 ? 1 : sum > 1 ? -1 : 0;
+            }
 
-        //}
+            while (res.Count > 1 && res.Last() == 0)
+                res.RemoveAt(res.Count - 1);
+            res.Reverse();
+
+            return res.ToArray();
+        }
 
     }
 }

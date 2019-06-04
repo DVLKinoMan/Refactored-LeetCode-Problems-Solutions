@@ -52,10 +52,45 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return true;
         }
 
-        //public static int MaxEqualRowsAfterFlips(int[][] matrix)
-        //{
+        /// <summary>
+        /// Flip Columns For Maximum Number of Equal Rows (Mine)
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <returns></returns>
+        public static int MaxEqualRowsAfterFlips(int[][] matrix)
+        {
+            int maxRows = 0;
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                int first = matrix[i][0];
+                if (matrix[i].All(i1 => i1 == first))
+                    maxRows++;
+            }
 
-        //}
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                int currRows = 0;
+                for (int j = i + 1; j < matrix.GetLength(0); j++)
+                {
+                    bool equal = matrix[i][0] == matrix[j][0], satisfies = true;
+                    for (int k = 1; k < matrix[i].Length; k++)
+                    {
+                        if ((!equal && matrix[i][k] == matrix[j][k]) || (equal && matrix[i][k] != matrix[j][k]))
+                        {
+                            satisfies = false;
+                            break;
+                        }
+                    }
+
+                    if (satisfies)
+                        currRows++;
+                }
+
+                maxRows = Math.Max(currRows, maxRows);
+            }
+
+            return maxRows;
+        }
 
         /// <summary>
         /// Adding Two Negabinary Numbers (Not Mine)

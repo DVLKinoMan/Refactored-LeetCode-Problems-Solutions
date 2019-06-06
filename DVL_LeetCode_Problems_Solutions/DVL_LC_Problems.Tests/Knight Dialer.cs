@@ -27,5 +27,12 @@ namespace DVL_LC_Problems.Tests
             int actual = KnightDialer(3);
             Assert.AreEqual(46, actual);
         }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            int actual = KnightDialer(5000);
+            Assert.AreEqual(46, actual);
+        }
     }
 }

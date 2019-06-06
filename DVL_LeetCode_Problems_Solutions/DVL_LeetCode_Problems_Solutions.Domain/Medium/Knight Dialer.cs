@@ -1,49 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        public static int max = (int)Math.Pow(10, 9) + 7;
+
+        /// <summary>
+        /// Knight Dialer (Not Mine)
+        /// </summary>
+        /// <param name="N"></param>
+        /// <returns></returns>
         public static int KnightDialer(int N)
         {
-            var list = new List<(int, int)>()
-                {(1, 4), (1, 3), (1, 2), (2, 1), (2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4)};
+            var arr = new long[N][,];
+            for (int i = 0; i < arr.Length; i++)
+                arr[i] = new long[4, 5];
 
-            int count = 0;
-            var knightMoves = new int[] {1, 2};
-            foreach (var node in list)
-                KnightDialerHelper(node, 0, N - 1, ref count, list, knightMoves);
+            long s = 0;
+            for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 3; j++)
+                s = (s + KnightDialerHelper(arr, i, j, N)) % max;
 
-            return count;
+            return (int) s;
         }
 
-        private static void KnightDialerHelper((int x, int y) node, int height, int n, ref int count,
-            List<(int, int)> list, int[] knightMoves)
+        private static long KnightDialerHelper(long[][,] M, int i, int j, int n)
         {
-            if (!list.Contains(node))
-                return;
+            if (i < 0 || j < 0 || i >= 4 || j >= 3 || (i == 0 && j == 0) || (i == 0 && j == 2))
+                return 0;
+            if (n == 1)
+                return 1;
 
-            if (height == n)
-            {
-                count = count == Math.Pow(10, 9) + 6 ? 0 : count + 1;
-                return;
-            }
+            if (M[n][i, j] > 0)
+                return M[n][i, j];
 
-            for (int i = 0; i < knightMoves.Length; i++)
-            for (int j = 0; j < knightMoves.Length; j++)
-                if (i != j)
-                {
-                    KnightDialerHelper((node.x + knightMoves[i], node.y + knightMoves[j]), height + 1, n, ref count,
-                        list, knightMoves);
-                    KnightDialerHelper((node.x + knightMoves[i], node.y - knightMoves[j]), height + 1, n, ref count,
-                        list, knightMoves);
-                    KnightDialerHelper((node.x - knightMoves[i], node.y + knightMoves[j]), height + 1, n, ref count,
-                        list, knightMoves);
-                    KnightDialerHelper((node.x - knightMoves[i], node.y - knightMoves[j]), height + 1, n, ref count,
-                        list, knightMoves);
-                }
-
+            M[n][i, j] = KnightDialerHelper(M, i - 1, j - 2, n - 1) % max +
+                         KnightDialerHelper(M, i - 2, j - 1, n - 1) % max +
+                         KnightDialerHelper(M, i - 2, j + 1, n - 1) % max +
+                         KnightDialerHelper(M, i - 1, j + 2, n - 1) % max +
+                         KnightDialerHelper(M, i + 1, j + 2, n - 1) % max +
+                         KnightDialerHelper(M, i + 2, j + 1, n - 1) % max +
+                         KnightDialerHelper(M, i + 2, j - 1, n - 1) % max +
+                         KnightDialerHelper(M, i + 1, j - 2, n - 1) % max; 
+            return M[n][i, j];
         }
     }
 }

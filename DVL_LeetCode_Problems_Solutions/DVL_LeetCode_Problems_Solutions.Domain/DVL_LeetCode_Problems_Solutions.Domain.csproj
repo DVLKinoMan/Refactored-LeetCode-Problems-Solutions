@@ -47,6 +47,7 @@
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Add Binary.cs" />
+    <Compile Include="Easy\Add to Array-Form of Integer.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />

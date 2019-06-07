@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Broken Calculator.cs" />
+    <Compile Include="Knight Dialer.cs" />
     <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sum of Even Numbers After Queries.cs" />

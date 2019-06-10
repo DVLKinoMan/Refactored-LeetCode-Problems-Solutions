@@ -61,21 +61,60 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }
         }
 
+        /// <summary>
+        /// Insufficient Nodes in Root to Leaf Paths (Not Mine)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="limit"></param>
+        /// <returns></returns>
         public static TreeNode SufficientSubset(TreeNode root, int limit)
         {
-            SufficientSubsetHelper(ref root, null, true, 0, limit);
-
-            return root;
+            if (root.left == root.right)
+                return root.val < limit ? null : root;
+            if (root.left != null)
+                root.left = SufficientSubset(root.left, limit - root.val);
+            if (root.right != null)
+                root.right = SufficientSubset(root.right, limit - root.val);
+            return root.left == root.right ? null : root;
         }
 
-        private static int SufficientSubsetHelper(ref TreeNode node, TreeNode prevNode, bool prevNodeWasLeft, int prevSum, int limit)
+        /// <summary>
+        /// do not works
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="prevNode"></param>
+        /// <param name="prevNodeWasLeft"></param>
+        /// <param name="prevSum"></param>
+        /// <param name="limit"></param>
+        /// <returns></returns>
+        private static int SufficientSubsetHelper(ref TreeNode node, TreeNode prevNode, bool prevNodeWasLeft,
+            int prevSum, int limit)
         {
-            if (node == null)
-                return 0;
+            if (node.left == null && node.right == null)
+            {
+                int val = node.val;
+                if (prevSum + node.val < limit)
+                {
+                    if (prevNode != null)
+                    {
+                        if (prevNodeWasLeft)
+                            prevNode.left = null;
+                        else prevNode.right = null;
+                    }
+                    else node = null;
+                }
+                return val;
+            }
 
-            int leftSum = SufficientSubsetHelper(ref node.left, node, true, prevSum + node.val, limit);
-            int rightSum = SufficientSubsetHelper(ref node.right, node, false, prevSum + node.val, limit);
-            if (leftSum + prevSum + node.val < limit && rightSum + prevSum + node.val < limit)
+            int? leftSum = node.left != null
+                ? (int?) SufficientSubsetHelper(ref node.left, node, true, prevSum + node.val, limit)
+                : null;
+            int? rightSum = node.right != null
+                ? (int?) SufficientSubsetHelper(ref node.right, node, false, prevSum + node.val, limit)
+                : null;
+            bool leftLessThanLimit = leftSum == null ? true : leftSum + prevSum + node.val < limit;
+            bool rightLessThanLimit = rightSum == null ? true : rightSum + prevSum + node.val < limit;
+            if (leftLessThanLimit && rightLessThanLimit)
             {
                 if (prevNode != null)
                 {
@@ -88,7 +127,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 return 0;
             }
 
-            return leftSum + rightSum + node.val;
+            return (leftSum ?? 0) + (rightSum ?? 0) + node.val;
         }
 
         public static string SmallestSubsequence(string text)

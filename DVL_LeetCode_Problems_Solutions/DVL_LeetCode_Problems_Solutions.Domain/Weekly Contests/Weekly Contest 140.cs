@@ -130,26 +130,30 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return (leftSum ?? 0) + (rightSum ?? 0) + node.val;
         }
 
+        /// <summary>
+        /// Smallest Subsequence of Distinct Characters (Not Mine)
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public static string SmallestSubsequence(string text)
         {
-            int[] countChars = new int[26];
-            bool[] seenChars = new bool[26];
             var stack = new Stack<int>();
-            foreach (var ch in text)
-                countChars[ch - 'a']++;
-
-            foreach(var ch in text)
+            int[] last = new int[26];
+            bool[] seen = new bool[26];
+            for (int i = 0; i < text.Length; ++i)
+                last[text[i] - 'a'] = i;
+            for (int i = 0; i < text.Length; ++i)
             {
-                --countChars[ch - 'a'];
-                if (seenChars[ch - 'a'])
-                    continue;
-                seenChars[ch - 'a'] = true;
-                while (stack.Count != 0 && stack.Peek() > ch && countChars[stack.Peek()] > 0)
-                    seenChars[stack.Pop()] = false;
-                stack.Push(ch - 'a');
+                int c = text[i] - 'a';
+                if (seen[c]) continue;
+                while (stack.Count != 0 && stack.Peek() > c && i < last[stack.Peek()])
+                    seen[stack.Pop()] = false;
+
+                stack.Push(c);
+                seen[c] = true;
             }
 
-            return string.Join("", stack.Select(s=>(char)s));
+            return string.Join("", stack.Select(c => (char) (c + 'a')).Reverse());
         }
     }
 }

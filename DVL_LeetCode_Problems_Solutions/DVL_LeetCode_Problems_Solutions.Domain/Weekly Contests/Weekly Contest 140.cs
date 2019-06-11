@@ -132,40 +132,24 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
         public static string SmallestSubsequence(string text)
         {
-            var lettersIndexes=new Dictionary<char, List<int>>();
-            int[] minLefts=new int[text.Length];
-            int minLeft = int.MaxValue;
-            for (int i = 0; i < text.Length; i++)
-            {
-                if (text[i] < minLeft)
-                    minLeft = text[i];
-                minLefts[i] = minLeft;
+            int[] countChars = new int[26];
+            bool[] seenChars = new bool[26];
+            var stack = new Stack<int>();
+            foreach (var ch in text)
+                countChars[ch - 'a']++;
 
-                if (lettersIndexes.ContainsKey(text[i]))
-                    lettersIndexes[text[i]].Add(i);
-                else lettersIndexes.Add(text[i], new List<int> {i});
+            foreach(var ch in text)
+            {
+                --countChars[ch - 'a'];
+                if (seenChars[ch - 'a'])
+                    continue;
+                seenChars[ch - 'a'] = true;
+                while (stack.Count != 0 && stack.Peek() > ch && countChars[stack.Peek()] > 0)
+                    seenChars[stack.Pop()] = false;
+                stack.Push(ch - 'a');
             }
 
-            var arrOfRightIndex = new bool[text.Length];
-            foreach (var letterIndexes in lettersIndexes)
-            {
-                int letterIndex = -1, minValue = int.MaxValue;
-                foreach (var index in letterIndexes.Value)
-                    if (minLefts[index] <= minValue)
-                    {
-                        minValue = minLefts[index];
-                        letterIndex = index;
-                    }
-
-                arrOfRightIndex[letterIndex] = true;
-            }
-
-            var resString = new StringBuilder();
-            for (int i = 0; i < text.Length; i++)
-                if (arrOfRightIndex[i] == true)
-                    resString.Append(text[i]);
-
-            return resString.ToString();
+            return string.Join("", stack.Select(s=>(char)s));
         }
     }
 }

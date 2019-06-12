@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
     <Compile Include="Classes\Interval.cs" />
+    <Compile Include="Classes\Node.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Add Binary.cs" />
     <Compile Include="Easy\Add to Array-Form of Integer.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
+    <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />

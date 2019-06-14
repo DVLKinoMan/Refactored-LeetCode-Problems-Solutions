@@ -57,6 +57,7 @@
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
+    <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Medium\Pow%28x,n%29.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />
+    <Compile Include="Medium\Rectangle Area.cs" />
     <Compile Include="Medium\Reorder List.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
     <Compile Include="Medium\Rotate List.cs" />

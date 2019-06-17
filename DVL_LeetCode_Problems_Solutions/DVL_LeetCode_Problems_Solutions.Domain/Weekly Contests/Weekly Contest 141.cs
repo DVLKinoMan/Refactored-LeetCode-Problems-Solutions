@@ -76,54 +76,72 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Not working
+        /// Shortest Path in Binary Matrix (Not Mine)
         /// </summary>
         /// <param name="grid"></param>
         /// <returns></returns>
         public static int ShortestPathBinaryMatrix(int[][] grid)
         {
-            int res = ShortestPathBinaryMatrixHelper(grid, 0, 0);
-            return res;
-        }
+            int m = grid.Length, n = grid[0].Length;
 
-        private static int ShortestPathBinaryMatrixHelper(int[][] grid, int i, int j)
-        {
-            if (i >= grid.Length)
+            if (grid[m - 1][n - 1] == 1 || grid[0][0] == 1)
                 return -1;
-            if (j >= grid[0].Length)
-                return -1;
-            if (grid[i][j] == 1)
-                return -1;
-            if (grid.Length - 1 == i && grid[0].Length - 1 == j)
-                return 1;
 
-            int f = ShortestPathBinaryMatrixHelper(grid, i + 1, j) + 1;
-            int s = ShortestPathBinaryMatrixHelper(grid, i, j + 1) + 1;
-            int t = ShortestPathBinaryMatrixHelper(grid, i + 1, j + 1) + 1;
+            var dir = new (int, int)[] {(0, 1), (0, -1), (1, 0), (-1, 0), (1, -1), (-1, 1), (-1, -1), (1, 1)};
+            bool[,] visited = new bool[grid.Length, grid[0].Length];
+            var coordinates = new Queue<(int, int)>();
+            coordinates.Enqueue((0, 0));
+            visited[0, 0] = true;
 
-            int res = Math.Min(Math.Min(f == 0 ? int.MaxValue : f, s == 0 ? int.MaxValue : s), t == 0 ? int.MaxValue : t);
+            int count = 0;
+            while (coordinates.Count > 0)
+            {
+                int size = coordinates.Count;
+                for (int i = 0; i < size; i++)
+                {
+                    var coo = coordinates.Dequeue();
 
-            return res == int.MaxValue ? -1 : res;
+                    if (coo.Item1 == m - 1 && coo.Item2 == n - 1)
+                        return count + 1;
+
+                    for (int d = 0; d < dir.Length; d++)
+                    {
+                        int nextX = coo.Item1 + dir[d].Item1;
+                        int nextY = coo.Item2 + dir[d].Item2;
+
+                        if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && !visited[nextX, nextY] &&
+                            grid[nextX][nextY] == 0)
+                        {
+                            coordinates.Enqueue((nextX, nextY));
+                            visited[nextX, nextY] = true;
+                        }
+                    }
+                }
+
+                count++;
+            }
+
+            return -1;
         }
 
         //public string ShortestCommonSupersequence(string str1, string str2)
-        //{
-        //    int[,] m = new int[str1.Length + 1, str2.Length + 1];
+    //{
+    //    int[,] m = new int[str1.Length + 1, str2.Length + 1];
 
-        //    int maxSubstrLen = 0;
-        //    (int, int) maxSubstrCoo = (-1, -1);
-        //    for (int i = 0; i < str1.Length; i++)
-        //    for (int j = 0; j < str2.Length; j++)
-        //        if (str1[i] == str2[j])
-        //        {
-        //            m[i + 1, j + 1] += m[i, j];
-        //            if (m[i + 1, j + 1] > maxSubstrLen)
-        //            {
-        //                maxSubstrLen = m[i + 1, j + 1];
-        //                maxSubstrCoo = (i, j);
-        //            }
-        //        }
+    //    int maxSubstrLen = 0;
+    //    (int, int) maxSubstrCoo = (-1, -1);
+    //    for (int i = 0; i < str1.Length; i++)
+    //    for (int j = 0; j < str2.Length; j++)
+    //        if (str1[i] == str2[j])
+    //        {
+    //            m[i + 1, j + 1] += m[i, j];
+    //            if (m[i + 1, j + 1] > maxSubstrLen)
+    //            {
+    //                maxSubstrLen = m[i + 1, j + 1];
+    //                maxSubstrCoo = (i, j);
+    //            }
+    //        }
 
-        //}
-    }
+    //}
+}
 }

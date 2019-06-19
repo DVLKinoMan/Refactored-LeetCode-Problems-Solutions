@@ -125,7 +125,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Shortest Common Supersequence (Not Working)
+        /// Shortest Common Supersequence (Not Mine)
         /// </summary>
         /// <param name="str1"></param>
         /// <param name="str2"></param>
@@ -133,13 +133,17 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         public static string ShortestCommonSupersequence(string str1, string str2)
         {
             string[,] m = new string[str1.Length + 1, str2.Length + 1];
+            for (int i = 0; i <= str1.Length; i++)
+                m[i, 0] = "";
+            for (int j = 0; j <= str2.Length; j++)
+                m[0, j] = "";
 
             for (int i = 0; i < str1.Length; i++)
             for (int j = 0; j < str2.Length; j++)
                 if (str1[i] == str2[j])
-                    m[i + 1, j + 1] += m[i, j] + str1[i];
+                    m[i + 1, j + 1] = m[i, j] + str1[i];
                 else
-                    m[i + 1,j + 1] = m[i + 1, j]?.Length > m[i, j + 1]?.Length ? m[i + 1, j] : m[i, j + 1];
+                    m[i + 1, j + 1] = m[i + 1, j].Length > m[i, j + 1].Length ? m[i + 1, j] : m[i, j + 1];
 
             int i1 = 0, j1 = 0;
             string lcs = m[str1.Length, str2.Length];
@@ -155,7 +159,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 j1++;
             }
 
-            return result + str1.Substring(i1) + str2.Substring(j1); 
+            return result + str1.Substring(i1) + str2.Substring(j1);
         }
     }
 }

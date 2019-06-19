@@ -124,24 +124,38 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return -1;
         }
 
-        //public string ShortestCommonSupersequence(string str1, string str2)
-    //{
-    //    int[,] m = new int[str1.Length + 1, str2.Length + 1];
+        /// <summary>
+        /// Shortest Common Supersequence (Not Working)
+        /// </summary>
+        /// <param name="str1"></param>
+        /// <param name="str2"></param>
+        /// <returns></returns>
+        public static string ShortestCommonSupersequence(string str1, string str2)
+        {
+            string[,] m = new string[str1.Length + 1, str2.Length + 1];
 
-    //    int maxSubstrLen = 0;
-    //    (int, int) maxSubstrCoo = (-1, -1);
-    //    for (int i = 0; i < str1.Length; i++)
-    //    for (int j = 0; j < str2.Length; j++)
-    //        if (str1[i] == str2[j])
-    //        {
-    //            m[i + 1, j + 1] += m[i, j];
-    //            if (m[i + 1, j + 1] > maxSubstrLen)
-    //            {
-    //                maxSubstrLen = m[i + 1, j + 1];
-    //                maxSubstrCoo = (i, j);
-    //            }
-    //        }
+            for (int i = 0; i < str1.Length; i++)
+            for (int j = 0; j < str2.Length; j++)
+                if (str1[i] == str2[j])
+                    m[i + 1, j + 1] += m[i, j] + str1[i];
+                else
+                    m[i + 1,j + 1] = m[i + 1, j]?.Length > m[i, j + 1]?.Length ? m[i + 1, j] : m[i, j + 1];
 
-    //}
-}
+            int i1 = 0, j1 = 0;
+            string lcs = m[str1.Length, str2.Length];
+            string result = string.Empty;
+            foreach (var c in lcs)
+            {
+                while (i1 < str1.Length && str1[i1] != c)
+                    result += str1[i1++];
+                while (j1 < str2.Length && str2[j1] != c)
+                    result += str2[j1++];
+                result += c;
+                i1++;
+                j1++;
+            }
+
+            return result + str1.Substring(i1) + str2.Substring(j1); 
+        }
+    }
 }

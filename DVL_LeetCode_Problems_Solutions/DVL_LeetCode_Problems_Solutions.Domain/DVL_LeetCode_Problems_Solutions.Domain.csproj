@@ -50,6 +50,7 @@
     <Compile Include="Easy\Add Binary.cs" />
     <Compile Include="Easy\Add to Array-Form of Integer.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
+    <Compile Include="Easy\Factorial Trailing Zeroes.cs" />
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />

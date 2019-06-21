@@ -54,6 +54,7 @@
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
+    <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />

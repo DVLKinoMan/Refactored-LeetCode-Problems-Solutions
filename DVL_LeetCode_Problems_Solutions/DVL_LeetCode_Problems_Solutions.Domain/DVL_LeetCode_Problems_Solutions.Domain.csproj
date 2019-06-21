@@ -50,6 +50,7 @@
     <Compile Include="Easy\Add Binary.cs" />
     <Compile Include="Easy\Add to Array-Form of Integer.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
+    <Compile Include="Easy\Factorial Trailing Zeroes.cs" />
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Medium\Maximum Sum of Two Non-Overlapping Subarrays.cs" />
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />
+    <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />
     <Compile Include="Medium\Minimum Path Sum.cs" />
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 138.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 139.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 140.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 141.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

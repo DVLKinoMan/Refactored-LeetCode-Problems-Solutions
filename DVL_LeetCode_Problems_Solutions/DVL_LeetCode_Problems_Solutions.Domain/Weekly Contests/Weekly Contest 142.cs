@@ -10,7 +10,8 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     {
         public static double[] SampleStats(int[] count)
         {
-            double min = -1, max = -1, mean, median = 0, mode = -1, sum = 0;
+            double min = -1, max = -1, mean, median = 0, mode = -1;
+            long sum = 0;
 
             int modeCount = 0, notZeroCount = 0;
             for (int i = 0; i < count.Length; i++)
@@ -28,7 +29,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     notZeroCount += count[i];
                 }
 
-            mean = sum / notZeroCount;
+            mean = (double)sum / notZeroCount;
             int k = 0, k1 = 0;
             while (k1 != count.Length)
             {

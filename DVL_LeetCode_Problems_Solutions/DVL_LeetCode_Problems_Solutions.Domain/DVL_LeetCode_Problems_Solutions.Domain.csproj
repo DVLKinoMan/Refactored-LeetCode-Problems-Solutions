@@ -57,6 +57,7 @@
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
+    <Compile Include="Easy\Middle of the Linked List.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />

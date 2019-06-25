@@ -1,14 +1,15 @@
 ﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Find in Mountain Array (Mine)
+        /// </summary>
+        /// <param name="target"></param>
+        /// <param name="mountainArr"></param>
+        /// <returns></returns>
         public static int FindInMountainArray(int target, MountainArray mountainArr)
         {
             int a = 0, b = mountainArr.Length() - 1;
@@ -16,7 +17,9 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             while (true)
             {
                 int curr = (a + b) / 2;
-                int left = mountainArr.Get(curr - 1), right = mountainArr.Get(curr + 1), currValue = mountainArr.Get(curr);
+                var (left, currValue, right) = (curr - 1 < 0 ? -1 : mountainArr.Get(curr - 1), 
+                                                mountainArr.Get(curr),
+                                                curr + 1 >= mountainArr.Length() ? mountainArr.Length() : mountainArr.Get(curr + 1));
                 if (currValue > left && currValue > right)
                 {
                     peek = curr;
@@ -32,12 +35,12 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             int res = FindInMountainArrayHelper(target, mountainArr, 0, peek);
             if (res != -1)
                 return res;
-            return FindInMountainArrayHelper(target, mountainArr, peek, mountainArr.Length(), false);
+            return FindInMountainArrayHelper(target, mountainArr, peek, mountainArr.Length() - 1, false);
         }
 
         private static int FindInMountainArrayHelper(int target, MountainArray mountainArr, int a, int b, bool asc = true)
         {
-            while (a < b)
+            while (a <= b)
             {
                 int curr = (a + b) / 2;
                 int get = mountainArr.Get(curr);

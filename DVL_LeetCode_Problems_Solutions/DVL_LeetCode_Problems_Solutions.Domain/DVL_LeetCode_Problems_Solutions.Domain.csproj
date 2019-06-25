@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
     <Compile Include="Classes\Interval.cs" />
+    <Compile Include="Classes\MountainArray.cs" />
     <Compile Include="Classes\Node.cs" />
     <Compile Include="Classes\TreeNode.cs" />
     <Compile Include="Easy\Add Binary.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />
+    <Compile Include="Hard\Find in Mountain Array.cs" />
     <Compile Include="Hard\Find Minimum in Rotated Sorted Array II.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
     <Compile Include="Hard\Insert Interval.cs" />

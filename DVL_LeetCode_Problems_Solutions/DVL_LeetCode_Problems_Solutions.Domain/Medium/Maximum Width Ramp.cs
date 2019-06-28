@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -16,10 +17,8 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             int prevMin = int.MaxValue, maxWidth = 0;
             foreach (var index in sortedIndexes)
             {
-                if (index - prevMin > maxWidth)
-                    maxWidth = index - prevMin;
-                if (prevMin > index)
-                    prevMin = index;
+                maxWidth = Math.Max(maxWidth, index - prevMin);
+                prevMin = Math.Min(prevMin, index);
             }
 
             return maxWidth;

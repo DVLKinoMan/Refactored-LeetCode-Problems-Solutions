@@ -98,6 +98,7 @@
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
+    <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Jump Game.cs" />
     <Compile Include="Medium\Knight Dialer.cs" />
     <Compile Include="Medium\Largest Number.cs" />

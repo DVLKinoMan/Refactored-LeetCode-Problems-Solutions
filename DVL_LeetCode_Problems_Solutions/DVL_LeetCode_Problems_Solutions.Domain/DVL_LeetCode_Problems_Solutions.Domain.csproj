@@ -120,6 +120,7 @@
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />
     <Compile Include="Medium\Maximum Length of Repeated Subarray.cs" />
     <Compile Include="Medium\Maximum Sum of Two Non-Overlapping Subarrays.cs" />
+    <Compile Include="Medium\Maximum Width Ramp.cs" />
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />

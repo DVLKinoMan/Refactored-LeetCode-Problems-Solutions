@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -54,19 +51,23 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Path In Zigzag Labelled Binary Tree (Mine)
+        /// </summary>
+        /// <param name="label"></param>
+        /// <returns></returns>
         public static IList<int> PathInZigZagTree(int label)
         {
             var list = new List<int>();
-
             int row = (int)Math.Floor(Math.Log(label, 2));
 
             list.Add(label);
             int curr = label;
             while (row != 0)
             {
-                int parentPos = (curr - (int)Math.Pow(2, row) + 1) % (int)Math.Pow(2, row - 1);
-                int num = (int)Math.Pow(2, row - 1);
-                curr = num + (row % 2 == 0 ? parentPos : (num - (parentPos + 1)));
+                int num = (int) Math.Pow(2, row);
+                int parentPos = (int)Math.Ceiling((curr - num + 1) / (double)2);
+                curr = num - parentPos;
                 list.Add(curr);
                 row--;
             }

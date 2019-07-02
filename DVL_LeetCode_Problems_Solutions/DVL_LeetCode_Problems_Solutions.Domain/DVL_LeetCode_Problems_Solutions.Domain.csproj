@@ -97,6 +97,7 @@
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
+    <Compile Include="Medium\Filling Bookcase Shelves.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />

@@ -1,36 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain.Medium
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Filling Bookcase Shelves (Not Mine)
+        /// </summary>
+        /// <param name="books"></param>
+        /// <param name="shelf_width"></param>
+        /// <returns></returns>
         public static int MinHeightShelves(int[][] books, int shelf_width)
         {
-            var booksList = books.OrderByDescending(b => b[1]).ToList();
-            int sumHeight = 0, maxHeightInShelf = 0, widthInShelf = 0;
-            while (booksList.Count != 0)
+            var dp = new int[books.Length + 1];
+            dp[0] = 0;
+
+            for (int i = 1; i <= books.Length; ++i)
             {
-                var book = booksList.First();
-                widthInShelf += book[0];
-                if (widthInShelf > shelf_width)
+                int width = books[i - 1][0];
+                int height = books[i - 1][1];
+                dp[i] = dp[i - 1] + height;
+                for (int j = i - 1; j > 0 && width + books[j - 1][0] <= shelf_width; --j)
                 {
-                    sumHeight += maxHeightInShelf;
-                    maxHeightInShelf = 0;
-                    widthInShelf = 0;
-                    continue;
+                    height = Math.Max(height, books[j - 1][1]);
+                    width += books[j - 1][0];
+                    dp[i] = Math.Min(dp[i], dp[j - 1] + height);
                 }
-
-                maxHeightInShelf = Math.Max(maxHeightInShelf, book[1]);
-                booksList.RemoveAt(0);
             }
-
-            sumHeight += maxHeightInShelf;
-
-            return sumHeight;
+            return dp[books.Length];
         }
     }
 }

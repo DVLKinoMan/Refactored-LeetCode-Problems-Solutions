@@ -152,6 +152,7 @@
     <Compile Include="Medium\Unique Paths II.cs" />
     <Compile Include="Medium\Unique Paths.cs" />
     <Compile Include="Medium\Valid Parenthesis String.cs" />
+    <Compile Include="Medium\Valid Square.cs" />
     <Compile Include="Medium\Video Stitching.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -153,6 +153,7 @@
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
+    <Compile Include="Medium\Sum of Subarray Minimums.cs" />
     <Compile Include="Medium\Unique Paths II.cs" />
     <Compile Include="Medium\Unique Paths.cs" />
     <Compile Include="Medium\Valid Parenthesis String.cs" />

@@ -1,9 +1,6 @@
 ﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -16,12 +13,24 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static string DefangIPaddr(string address) => address.Replace(".", "[.]");
 
+        /// <summary>
+        /// Corporate Flight Bookings (Not Mine)
+        /// </summary>
+        /// <param name="bookings"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static int[] CorpFlightBookings(int[][] bookings, int n)
         {
             int[] res = new int[n];
             foreach (var booking in bookings)
-                for (int i = booking[0] - 1; i < booking[1]; i++)
-                    res[i] += booking[2];
+            {
+                res[booking[0] - 1] += booking[2];
+                if (booking[1] < n)
+                    res[booking[1]] -= booking[2];
+            }
+
+            for (int i = 1; i < n; i++)
+                res[i] += res[i - 1];
 
             return res;
         }

@@ -20,7 +20,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             var s when string.IsNullOrEmpty(s) => throw new NotImplementedException("Expression was Null"),
             var s when s.StartsWith("!") => !ParseBoolExpr(expression.Substring(2, expression.Length - 3)),
             var s when s.StartsWith("&") => expression.Substring(2, expression.Length - 3).ParseBoolExprHelperSplitter().All(exp => ParseBoolExpr(exp)),
-            var s when s.StartsWith("|") => expression.Substring(2, expression.Length - 3).ParseBoolExprHelperSplitter().Any(exp => ParseBoolExpr(exp))
+            var s when s.StartsWith("|") => expression.Substring(2, expression.Length - 3).ParseBoolExprHelperSplitter().Any(exp => ParseBoolExpr(exp)),
                 _ => throw new NotImplementedException("First Character was Invalid")
         };
         //if (expression == "t")

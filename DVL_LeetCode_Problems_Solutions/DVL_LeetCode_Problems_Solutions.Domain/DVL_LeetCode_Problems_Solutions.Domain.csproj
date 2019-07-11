@@ -92,6 +92,7 @@
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Number of Submatrices That Sum to Target.cs" />
     <Compile Include="Hard\Parsing A Boolean Expression.cs" />
+    <Compile Include="Hard\Profitable Schemes.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />
     <Compile Include="Hard\Text Justification.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Filling Bookcase Shelves.cs" />
+    <Compile Include="Medium\Find and Replace Pattern.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />

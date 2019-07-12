@@ -47,5 +47,5 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 res = (res + dp[P, i]) % mod;
             return res;
         }
-    } }
+    }
 }

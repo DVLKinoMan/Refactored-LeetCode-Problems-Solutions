@@ -112,6 +112,7 @@
     <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Jump Game.cs" />
     <Compile Include="Medium\Knight Dialer.cs" />
+    <Compile Include="Medium\Kth Smallest Element in a Sorted Matrix.cs" />
     <Compile Include="Medium\Largest Number.cs" />
     <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />
     <Compile Include="Medium\Integer to Roman.cs" />

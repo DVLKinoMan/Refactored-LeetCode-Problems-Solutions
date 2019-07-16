@@ -12,20 +12,21 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         {
             int ns = req_skills.Length, np = people.Count;
             var map = new Dictionary<String, int>();
-            for (int i = 0; i < ns; ++i) map.Add(req_skills[i], i);
+            for (int i = 0; i < ns; ++i)
+                map.Add(req_skills[i], i);
             var suff = new List<List<int>>();//[1 << ns]
-            suff[0] = new List<int>();
+            suff.Add(new List<int>());
             for (int i = 0; i < np; ++i)
             {
                 int skill = 0;
                 foreach (String s in people[i]) skill |= (1 << map[s]);
                 for (int prev = 0; prev < suff.Count; ++prev)
                 {
-                    if (suff[prev] == null) continue;
+                    if (prev >= suff.Count()) continue;
                     int comb = prev | skill;
-                    if (suff[comb] == null || suff[prev].Count + 1 < suff[comb].Count)
+                    if (comb < suff.Count() || suff[prev].Count + 1 < suff[comb].Count)
                     {
-                        suff[comb] = suff[prev];
+                        suff[comb] = new List<int>(suff[prev]);
                         suff[comb].Add(i);
                     }
                 }

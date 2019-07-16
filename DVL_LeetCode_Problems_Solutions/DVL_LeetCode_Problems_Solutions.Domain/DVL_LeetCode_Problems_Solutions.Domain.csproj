@@ -93,6 +93,7 @@
     <Compile Include="Hard\Number of Submatrices That Sum to Target.cs" />
     <Compile Include="Hard\Parsing A Boolean Expression.cs" />
     <Compile Include="Hard\Profitable Schemes.cs" />
+    <Compile Include="Hard\Smallest Sufficient Team.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />
     <Compile Include="Hard\Text Justification.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />

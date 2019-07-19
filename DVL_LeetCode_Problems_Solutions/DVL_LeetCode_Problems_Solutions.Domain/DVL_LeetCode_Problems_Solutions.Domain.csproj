@@ -72,6 +72,7 @@
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
+    <Compile Include="Easy\Rotate Array.cs" />
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Subdomain Visit Count.cs" />
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />

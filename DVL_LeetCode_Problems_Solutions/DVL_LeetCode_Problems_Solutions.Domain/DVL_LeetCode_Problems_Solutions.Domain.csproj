@@ -79,6 +79,7 @@
     <Compile Include="Easy\Toeplitz Matrix.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />
+    <Compile Include="Easy\Verifying an Alien Dictionary.cs" />
     <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />

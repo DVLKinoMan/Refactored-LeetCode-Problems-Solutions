@@ -65,35 +65,29 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Minimum Cost Tree From Leaf Values (Not Mine)
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int MctFromLeafValues(int[] arr)
         {
-            var list = arr.ToList();
-            int sum = 0;
-            while (list.Count > 1)
+            int res = 0;
+            var stack = new Stack<int>();
+            stack.Push(int.MaxValue);
+            foreach (var a in arr)
             {
-                var newList = new List<int>();
-                list.Sort();
-                if (list.Count % 2 == 1)
+                while (stack.Peek() <= a)
                 {
-                    newList.Add(list[list.Count - 1]);
-                    list.RemoveAt(list.Count - 1);
+                    int mid = stack.Pop();
+                    res += mid * Math.Min(stack.Peek(), a);
                 }
-
-                int len = list.Count / 2;
-                for (int i = 0; i < len; i++)
-                {
-                    int num = list[i] * list[list.Count - i - 1];
-                    sum += num;
-                    newList.Add(list[list.Count - i - 1]);
-                }
-
-                list = newList;
+                stack.Push(a);
             }
+            while (stack.Count > 2)
+                res += stack.Pop() * stack.Peek();
 
-            if (list.Count == 1)
-                sum += list[0];
-
-            return sum;
+            return res;
         }
     }
 }

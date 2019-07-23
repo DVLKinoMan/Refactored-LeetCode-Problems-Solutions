@@ -29,11 +29,10 @@ namespace DVL_LC_Problems.Tests
 
             var arr = ShortestAlternatingPaths(3,
 new int[][]{
-    new int[]{0, 1 },
-    new int[]{0, 2}
+    new int[]{0, 1 }
 },
 new int[][]{
-new int[]{1, 0 } });
+new int[]{1, 2 } });
 
             var expected = new int[] { 0, 1, 2, 3, 7 };
 

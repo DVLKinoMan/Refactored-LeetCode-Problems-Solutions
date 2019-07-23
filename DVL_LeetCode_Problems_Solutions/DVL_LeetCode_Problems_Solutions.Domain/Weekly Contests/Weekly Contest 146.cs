@@ -32,7 +32,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Shortest Path with Alternating Colors
+        /// Shortest Path with Alternating Colors (Mine)
         /// </summary>
         /// <param name="n"></param>
         /// <param name="red_edges"></param>
@@ -62,11 +62,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             {
                 var currNode = openedList[0];
                 var nodes = currNode.redsTrun && red_edgesDic.ContainsKey(currNode.number) ? red_edgesDic[currNode.number] :
-                    (blue_edgesDic.ContainsKey(currNode.number) ? blue_edgesDic[currNode.number] : new List<int>());
+                    (!currNode.redsTrun && blue_edgesDic.ContainsKey(currNode.number) ? blue_edgesDic[currNode.number] : new List<int>());
                 foreach (var node in nodes)
                 {
                     (int number, bool redsTrun, int distance) node2 = (node, !currNode.redsTrun, currNode.distance + 1);
-                    if (node2.distance < answer[node2.number] || currNode.distance == 0)
+                    if (node2.distance < answer[node2.number] || answer[node2.number] == 0)
                         answer[node2.number] = node2.distance;
                     if (!closedList.Any(d=>d.number == node2.number && d.redsTrun == node2.redsTrun))
                         openedList.Add(node2);

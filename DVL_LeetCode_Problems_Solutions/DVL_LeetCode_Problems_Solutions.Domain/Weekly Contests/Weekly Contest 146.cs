@@ -31,6 +31,13 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }).Sum();
         }
 
+        /// <summary>
+        /// Shortest Path with Alternating Colors
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="red_edges"></param>
+        /// <param name="blue_edges"></param>
+        /// <returns></returns>
         public static int[] ShortestAlternatingPaths(int n, int[][] red_edges, int[][] blue_edges)
         {
             var res = new int[n];
@@ -49,20 +56,44 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 else
                     blue_edgesDic.Add(blue_edge[0], new List<int>() {blue_edge[1]});
 
-            int currNode = 0, height = 0;
-            bool redsTurn = true;
-            //var listNodes = blue_edgesDic.Where(d=>d.Key == 0).Select(d=>d.)
-            while (true)
-            {
-                if (redsTurn && !red_edgesDic.ContainsKey(currNode))
-                    break;
-                else if (!redsTurn && !blue_edgesDic.ContainsKey(currNode))
-                    break;
+            BFS(0, res, red_edgesDic, blue_edgesDic);
+            BFS(0, res, red_edgesDic, blue_edgesDic, false);
 
-                height++;
-            }
+            for(int i=1;i<res.Length;i++)
+                if (res[i] == 0)
+                    res[i] = -1;
 
             return res;
+        }
+
+        private static void BFS(int currNode, int[] answer, Dictionary<int, List<int>> red_edgesDic,
+            Dictionary<int, List<int>> blue_edgesDic, bool redsTurn = true)
+        {
+            if(redsTurn)
+            {
+                if (!red_edgesDic.ContainsKey(currNode))
+                    return;
+
+                foreach (var node in red_edgesDic[currNode])
+                    if (node != 0 && (answer[node] > answer[currNode] + 1 || answer[node] == 0))
+                    {
+                        answer[node] = answer[currNode] + 1;
+                        BFS(node, answer, red_edgesDic, blue_edgesDic, false);
+                    }
+            }
+            else
+            {
+
+                if (!blue_edgesDic.ContainsKey(currNode))
+                    return;
+
+                foreach (var node in blue_edgesDic[currNode])
+                    if (node != 0 && (answer[node] > answer[currNode] + 1 || answer[node] == 0))
+                    {
+                        answer[node] = answer[currNode] + 1;
+                        BFS(node, answer, red_edgesDic, blue_edgesDic);
+                    }
+            }
         }
 
         /// <summary>

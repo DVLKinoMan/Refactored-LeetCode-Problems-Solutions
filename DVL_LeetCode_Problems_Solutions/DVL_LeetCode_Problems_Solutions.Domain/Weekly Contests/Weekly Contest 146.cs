@@ -40,7 +40,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int[] ShortestAlternatingPaths(int n, int[][] red_edges, int[][] blue_edges)
         {
-            var res = new int[n];
+            var answer = new int[n];
             var red_edgesDic = new Dictionary<int, List<int>>();
             var blue_edgesDic = new Dictionary<int, List<int>>();
 
@@ -56,44 +56,30 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 else
                     blue_edgesDic.Add(blue_edge[0], new List<int>() {blue_edge[1]});
 
-            BFS(0, res, red_edgesDic, blue_edgesDic);
-            BFS(0, res, red_edgesDic, blue_edgesDic, false);
-
-            for(int i=1;i<res.Length;i++)
-                if (res[i] == 0)
-                    res[i] = -1;
-
-            return res;
-        }
-
-        private static void BFS(int currNode, int[] answer, Dictionary<int, List<int>> red_edgesDic,
-            Dictionary<int, List<int>> blue_edgesDic, bool redsTurn = true)
-        {
-            if(redsTurn)
+            var openedList = new List<(int number, bool redsTrun, int distance)> { (0,true, 0), (0, false, 0) };
+            var closedList = new List<(int number, bool redsTrun, int distance)>();
+            while (openedList.Count != 0)
             {
-                if (!red_edgesDic.ContainsKey(currNode))
-                    return;
-
-                foreach (var node in red_edgesDic[currNode])
-                    if (node != 0 && (answer[node] > answer[currNode] + 1 || answer[node] == 0))
-                    {
-                        answer[node] = answer[currNode] + 1;
-                        BFS(node, answer, red_edgesDic, blue_edgesDic, false);
-                    }
+                var currNode = openedList[0];
+                var nodes = currNode.redsTrun && red_edgesDic.ContainsKey(currNode.number) ? red_edgesDic[currNode.number] :
+                    (blue_edgesDic.ContainsKey(currNode.number) ? blue_edgesDic[currNode.number] : new List<int>());
+                foreach (var node in nodes)
+                {
+                    (int number, bool redsTrun, int distance) node2 = (node, !currNode.redsTrun, currNode.distance + 1);
+                    if (node2.distance < answer[node2.number] || currNode.distance == 0)
+                        answer[node2.number] = node2.distance;
+                    if (!closedList.Any(d=>d.number == node2.number && d.redsTrun == node2.redsTrun))
+                        openedList.Add(node2);
+                }
+                openedList.RemoveAt(0);
+                closedList.Add(currNode);
             }
-            else
-            {
 
-                if (!blue_edgesDic.ContainsKey(currNode))
-                    return;
+            for(int i=1;i<answer.Length;i++)
+                if (answer[i] == 0)
+                    answer[i] = -1;
 
-                foreach (var node in blue_edgesDic[currNode])
-                    if (node != 0 && (answer[node] > answer[currNode] + 1 || answer[node] == 0))
-                    {
-                        answer[node] = answer[currNode] + 1;
-                        BFS(node, answer, red_edgesDic, blue_edgesDic);
-                    }
-            }
+            return answer;
         }
 
         /// <summary>

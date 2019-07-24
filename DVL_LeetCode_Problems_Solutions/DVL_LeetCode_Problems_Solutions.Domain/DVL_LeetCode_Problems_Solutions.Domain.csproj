@@ -157,6 +157,7 @@
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />
     <Compile Include="Medium\Rectangle Area.cs" />
     <Compile Include="Medium\Reorder List.cs" />
+    <Compile Include="Medium\Reordered Power of 2.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
     <Compile Include="Medium\Rotate List.cs" />
     <Compile Include="Medium\Satisfiability of Equality Equations.cs" />

@@ -111,23 +111,30 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res.ToString();
         }
 
+        /// <summary>
+        /// Largest 1-Bordered Square (Not Mine)
+        /// </summary>
+        /// <param name="grid"></param>
+        /// <returns></returns>
         public static int Largest1BorderedSquare(int[][] grid)
         {
-            //var dic1 = new Dictionary<(int, int), int>();
-            //var dic2 = new Dictionary<(int, int), int>();
-            //for (int i = 0; i < grid.Length; i++)
-            //{
-            //    for (int j = 0; j < grid[0].Length; j++)
-            //    {
-            //        if (grid[i][j] == 1)
-            //        {
-            //            if (dic1.ContainsKey((i, j)))
-            //                dic1[(i, j)]++;
-            //            else dic1.Add((i, j), 1);
-            //        }
-            //    }
-            //}
-            return 1;
+            int m = grid.Length, n = grid[0].Length;
+            int[,] left = new int[m, n], top = new int[m, n];
+            for (int i = 0; i < m; i++)
+            for (int j = 0; j < n; j++)
+                if (grid[i][j] > 0)
+                {
+                    left[i, j] = j > 0 ? left[i, j - 1] + 1 : 1;
+                    top[i, j] = i > 0 ? top[i - 1, j] + 1 : 1;
+                }
+
+            for (int len = Math.Min(m, n); len > 0; len--)
+            for (int i = 0; i <= m - len; i++)
+            for (int j = 0; j <= n - len; j++)
+                if (left[i, j + len - 1] >= len && top[i + len - 1, j] >= len &&
+                    left[i + len - 1, j + len - 1] >= len && top[i + len - 1, j + len - 1] >= len)
+                    return len * len;
+            return 0;
         }
     }
 

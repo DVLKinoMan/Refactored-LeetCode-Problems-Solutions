@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shortest Path with Alternating Colors.cs" />
     <Compile Include="Shortest Subarray with Sum at Least K Tester.cs" />
+    <Compile Include="StoneGameIITester.cs" />
     <Compile Include="Sum of Even Numbers After Queries.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -67,6 +67,7 @@
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
+    <Compile Include="Easy\Maximum Depth of Binary Tree.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Middle of the Linked List.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />

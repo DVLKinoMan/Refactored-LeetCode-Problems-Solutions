@@ -51,8 +51,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int LongestDecomposition(string text)
         {
-            int count = 0;
-            int index = 0, len = 1, divlen = text.Length / 2;
+            int count = 0, index = 0, len = 1, divlen = text.Length / 2;
             bool lastElement = false;
             while (index + len - 1 < divlen)
             {

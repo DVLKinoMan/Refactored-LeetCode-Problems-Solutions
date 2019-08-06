@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Broken Calculator.cs" />
     <Compile Include="Knight Dialer.cs" />
+    <Compile Include="Longest Chunked Palindrome Decomposition Tester.cs" />
     <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shortest Path with Alternating Colors.cs" />

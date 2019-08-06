@@ -44,6 +44,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return Math.Min(count1, count2);
         }
 
+        /// <summary>
+        /// Longest Chunked Palindrome Decomposition (Mine - did it after contest, but i had little mistake in contest and did not work becuase of that)
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public static int LongestDecomposition(string text)
         {
             int count = 0;
@@ -53,9 +58,9 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             {
                 if (text.Substring(index, len) == text.Substring(text.Length - index - len, len))
                 {
-                    count+=2;
-                    len = 1;
+                    count += 2;
                     index += len;
+                    len = 1;
                     lastElement = true;
                 }
                 else

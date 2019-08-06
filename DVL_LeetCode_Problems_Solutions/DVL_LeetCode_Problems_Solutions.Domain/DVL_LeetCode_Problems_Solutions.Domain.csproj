@@ -173,6 +173,7 @@
     <Compile Include="Medium\Search a 2D Matrix.cs" />
     <Compile Include="Medium\Set Matrix Zeroes.cs" />
     <Compile Include="Medium\Smallest Range II.cs" />
+    <Compile Include="Medium\Snapshot Array.cs" />
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />

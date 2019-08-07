@@ -154,6 +154,7 @@
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />
     <Compile Include="Medium\Minimum Path Sum.cs" />
+    <Compile Include="Medium\Most Frequent Subtree Sum.cs" />
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
     <Compile Include="Medium\Next Greater Node In Linked List.cs" />

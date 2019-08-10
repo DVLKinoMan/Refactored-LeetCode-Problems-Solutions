@@ -64,6 +64,7 @@
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Find the Town Judge.cs" />
+    <Compile Include="Easy\House Robber.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />

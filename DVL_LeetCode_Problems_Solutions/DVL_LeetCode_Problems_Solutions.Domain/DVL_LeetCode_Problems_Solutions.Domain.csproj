@@ -150,6 +150,7 @@
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Longest Common Subsequence.cs" />
+    <Compile Include="Medium\Longest Turbulent Subarray.cs" />
     <Compile Include="Medium\Longest Well-Performing Interval.cs" />
     <Compile Include="Medium\Lowest Common Ancestor of a Binary Tree.cs" />
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />

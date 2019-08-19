@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
 {
@@ -73,54 +71,91 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
             return level;
         }
 
+        ///// <summary>
+        ///// As Far from Land as Possible (Time Limit exceeded)
+        ///// </summary>
+        ///// <param name="grid"></param>
+        ///// <returns></returns>
+        //public static int MaxDistance(int[][] grid)
+        //{
+        //    int m = grid.Length, n = grid[0].Length;
+        //    int[,] distances = new int[m, n];
+        //    for (int i = 0; i < m; i++)
+        //    {
+        //        for (int j = 0; j < n; j++)
+        //        {
+        //            distances[i, j] = 1000;
+        //        }
+        //    }
+        //    for (int i = 0; i < m; i++)
+        //    {
+        //        for (int j = 0; j < n; j++)
+        //        {
+        //            if (grid[i][j] == 1)
+        //            {
+        //                for (int i2 = 0; i2 < m; i2++)
+        //                {
+        //                    for (int j2 = 0; j2 < n; j2++)
+        //                    {
+        //                        if (grid[i2][j2] == 0)
+        //                        {
+        //                            distances[i2, j2] = Math.Min(distances[i2, j2], distance(i, j, i2, j2));
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    int max = -1;
+        //    for (int i = 0; i < m; i++)
+        //        for (int j = 0; j < n; j++)
+        //            if (distances[i, j] != 1000 && max < distances[i, j])
+        //                max = distances[i, j];
+
+        //    int distance(int x, int y, int x1, int y1)
+        //    {
+        //        return Math.Abs(x - x1) + Math.Abs(y - y1);
+        //    }
+
+        //    return max;
+        //}
+
         /// <summary>
-        /// As Far from Land as Possible
+        /// As Far from Land as Possible  (Not Mine)
         /// </summary>
         /// <param name="grid"></param>
+        /// <param name="max"></param>
         /// <returns></returns>
-        public static int MaxDistance(int[][] grid)
+        public static int MaxDistance(int[][] grid, int max = -1)
         {
-            int m = grid.Length, n = grid[0].Length;
-            int[,] distances = new int[m, n];
-            for (int i = 0; i < m; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    distances[i, j] = 1000;
-                }
-            }
-            for (int i = 0; i < m; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    if (grid[i][j] == 1)
-                    {
-                        for (int i2 = 0; i2 < m; i2++)
-                        {
-                            for (int j2 = 0; j2 < n; j2++)
-                            {
-                                if (grid[i2][j2] == 0)
-                                {
-                                    distances[i2, j2] = Math.Min(distances[i2, j2], distance(i, j, i2, j2));
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            for (int i = 0; i < grid.Length; i++)
+            for (int j = 0; j < grid[0].Length; j++)
+                if (grid[i][j] == 1)
+                    MaxDistanceHelper(grid, i, j, 1, true);
 
-            int max = -1;
-            for (int i = 0; i < m; i++)
-                for (int j = 0; j < n; j++)
-                    if (distances[i, j] != 1000 && max < distances[i, j])
-                        max = distances[i, j];
-
-            int distance(int x, int y, int x1, int y1)
-            {
-                return Math.Abs(x - x1) + Math.Abs(y - y1);
-            }
+            for (int i = 0; i < grid.Length; i++)
+            for (int j = 0; j < grid[0].Length; j++)
+                if (grid[i][j] > 1)
+                    max = Math.Max(max, grid[i][j] - 1);
 
             return max;
+        }
+
+        private static void MaxDistanceHelper(int[][] grid, int i, int j, int distance, bool land = false)
+        {
+            if (!land)
+            {
+                if (i >= grid.Length || j >= grid[0].Length || i < 0 || j < 0 ||
+                    (grid[i][j] != 0 && grid[i][j] <= distance))
+                    return;
+                grid[i][j] = distance;
+            }
+
+            MaxDistanceHelper(grid, i + 1, j, distance + 1);
+            MaxDistanceHelper(grid, i, j + 1, distance + 1);
+            MaxDistanceHelper(grid, i, j - 1, distance + 1);
+            MaxDistanceHelper(grid, i - 1, j, distance + 1);
         }
     }
 }

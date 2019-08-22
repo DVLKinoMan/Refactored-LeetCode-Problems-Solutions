@@ -60,6 +60,7 @@
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
+    <Compile Include="Easy\Excel Sheet Column Number.cs" />
     <Compile Include="Easy\Factorial Trailing Zeroes.cs" />
     <Compile Include="Easy\Fibonacci Number.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />

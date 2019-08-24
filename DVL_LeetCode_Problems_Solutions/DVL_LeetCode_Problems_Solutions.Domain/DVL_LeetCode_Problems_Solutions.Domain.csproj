@@ -66,6 +66,7 @@
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Find the Town Judge.cs" />
     <Compile Include="Easy\House Robber.cs" />
+    <Compile Include="Easy\Intersection of Two Arrays.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />

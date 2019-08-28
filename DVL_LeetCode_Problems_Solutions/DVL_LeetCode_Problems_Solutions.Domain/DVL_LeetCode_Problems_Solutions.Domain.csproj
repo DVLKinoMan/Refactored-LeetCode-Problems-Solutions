@@ -182,6 +182,7 @@
     <Compile Include="Medium\Rabbits in Forest.cs" />
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />
     <Compile Include="Medium\Rectangle Area.cs" />
+    <Compile Include="Medium\Remove Zero Sum Consecutive Nodes from Linked List.cs" />
     <Compile Include="Medium\Reorder List.cs" />
     <Compile Include="Medium\Reordered Power of 2.cs" />
     <Compile Include="Medium\Rotate Image.cs" />

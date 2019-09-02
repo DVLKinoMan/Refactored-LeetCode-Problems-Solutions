@@ -72,35 +72,50 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
 
         public static IList<bool> CanMakePaliQueries(string s, int[][] queries)
         {
-            bool[] answer = new bool[queries.Length];
+            //bool[] answer = new bool[queries.Length];
+            //int[] diffCounts = new int[s.Length];
 
-            for (int i = 0; i < queries.Length; i++)
-                answer[i] = CanWeMakePalindrome(s.Substring(queries[i][0], queries[i][1] - queries[i][0] + 1),
-                    queries[i][2]);
+            //for (int len = 1; len <= s.Length; len++)
+            //    diffCounts[len-1] = CountDiffCounts(s.Substring(0, len));
 
-            return answer;
+            //for (int i = 0; i < queries.Length; i++)
+            //    answer[i] = CanWeMakePalindrome( diffCounts[queries[i][0]],queries[i][2]);
 
-            bool CanWeMakePalindrome(string str, int k)
+            //return answer;
+
+            //int CountDiffCounts(string str)
+            //{
+            //    int diffCount = 0;
+            //    for (int i = 0; i < str.Length / 2; i++)
+            //        if (str[i] != str[str.Length - i - 1])
+            //            diffCount++;
+
+            //    return diffCount;
+            //}
+
+            //bool CanWeMakePalindrome(int diffCount, int len, int k)
+            //{
+            //    diffCount = diffCount / 2 + diffCount % 2;
+
+            //    return diffCount <= k || (len % 2 == 1 && diffCount - 1 <= k);
+            //}
+            List<bool> ans = new List<bool>();
+            int[][] cnt = new int[s.Length + 1][];
+            for (int i = 0; i < s.Length; ++i)
             {
-                int diffCount = 0;
-                var dic = new Dictionary<char, int>();
-                for (int i = 0; i < str.Length; i++)
-                    if (dic.ContainsKey(str[i]))
-                    {
-                        dic[str[i]]++;
-                        if (dic[str[i]] % 2 == 0)
-                            diffCount--;
-                        else diffCount++;
-                    }
-                    else
-                    {
-                        dic.Add(str[i], 1);
-                        diffCount++;
-                    }
-                diffCount = diffCount / 2 + diffCount % 2;
-
-                return diffCount <= k || (str.Length % 2 == 1 && diffCount - 1 <= k);
+                cnt[i + 1] = cnt[i].Clone(); // copy previous sum.
+                ++cnt[i + 1][s.charAt(i) - 'a'];
             }
+            for (int[] q : queries)
+            {
+                int sum = 0;
+                for (int i = 0; i < 26; ++i)
+                {
+                    sum += (cnt[q[1] + 1][i] - cnt[q[0]][i]) % 2;
+                }
+                ans.add(sum / 2 <= q[2]);
+            }
+            return ans;
         }
 
         public static IList<int> FindNumOfValidWords(string[] words, string[] puzzles)

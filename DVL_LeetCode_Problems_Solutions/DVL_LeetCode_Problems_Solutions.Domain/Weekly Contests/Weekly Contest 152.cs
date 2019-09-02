@@ -70,6 +70,12 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
             return points;
         }
 
+        /// <summary>
+        /// Can Make Palindrome from Substring (Allmost Mine)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="queries"></param>
+        /// <returns></returns>
         public static IList<bool> CanMakePaliQueries(string s, int[][] queries)
         {
             //bool[] answer = new bool[queries.Length];
@@ -99,23 +105,26 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
 
             //    return diffCount <= k || (len % 2 == 1 && diffCount - 1 <= k);
             //}
-            List<bool> ans = new List<bool>();
-            int[][] cnt = new int[s.Length + 1][];
-            for (int i = 0; i < s.Length; ++i)
+            bool[] answers = new bool[queries.Length];
+            int[][] matrix = new int[s.Length + 1][];
+            matrix[0] = new int[26];
+            for (int i = 0; i < s.Length; i++)
             {
-                cnt[i + 1] = cnt[i].Clone(); // copy previous sum.
-                ++cnt[i + 1][s.charAt(i) - 'a'];
+                matrix[i + 1] = matrix[i].ToArray();
+                matrix[i + 1][s[i] - 'a']++;
             }
-            for (int[] q : queries)
+
+            for (int i = 0; i < queries.Length; i++)
             {
-                int sum = 0;
-                for (int i = 0; i < 26; ++i)
-                {
-                    sum += (cnt[q[1] + 1][i] - cnt[q[0]][i]) % 2;
-                }
-                ans.add(sum / 2 <= q[2]);
+                int stIndex = queries[i][0], endIndex = queries[i][1], k = queries[i][2] , diffCount = 0;
+                for (int j = 0; j < 26; j++)
+                    if ((matrix[endIndex + 1][j] - matrix[stIndex][j]) % 2 == 1)
+                        diffCount++;
+                diffCount = diffCount / 2 + diffCount % 2;
+                answers[i] = diffCount <= k || ((endIndex - stIndex + 1) % 2 == 1 && diffCount - 1 <= k);
             }
-            return ans;
+
+            return answers;
         }
 
         public static IList<int> FindNumOfValidWords(string[] words, string[] puzzles)

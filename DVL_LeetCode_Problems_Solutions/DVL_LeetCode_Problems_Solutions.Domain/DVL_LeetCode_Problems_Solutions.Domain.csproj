@@ -97,6 +97,7 @@
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />
     <Compile Include="Easy\Verifying an Alien Dictionary.cs" />
+    <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />
     <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Medium\132 Pattern.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />
+    <Compile Include="Medium\Binary Tree Inorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Preorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Pruning.cs" />
     <Compile Include="Medium\Boats to Save People.cs" />

@@ -127,28 +127,72 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Weekly_Contests
             return answers;
         }
 
+        //public static IList<int> FindNumOfValidWords(string[] words, string[] puzzles)
+        //{
+        //    int[] answer = new int[puzzles.Length];
+
+        //    var list = new List<HashSet<char>>();
+        //    foreach (var word in words)
+        //        list.Add(new HashSet<char>(word));
+
+        //    for (int i = 0; i < puzzles.Length; i++)
+        //        answer[i] = ValidWordNumber(puzzles[i]);
+
+        //    return answer;
+
+        //    int ValidWordNumber(string puzzle)
+        //    {
+        //        int count = 0;
+        //        foreach (var set in list)
+        //            if(set.Contains(puzzle[0]) && set.All(ch=>puzzle.Contains(ch)))
+        //                count++;
+
+        //        return count;
+        //    }
+        //}
+
+        /// <summary>
+        /// Number of Valid Words for Each Puzzle (Not Mine)
+        /// </summary>
+        /// <param name="words"></param>
+        /// <param name="puzzles"></param>
+        /// <returns></returns>
         public static IList<int> FindNumOfValidWords(string[] words, string[] puzzles)
         {
-            int[] answer = new int[puzzles.Length];
+            var result = new List<int>();
+            var wordSets = new Dictionary<int, int>();
 
-            var list = new List<HashSet<char>>();
-            foreach (var word in words)
-                list.Add(new HashSet<char>(word));
-
-            for (int i = 0; i < puzzles.Length; i++)
-                answer[i] = ValidWordNumber(puzzles[i]);
-
-            return answer;
-
-            int ValidWordNumber(string puzzle)
+            // Encode word of 26 chars in 31 bit (signed Int)
+            foreach (string word in words)
             {
-                int count = 0;
-                foreach (var set in list)
-                    if(set.Contains(puzzle[0]) && set.All(ch=>puzzle.Contains(ch)))
-                        count++;
+                int bits = 0;
+                foreach (char c in word)
+                    bits |= 1 << (c - 'a');
 
-                return count;
+                if (wordSets.ContainsKey(bits))
+                    wordSets[bits]++;
+                else
+                    wordSets[bits] = 1;
             }
+
+            foreach (string puzzle in puzzles)
+            {
+                int bits = 0;
+                int firstCharBitSet = 1 << (puzzle[0] - 'a');
+                foreach (char c in puzzle)
+                    bits |= 1 << (c - 'a');
+
+                int count = 0;
+                // Decrement pattern (not all chars are mandatory) 
+                // and do 'and' with bits to make sure only bits in puzzle are set
+                for (int b = bits; b > 0; b = --b & bits)
+                    if ((b & firstCharBitSet) != 0 && wordSets.ContainsKey(b))
+                        count += wordSets[b];
+
+                result.Add(count);
+            }
+
+            return result;
         }
 
     }

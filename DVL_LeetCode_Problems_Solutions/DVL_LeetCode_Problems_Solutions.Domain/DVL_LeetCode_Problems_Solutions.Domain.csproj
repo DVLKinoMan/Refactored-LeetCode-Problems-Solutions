@@ -143,6 +143,7 @@
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Jump Game.cs" />
+    <Compile Include="Medium\K Closest Points to Origin.cs" />
     <Compile Include="Medium\Knight Dialer.cs" />
     <Compile Include="Medium\Kth Smallest Element in a Sorted Matrix.cs" />
     <Compile Include="Medium\Largest Number.cs" />

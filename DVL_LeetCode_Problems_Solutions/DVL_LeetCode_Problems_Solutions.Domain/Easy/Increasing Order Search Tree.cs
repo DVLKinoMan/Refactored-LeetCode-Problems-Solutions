@@ -1,15 +1,15 @@
 ﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
-        //todo???
+        /// <summary>
+        /// Increasing Order Search Tree (Mine)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="parent"></param>
+        /// <returns></returns>
         public static TreeNode IncreasingBST(TreeNode root, TreeNode parent = null)
         {
             TreeNode node;
@@ -20,7 +20,16 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             if (root.right == null)
                 root.right = parent ?? root.right;
-            else root.right = IncreasingBST(root.right);
+            else
+            {
+                root.right = IncreasingBST(root.right);
+                var currNode = root.right;
+                while (currNode.right != null)
+                    currNode = currNode.right;
+
+                if (parent != null)
+                    currNode.right = parent;
+            }
 
             root.left = null;
 

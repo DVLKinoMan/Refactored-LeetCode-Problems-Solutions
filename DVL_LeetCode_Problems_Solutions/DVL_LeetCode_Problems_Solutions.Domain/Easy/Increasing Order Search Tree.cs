@@ -35,5 +35,21 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return node;
         }
+
+        /// <summary>
+        /// Increasing Order Search Tree (Not mine. Same idea but better)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="parent"></param>
+        /// <returns></returns>
+        public static TreeNode IncreasingBST2(TreeNode root, TreeNode parent = null)
+        {
+            if (root == null)
+                return parent;
+            var node = IncreasingBST2(root.left, root);
+            root.left = null;
+            root.right = IncreasingBST2(root.right, parent);
+            return node;
+        }
     }
 }

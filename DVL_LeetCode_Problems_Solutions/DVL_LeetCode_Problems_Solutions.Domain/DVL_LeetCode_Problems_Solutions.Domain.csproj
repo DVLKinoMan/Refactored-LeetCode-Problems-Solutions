@@ -84,6 +84,7 @@
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
+    <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />

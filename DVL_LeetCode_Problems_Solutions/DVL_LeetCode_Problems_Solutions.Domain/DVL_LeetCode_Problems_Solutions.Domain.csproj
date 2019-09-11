@@ -55,6 +55,7 @@
     <Compile Include="Easy\Array Partition I.cs" />
     <Compile Include="Easy\Balanced Binary Tree.cs" />
     <Compile Include="Easy\Binary Number with Alternating Bits.cs" />
+    <Compile Include="Easy\Binary Prefix Divisible By 5.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />

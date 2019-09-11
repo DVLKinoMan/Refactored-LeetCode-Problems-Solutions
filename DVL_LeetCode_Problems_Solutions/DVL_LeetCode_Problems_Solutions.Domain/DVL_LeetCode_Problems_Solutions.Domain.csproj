@@ -92,6 +92,7 @@
     <Compile Include="Easy\Repeated Substring Pattern.cs" />
     <Compile Include="Easy\Rotate Array.cs" />
     <Compile Include="Easy\Same Tree.cs" />
+    <Compile Include="Easy\Shortest Distance to a Character.cs" />
     <Compile Include="Easy\Sort Array By Parity.cs" />
     <Compile Include="Easy\Student Attendance Record I.cs" />
     <Compile Include="Easy\Subdomain Visit Count.cs" />

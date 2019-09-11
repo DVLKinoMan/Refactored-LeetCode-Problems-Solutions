@@ -1,21 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Binary Prefix Divisible By 5 (Mine)
+        /// </summary>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public static IList<bool> PrefixesDivBy5(int[] A)
         {
-            var str = new StringBuilder();
             bool[] answers = new bool[A.Length];
+
+            int mod = 0;
             for (int i = 0; i < A.Length; i++)
             {
-                str.Append(A[i]);
-                answers[i] = int.Parse(Convert.ToString(int.Parse(str.ToString()), 10)) % 5 == 0;
+                mod = (mod * 2 + A[i]) % 5;
+                answers[i] = mod == 0;
             }
 
             return answers;

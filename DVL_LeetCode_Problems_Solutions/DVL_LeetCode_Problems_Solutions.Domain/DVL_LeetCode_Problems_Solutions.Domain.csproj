@@ -130,6 +130,7 @@
     <Compile Include="Hard\Trapping Rain Water.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\132 Pattern.cs" />
+    <Compile Include="Medium\4Sum II.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />
     <Compile Include="Medium\Binary Tree Inorder Traversal.cs" />

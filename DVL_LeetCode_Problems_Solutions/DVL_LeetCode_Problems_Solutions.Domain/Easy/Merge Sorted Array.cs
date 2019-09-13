@@ -11,7 +11,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <param name="m"></param>
         /// <param name="nums2"></param>
         /// <param name="n"></param>
-        public void Merge(int[] nums1, int m, int[] nums2, int n)
+        public static void Merge(int[] nums1, int m, int[] nums2, int n)
         {
             var res = new List<int>();
             int i = 0, j = 0;

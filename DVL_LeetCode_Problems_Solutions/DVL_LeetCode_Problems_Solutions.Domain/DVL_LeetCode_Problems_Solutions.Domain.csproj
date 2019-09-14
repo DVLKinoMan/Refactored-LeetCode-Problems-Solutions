@@ -118,6 +118,7 @@
     <Compile Include="Hard\Largest Rectangle in Histogram.cs" />
     <Compile Include="Hard\Last Substring in Lexicographical Order.cs" />
     <Compile Include="Hard\Longest Duplicate Substring.cs" />
+    <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />

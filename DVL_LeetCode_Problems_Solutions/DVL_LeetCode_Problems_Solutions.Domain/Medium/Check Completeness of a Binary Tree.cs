@@ -1,44 +1,53 @@
 ﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
-using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
         /// <summary>
-        /// Check Completeness of a Binary Tree (Not working)
+        /// Check Completeness of a Binary Tree (Mine)
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
         public static bool IsCompleteTree(TreeNode root)
         {
-            (bool, int depth) depth(TreeNode node)
+            if (root == null)
+                return true;
+
+            //List of last level node depths
+            var depths = new List<int>();
+
+            void dfs(TreeNode node, int depth)
             {
                 if (node.left == null && node.right == null)
-                    return (true, 0);
+                {
+                    depths.Add(depth);
+                    return;
+                }
 
-                var left = node.left == null ? (false, 0) : depth(node.left);
-                var right = node.right == null ? (true, 0) : depth(node.right);
+                if (node.left != null)
+                    dfs(node.left, depth + 1);
+                else depths.Add(depth);
 
-                if (left.Item1 == false || right.Item1 == false || Math.Abs(left.Item2 - right.Item2) > 1)
-                    return (false, 0);
-
-                return left.Item2 < right.Item2 ? (left.Item1, left.Item2 + 1) : (right.Item1, right.Item2 + 1);
+                if (node.right != null)
+                    dfs(node.right, depth + 1);
+                else depths.Add(depth);
             }
 
-            var tuple = depth(root);
-            if (tuple.Item1 == false)
-                return false;
+            //Run dfs to find depths of last level nodes
+            dfs(root, 0);
 
-            int i = 0;
-            var currNode = root;
-            while (currNode != null)
-            {
-                currNode = currNode.right;
-                i++;
-            }
+            //First index of last level node depth which is different than depths[0]
+            int index = depths.Select((l, i) => i).Where(i => depths[i] != depths[0]).FirstOrDefault();
 
-            return tuple.depth == i;
+            //If there is not such index all depths of last level nodes are equal
+            if (index == 0)
+                return true;
+
+            //Checking if in last level all nodes are as far left as possible
+            return depths[index] < depths[0] && !depths.Where((l, i) => i >= index && l != depths[index]).Any();
         }
     }
 }

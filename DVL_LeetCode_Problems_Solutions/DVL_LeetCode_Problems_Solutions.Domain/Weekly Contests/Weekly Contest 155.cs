@@ -32,26 +32,65 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return list;
         }
 
+        //public static int NthUglyNumber(int n, int a, int b, int c)
+        //{
+        //    var list = new List<int>(){a,b,c};
+        //    list.Sort();
+
+        //    int div1 = list[1] / list[0];
+        //    for (int i = 2; i < div1; i++)
+        //        list.Add(list[0] * i);
+
+        //    int div2 = list[2] / list[0];
+        //    for (int i = div1; i < div2; i++)
+        //        list.Add(list[0] * i);
+
+        //    int div3 = list[2] / list[1];
+        //    for (int i = 2; i < div3; i++)
+        //        list.Add(list[1] * i);
+
+        //    var uglyNumbers = list.Distinct().OrderBy(i => i).ToList();
+
+        //    return (n / uglyNumbers.Count + 1) * uglyNumbers[n % uglyNumbers.Count - 1 > 0 ? n % uglyNumbers.Count - 1 : uglyNumbers.Count - 1];
+        //}
+
+        /// <summary>
+        /// Ugly Number III (Not Mine)
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static int NthUglyNumber(int n, int a, int b, int c)
         {
-            var list = new List<int>(){a,b,c};
-            list.Sort();
+            long gcd(long a2, long b2) => a2 == 0 ? b2: gcd(b2 % a2, a2);
 
-            int div1 = list[1] / list[0];
-            for (int i = 2; i < div1; i++)
-                list.Add(list[0] * i);
+            long lcm(long a2, long b2) => a2 * b2 / gcd(a2, b2);
 
-            int div2 = list[2] / list[0];
-            for (int i = div1; i < div2; i++)
-                list.Add(list[0] * i);
+            int count(int num, int a2, int b2, int c2) => (int) (num / a2 + num / b2 + num / c2
+                              - num / lcm(a2, b2)
+                              - num / lcm(b2, c2)
+                              - num / lcm(a2, c2)
+                              + num / (lcm(a2, lcm(b2, c2))));
 
-            int div3 = list[2] / list[1];
-            for (int i = 2; i < div3; i++)
-                list.Add(list[1] * i);
+            int left = 0, right = int.MaxValue, result = 0;
 
-            var uglyNumbers = list.Distinct().OrderBy(i => i).ToList();
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                if (count(mid, a, b, c) >= n)
+                {
+                    result = mid;
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
 
-            return (n / uglyNumbers.Count + 1) * uglyNumbers[n % uglyNumbers.Count - 1 > 0 ? n % uglyNumbers.Count - 1 : uglyNumbers.Count - 1];
+            return result;
         }
 
         public static string SmallestStringWithSwaps(string s, IList<IList<int>> pairs)

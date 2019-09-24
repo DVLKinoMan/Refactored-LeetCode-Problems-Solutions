@@ -99,6 +99,9 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static string SmallestStringWithSwaps(string s, IList<IList<int>> pairs)
         {
+            if (pairs.Count == 0)
+                return s;
+
             var dic = new Dictionary<int, HashSet<int>>();
             foreach (var pair in pairs)
             {

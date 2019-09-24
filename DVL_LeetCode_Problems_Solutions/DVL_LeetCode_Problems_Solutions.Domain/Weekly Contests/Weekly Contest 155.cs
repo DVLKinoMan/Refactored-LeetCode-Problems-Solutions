@@ -94,7 +94,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Smallest String With Swaps (Not Working)
+        /// Smallest String With Swaps (Mine)
         /// </summary>
         /// <param name="s"></param>
         /// <param name="pairs"></param>
@@ -112,32 +112,35 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 else dic.Add(pair[1], new HashSet<int>() {pair[0]});
             }
 
-            var viewedSet = new SortedSet<int>();
-            var sets = new List<SortedSet<int>>();
+            var viewedSet = new HashSet<int>();
             var tuples = new List<(int i, char ch)>();
             foreach (var keyValue in dic)
                 if (!viewedSet.Contains(keyValue.Key))
                 {
-                    var set = new SortedSet<int>(func(keyValue.Key));
+                    var set = new HashSet<int>();
+                    func(keyValue.Key, set);
                     viewedSet.UnionWith(set);
-                    var list = s.Where((ch, i) => set.Contains(i)).OrderBy(ch => ch).ToList();
                     int count = 0;
-                    foreach (var i in set)
-                    {
-                        tuples.Add((i, list[count]));
-                        count++;
-                    }
-                    sets.Add(set);
+                    var listDesc = set.OrderBy(i => i).ToList();
+                    var list = set.OrderBy(i => s[i]).Select(i => (listDesc[count++], s[i])).ToList();
+                    tuples.AddRange(list);
                 }
+
+            for (int i = 0; i < s.Length; i++)
+                if (!dic.ContainsKey(i))
+                    tuples.Add((i, s[i]));
 
             return string.Join("", tuples.OrderBy(t => t.i).Select(t => t.ch));
 
-            IEnumerable<int> func(int k, int l = -1)
+            void func(int k, HashSet<int> set)
             {
+                set.Add(k);
                 foreach (var d in dic[k])
-                    if (d != l)
-                        foreach (var v in func(d, k))
-                            yield return v;
+                    if (!set.Contains(d))
+                    {
+                        set.Add(d);
+                        func(d, set);
+                    }
             }
         }
     }

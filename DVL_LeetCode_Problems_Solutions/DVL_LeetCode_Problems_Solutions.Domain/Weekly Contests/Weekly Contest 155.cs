@@ -93,32 +93,51 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return result;
         }
 
+        /// <summary>
+        /// Smallest String With Swaps (Not Working)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="pairs"></param>
+        /// <returns></returns>
         public static string SmallestStringWithSwaps(string s, IList<IList<int>> pairs)
         {
             var dic = new Dictionary<int, HashSet<int>>();
             foreach (var pair in pairs)
             {
-                if(dic.ContainsKey(pair[0]))
+                if (dic.ContainsKey(pair[0]))
                     dic[pair[0]].Add(pair[1]);
-                else dic.Add(pair[0], new HashSet<int>(){pair[1]});
+                else dic.Add(pair[0], new HashSet<int>() {pair[1]});
                 if (dic.ContainsKey(pair[1]))
                     dic[pair[1]].Add(pair[0]);
-                else dic.Add(pair[1], new HashSet<int>() { pair[0] });
+                else dic.Add(pair[1], new HashSet<int>() {pair[0]});
             }
 
-            var viewedSet = new HashSet<int>();
-            var sets = new List<HashSet<int>>();
+            var viewedSet = new SortedSet<int>();
+            var sets = new List<SortedSet<int>>();
+            var tuples = new List<(int i, char ch)>();
             foreach (var keyValue in dic)
-            {
                 if (!viewedSet.Contains(keyValue.Key))
                 {
-                   var set = new HashSet<int>(keyValue.Value);
-                   set.Add(keyValue.Key);
-                   foreach (var keyValue2 in keyValue.Value)
-                   {
-                       
-                   }
+                    var set = new SortedSet<int>(func(keyValue.Key));
+                    viewedSet.UnionWith(set);
+                    var list = s.Where((ch, i) => set.Contains(i)).OrderBy(ch => ch).ToList();
+                    int count = 0;
+                    foreach (var i in set)
+                    {
+                        tuples.Add((i, list[count]));
+                        count++;
+                    }
+                    sets.Add(set);
                 }
+
+            return string.Join("", tuples.OrderBy(t => t.i).Select(t => t.ch));
+
+            IEnumerable<int> func(int k, int l = -1)
+            {
+                foreach (var d in dic[k])
+                    if (d != l)
+                        foreach (var v in func(d, k))
+                            yield return v;
             }
         }
     }

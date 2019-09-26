@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain.Hard
 {
     partial class ProblemSolver
     {
         /// <summary>
-        /// Cracking the Safe (Not Working)
+        /// Cracking the Safe (Not Mine - My implementation)
         /// </summary>
         /// <param name="n"></param>
         /// <param name="k"></param>
@@ -19,22 +17,19 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Hard
             string strPwd = new string('0', n);
             var sbPwd = new StringBuilder(strPwd);
 
-            var visitedComb = new HashSet<string>();
-            visitedComb.Add(strPwd);
+            var visitedComb2 = new HashSet<string>();
+            visitedComb2.Add(strPwd);
 
             int targetNumVisited = (int) Math.Pow(k, n);
 
-            crackSafeAfter(sbPwd);
+            crackSafeAfter(sbPwd, visitedComb2);
 
             return sbPwd.ToString();
 
-            bool crackSafeAfter(StringBuilder pwd)
+            bool crackSafeAfter(StringBuilder pwd, HashSet<string> visitedComb)
             {
-                // Base case: all n-length combinations among digits 0..k-1 are visited. 
                 if (visitedComb.Count == targetNumVisited)
-                {
                     return true;
-                }
 
                 var str = new StringBuilder();
                 for (int i = pwd.Length - (n - 1); i < pwd.Length; i++)
@@ -48,13 +43,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Hard
                     {
                         visitedComb.Add(newComb);
                         pwd.Append(ch);
-                        if (crackSafeAfter(pwd))
-                        {
+                        if (crackSafeAfter(pwd, visitedComb))
                             return true;
-                        }
 
                         visitedComb.Remove(newComb);
-                        pwd.Insert(pwd.Length - 1, "");
+                        pwd.Remove(pwd.Length - 1, 1);
                     }
                 }
 

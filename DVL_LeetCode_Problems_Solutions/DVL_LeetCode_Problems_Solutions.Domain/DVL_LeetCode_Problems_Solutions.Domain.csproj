@@ -86,6 +86,7 @@
     <Compile Include="Easy\Move Zeros.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />
+    <Compile Include="Easy\Nim Game.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Plus One.cs" />

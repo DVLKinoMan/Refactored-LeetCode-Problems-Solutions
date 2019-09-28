@@ -214,6 +214,7 @@
     <Compile Include="Medium\Remove Zero Sum Consecutive Nodes from Linked List.cs" />
     <Compile Include="Medium\Reorder List.cs" />
     <Compile Include="Medium\Reordered Power of 2.cs" />
+    <Compile Include="Medium\Replace Words.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
     <Compile Include="Medium\Rotate List.cs" />
     <Compile Include="Medium\Satisfiability of Equality Equations.cs" />

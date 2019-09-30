@@ -159,6 +159,7 @@
     <Compile Include="Medium\Find Bottom Left Tree Value.cs" />
     <Compile Include="Medium\Find Duplicate Subtrees.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
+    <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Jump Game.cs" />

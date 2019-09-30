@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Broken Calculator.cs" />
+    <Compile Include="Get Equal Substrings Within Budget Tester.cs" />
     <Compile Include="Increasing Order Search Tree Test.cs" />
     <Compile Include="Knight Dialer.cs" />
     <Compile Include="Longest Chunked Palindrome Decomposition Tester.cs" />

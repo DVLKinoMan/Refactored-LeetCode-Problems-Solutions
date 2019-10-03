@@ -91,6 +91,7 @@
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Plus One.cs" />
+    <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
     <Compile Include="Easy\Repeated Substring Pattern.cs" />

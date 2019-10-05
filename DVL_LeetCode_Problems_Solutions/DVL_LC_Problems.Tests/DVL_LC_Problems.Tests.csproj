@@ -55,6 +55,7 @@
     <Compile Include="Increasing Order Search Tree Test.cs" />
     <Compile Include="Knight Dialer.cs" />
     <Compile Include="Longest Chunked Palindrome Decomposition Tester.cs" />
+    <Compile Include="Minimum Moves to Reach Targest with Rotations Tester.cs" />
     <Compile Include="Plus One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shortest Path with Alternating Colors.cs" />

@@ -127,6 +127,7 @@
     <Compile Include="Hard\Longest Duplicate Substring.cs" />
     <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
+    <Compile Include="Hard\Minimum Moves to Reach Target with Rotations.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Number of Submatrices That Sum to Target.cs" />

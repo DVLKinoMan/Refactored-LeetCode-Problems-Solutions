@@ -283,6 +283,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 154.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 155.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 156.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 157.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

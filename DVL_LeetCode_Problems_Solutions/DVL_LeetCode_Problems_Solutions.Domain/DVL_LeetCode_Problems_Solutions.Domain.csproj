@@ -91,6 +91,7 @@
     <Compile Include="Easy\Nim Game.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
+    <Compile Include="Easy\Play with Chips.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />

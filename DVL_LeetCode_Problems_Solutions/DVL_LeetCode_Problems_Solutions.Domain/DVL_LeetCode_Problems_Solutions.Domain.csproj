@@ -113,6 +113,7 @@
     <Compile Include="Easy\Word Pattern.cs" />
     <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />
     <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
+    <Compile Include="Hard\Count Vowels Permutation.cs" />
     <Compile Include="Hard\Cracking the Safe.cs" />
     <Compile Include="Hard\Critical Connections in a Network.cs" />
     <Compile Include="Hard\Edit Distance.cs" />

@@ -235,6 +235,7 @@
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
+    <Compile Include="Medium\Split Array into Fibonacci Sequence.cs" />
     <Compile Include="Medium\Stone Game II.cs" />
     <Compile Include="Medium\Subarray Sum Equals K.cs" />
     <Compile Include="Medium\Subarray Sums Divisible by K.cs" />

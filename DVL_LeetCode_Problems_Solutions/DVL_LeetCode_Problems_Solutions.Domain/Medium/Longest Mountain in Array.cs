@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
         /// <summary>
-        /// Longest Mountain in Array (Not Working)
+        /// Longest Mountain in Array (Mine)
         /// </summary>
         /// <param name="A"></param>
         /// <returns></returns>
@@ -32,9 +28,9 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                         {
                             maxCount = Math.Max(maxCount, currCount + 1);
                             isMountain = false;
+                            currCount = 1;
                         }
-
-                        currCount = 1;
+                        else currCount++;
                     }
                     else
                     {

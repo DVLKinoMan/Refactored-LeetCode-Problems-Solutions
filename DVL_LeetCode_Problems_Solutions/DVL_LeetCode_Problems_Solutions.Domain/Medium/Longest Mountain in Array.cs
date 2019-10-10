@@ -43,11 +43,8 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                         currCount = 0;
                     }
                 }
-                else
-                {
-                    if (A[i] > A[i - 1])
-                        currCount++;
-                }
+                else if (A[i] > A[i - 1])
+                    currCount++;
             }
 
             if (isMountain)

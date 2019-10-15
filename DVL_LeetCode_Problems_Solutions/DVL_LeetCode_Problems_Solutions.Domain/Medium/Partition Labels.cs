@@ -22,7 +22,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Medium
             }
 
             var stack = new Stack<(int i,int j)>();
-            foreach (var range in dicRanges.OrderBy(d => d.Value.i).Select(d => d.Value))
+            foreach (var range in dicRanges.Select(d => d.Value))
             {
                 if (stack.Count != 0 && stack.Peek().j > range.i)
                 {
@@ -32,7 +32,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Medium
                 else stack.Push(range);
             }
 
-            return stack.OrderBy(s => s.i).Select(s => s.j - s.i + 1).ToList();
+            return stack.Reverse().Select(s => s.j - s.i + 1).ToList();
         }
     }
 }

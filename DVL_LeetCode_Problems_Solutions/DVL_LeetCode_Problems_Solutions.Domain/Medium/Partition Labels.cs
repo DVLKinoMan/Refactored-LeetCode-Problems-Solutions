@@ -26,8 +26,8 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Medium
             {
                 if (stack.Count != 0 && stack.Peek().j > range.i)
                 {
-                    var currRange = stack.Pop();
-                    stack.Push((currRange.i, Math.Max(currRange.j, range.j)));
+                    var (i, j) = stack.Pop();
+                    stack.Push((i, Math.Max(j, range.j)));
                 }
                 else stack.Push(range);
             }

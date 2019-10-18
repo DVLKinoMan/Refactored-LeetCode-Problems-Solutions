@@ -80,6 +80,7 @@
     <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
     <Compile Include="Easy\Magic Squares in Grid.cs" />
     <Compile Include="Easy\Majority Element.cs" />
+    <Compile Include="Easy\Maximize Distance to Closest Person.cs" />
     <Compile Include="Easy\Maximum Depth of Binary Tree.cs" />
     <Compile Include="Easy\Maximum Depth of N-ary Tree.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />

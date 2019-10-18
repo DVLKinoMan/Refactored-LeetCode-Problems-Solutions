@@ -15,6 +15,7 @@ namespace DVL_LC_Problems.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            //MaxDistToClosest(new int[] {1, 0, 0, 0, 1, 0, 1});
             var res = ShortestSubarray(new[] { 84, -37, 32, 40, 95 }, 167);
             Assert.AreEqual(3, res);
         }

@@ -146,6 +146,7 @@
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\132 Pattern.cs" />
     <Compile Include="Medium\4Sum II.cs" />
+    <Compile Include="Medium\Accounts Merge.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\All Paths From Source to Target.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />

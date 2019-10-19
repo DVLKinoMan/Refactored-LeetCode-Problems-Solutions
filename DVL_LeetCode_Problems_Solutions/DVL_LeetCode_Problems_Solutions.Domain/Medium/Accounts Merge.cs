@@ -1,83 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Accounts Merge (Mine)
+        /// </summary>
+        /// <param name="accounts"></param>
+        /// <returns></returns>
         public static IList<IList<string>> AccountsMerge(IList<IList<string>> accounts)
         {
-            var emailIndexesList = new Dictionary<string, List<int>>();
-            var unionSets = new Dictionary<int, List<int>>();
-            var mapper = new Dictionary<int, int>();
-            for (int i = 0; i < accounts.Count; i++)
-            for (int j = 1; j < accounts[i].Count; j++)
+            var parents = new Dictionary<string, string>();
+            var emailOwners = new Dictionary<string, string>();
+            foreach (var account in accounts)
             {
-                if (emailIndexesList.ContainsKey(accounts[i][j]))
-                    emailIndexesList[accounts[i][j]].Add(i);
-                else emailIndexesList.Add(accounts[i][j], new List<int>() {i});
-            }
+                if (!emailOwners.ContainsKey(account[1]))
+                    emailOwners.Add(account[1], account[0]);
 
-            foreach (var emailIndexes in emailIndexesList)
-            {
-                int emailIndex = -1;
-                foreach (var emIndex in 
-                    emailIndexes.Value.Where(emIndex => unionSets.ContainsKey(emIndex) || mapper.ContainsKey(emIndex)))
+                var setOfRoots = new HashSet<string>();
+                var notHaveParents = new HashSet<string>();
+                foreach (var em in account.Skip(1))
                 {
-                    emailIndex = emIndex;
-                    break;
+                    if (parents.ContainsKey(em))
+                        setOfRoots.Add(FindRoot(em, parents));
+                    else notHaveParents.Add(em);
                 }
 
-                if (unionSets.ContainsKey(emailIndex))
+                if (setOfRoots.Count != 0)
                 {
-                    foreach (var ind in emailIndexes.Value)
-                    {
-                        unionSets[emailIndex].Add(ind);
-                        if(!mapper.ContainsKey(ind))
-                            mapper.Add(ind, emailIndex);
-                    }
-                }
-                else if (mapper.ContainsKey(emailIndex))
-                {
-                    int parentIndex = GetRoot(emailIndex, mapper);
-                    foreach (var ind in emailIndexes.Value)
-                    {
-                        unionSets[parentIndex].Add(ind);
-                        if (!mapper.ContainsKey(ind))
-                            mapper.Add(ind, parentIndex);
-                    }
+                    string parent = setOfRoots.First();
+                    foreach (var notHaveParent in notHaveParents)
+                        parents.Add(notHaveParent, parent);
+
+                    foreach (var root in setOfRoots)
+                        parents[root] = parent;
                 }
                 else
                 {
-                    int f = emailIndexes.Value.First();
-                    unionSets.Add(f, emailIndexes.Value);
-                    foreach (var i in emailIndexes.Value.Skip(1))
-                        if (!mapper.ContainsKey(i))
-                            mapper.Add(i, f);
+                    parents.Add(account[1], account[1]);
+                    foreach (var em in account.Skip(2))
+                        if (!parents.ContainsKey(em))
+                            parents.Add(em, account[1]);
                 }
             }
 
-            var res = new List<IList<string>>();
-            foreach (var d in unionSets)
+            var res = parents.GroupBy(p => FindRoot(p.Value, parents)).Select(gr =>
             {
-                var list = d.Value.SelectMany(i => accounts[i].Skip(1)).Distinct().OrderBy(em => em, StringComparer.Ordinal).ToList();
-                list.Insert(0, accounts[d.Value.First()][0]);
-                res.Add(list);
-            }
+                IList<string> list = gr.Select(g => g.Key).OrderBy(em=>em, StringComparer.Ordinal).ToList();
+                list.Insert(0, emailOwners[gr.Key]);
+                return list;
+            }).ToList();
 
             return res;
 
-            static int GetRoot(int ind, Dictionary<int, int> map)
-            {
-                int res = map[ind];
-                while (map.ContainsKey(res))
-                    res = map[res];
-                return res;
-            }
+            string FindRoot(string em, Dictionary<string, string> mapper) =>
+                mapper[em] == em ? em : FindRoot(mapper[em], mapper);
         }
     }
 }

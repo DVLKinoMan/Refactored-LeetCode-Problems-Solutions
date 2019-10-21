@@ -60,34 +60,41 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Maximum Profit in Job Scheduling (Not Mine)
+        /// </summary>
+        /// <param name="startTime"></param>
+        /// <param name="endTime"></param>
+        /// <param name="profit"></param>
+        /// <returns></returns>
         public static int JobScheduling(int[] startTime, int[] endTime, int[] profit)
         {
-            var list = new List<(int st,int end,int prof)>();
+            var list = new List<(int st, int end, int prof)>();
             for (int i = 0; i < startTime.Length; i++)
                 list.Add((startTime[i], endTime[i], profit[i]));
-            list = list.OrderBy(l => l.st).ToList();
-            var din = new Dictionary<int, int>();
+            list = list.OrderBy(l => l.end).ToList();
 
-            return MaxProfit(-1);
-
-            int MaxProfit(int prevEndTime, int prof = 0, int startTimeIndex = 0)
+            var dpEndTime = new List<int>();
+            var dpProfit = new List<int>();
+            // init value to avoid IndexOutBoundExp
+            dpEndTime.Add(0);
+            dpProfit.Add(0);
+            foreach (var item in list)
             {
-                if(din.ContainsKey(prevEndTime))
-                    return din[prevEndTime] + prof;
-
-                int max = prof;
-                for (int i = startTimeIndex; i < list.Count; i++)
+                // find previous endTime index
+                int prevIdx = dpEndTime.BinarySearch(item.st + 1);
+                if (prevIdx < 0)
+                    prevIdx = -prevIdx - 1;
+                prevIdx--;
+                int currProfit = dpProfit[prevIdx] + item.prof, maxProfit = dpProfit[dpProfit.Count - 1];
+                if (currProfit > maxProfit)
                 {
-                    if (list[i].st >= prevEndTime)
-                    {
-                        max = Math.Max(max, MaxProfit(list[i].end, prof + list[i].prof, i + 1));
-                    }
+                    dpProfit.Add(currProfit);
+                    dpEndTime.Add(item.end);
                 }
-
-                din.Add(prevEndTime, max - prof);
-
-                return max;
             }
+
+            return dpProfit[dpProfit.Count - 1];
         }
     }
 }

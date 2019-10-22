@@ -74,23 +74,19 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 list.Add((startTime[i], endTime[i], profit[i]));
             list = list.OrderBy(l => l.end).ToList();
 
-            var dpEndTime = new List<int>();
-            var dpProfit = new List<int>();
-            // init value to avoid IndexOutBoundExp
-            dpEndTime.Add(0);
-            dpProfit.Add(0);
-            foreach (var item in list)
+            var dpEndTime = new List<int>(){ 0 };
+            var dpProfit = new List<int>() { 0 };
+            foreach (var (st, end, prof) in list)
             {
-                // find previous endTime index
-                int prevIdx = dpEndTime.BinarySearch(item.st + 1);
+                int prevIdx = dpEndTime.BinarySearch(st + 1);
                 if (prevIdx < 0)
                     prevIdx = -prevIdx - 1;
                 prevIdx--;
-                int currProfit = dpProfit[prevIdx] + item.prof, maxProfit = dpProfit[dpProfit.Count - 1];
+                int currProfit = dpProfit[prevIdx] + prof, maxProfit = dpProfit[dpProfit.Count - 1];
                 if (currProfit > maxProfit)
                 {
                     dpProfit.Add(currProfit);
-                    dpEndTime.Add(item.end);
+                    dpEndTime.Add(end);
                 }
             }
 

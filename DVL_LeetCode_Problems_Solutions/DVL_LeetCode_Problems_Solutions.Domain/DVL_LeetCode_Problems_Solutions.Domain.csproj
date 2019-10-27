@@ -303,6 +303,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 157.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 158.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 159.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 160.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

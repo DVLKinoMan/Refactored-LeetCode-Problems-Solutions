@@ -15,6 +15,7 @@ namespace DVL_LC_Problems.Tests
         public void Method1()
         {
             int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
+            //CircularPermutation(2, 3);
 
             Assert.AreEqual(10, d);
         }

@@ -32,24 +32,17 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Circular Permutation in Binary Representation (Not Mine - Gray Code)
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="start"></param>
+        /// <returns></returns>
         public static IList<int> CircularPermutation(int n, int start)
         {
             var res = new List<int>();
-            res.Add(start);
-            int len = (int)Math.Pow(2, n) - 1;
-            int k = len;
-            for (int i = 1; i < len; i++)
-            {
-                int k2 = res[i - 1] | k;
-                while (k2 == res[i - 1])
-                {
-                    k >>= 1;
-                    k2 = res[i - 1] | k;
-                }
-
-                res.Add(k2);
-            }
-
+            for (int i = 0; i < 1 << n; ++i)
+                res.Add(start ^ i ^ i >> 1);
             return res;
         }
 

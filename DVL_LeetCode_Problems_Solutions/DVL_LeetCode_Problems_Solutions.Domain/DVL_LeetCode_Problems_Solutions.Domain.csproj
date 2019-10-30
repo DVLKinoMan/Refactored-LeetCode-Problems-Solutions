@@ -111,6 +111,7 @@
     <Compile Include="Easy\Sum of Square Numbers.cs" />
     <Compile Include="Easy\Third Maximum Number.cs" />
     <Compile Include="Easy\Toeplitz Matrix.cs" />
+    <Compile Include="Easy\Transpose Matrix.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Mountain Array.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />

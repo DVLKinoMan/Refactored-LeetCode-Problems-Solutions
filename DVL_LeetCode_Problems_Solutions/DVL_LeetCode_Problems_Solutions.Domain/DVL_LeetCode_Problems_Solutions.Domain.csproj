@@ -219,6 +219,7 @@
     <Compile Include="Medium\Minimum Increment to Make Array Unique.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />
     <Compile Include="Medium\Minimum Path Sum.cs" />
+    <Compile Include="Medium\Mirror Reflection.cs" />
     <Compile Include="Medium\Most Frequent Subtree Sum.cs" />
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />

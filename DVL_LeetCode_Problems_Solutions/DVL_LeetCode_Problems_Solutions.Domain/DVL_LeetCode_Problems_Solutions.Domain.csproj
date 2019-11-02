@@ -148,6 +148,7 @@
     <Compile Include="Hard\Sort Items by Groups Respecting Dependencies.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />
     <Compile Include="Hard\Text Justification.cs" />
+    <Compile Include="Hard\Tiling a Rectangle with the Fewest Squares.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\132 Pattern.cs" />

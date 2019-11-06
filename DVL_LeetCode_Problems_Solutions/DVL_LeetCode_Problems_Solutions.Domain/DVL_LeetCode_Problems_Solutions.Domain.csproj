@@ -112,6 +112,7 @@
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />
     <Compile Include="Easy\Sum of Square Numbers.cs" />
     <Compile Include="Easy\Third Maximum Number.cs" />
+    <Compile Include="Easy\To Lower Case.cs" />
     <Compile Include="Easy\Toeplitz Matrix.cs" />
     <Compile Include="Easy\Transpose Matrix.cs" />
     <Compile Include="Easy\Ugly Number.cs" />

@@ -32,54 +32,51 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return count;
         }
 
+        /// <summary>
+        /// Reconstruct a 2-Row Binary Matrix (Not Working)
+        /// </summary>
+        /// <param name="upper"></param>
+        /// <param name="lower"></param>
+        /// <param name="colsum"></param>
+        /// <returns></returns>
         public static IList<IList<int>> ReconstructMatrix(int upper, int lower, int[] colsum)
         {
             int[][] arr = new int[2][];
-            int n = colsum.Length;
+            int n = colsum.Length, count = 0;
             arr[0] = new int[n];
             arr[1] = new int[n];
 
             var set = new HashSet<int>();
             for (int i = 0; i < n; i++)
             {
-                if (colsum[i] == 0)
-                    set.Add(i);
-                else if (colsum[i] == 2)
+                if (colsum[i] == 2)
                 {
                     arr[0][i] = 1;
                     arr[1][i] = 1;
                     lower--;
                     upper--;
+                }
+                else if (colsum[i] == 1)
+                {
+                    count++;
                     set.Add(i);
                 }
             }
 
-            if (IsValid(0, upper, lower))
+            if (count == lower + upper)
+            {
+                int c = 0;
+                foreach (var index in set)
+                {
+                    if (c < upper)
+                        arr[0][index] = 1;
+                    else arr[1][index] = 1;
+                    c++;
+                }
                 return arr;
+            }
 
             return new List<IList<int>>();
-
-            bool IsValid(int colIndex, int leftUpper, int leftLower)
-            {
-                if (colIndex == n)
-                    return leftUpper == 0 && leftLower == 0;
-
-                if (set.Contains(colIndex))
-                    return IsValid(colIndex + 1, leftUpper, leftLower);
-
-                switch (colsum[colIndex])
-                {
-                    case 1:
-                        arr[0][colIndex] = 1;
-                        if (leftUpper > 0 && IsValid(colIndex + 1, leftUpper - 1, leftLower))
-                            return true;
-                        arr[0][colIndex] = 0;
-                        arr[1][colIndex] = 1;
-                        return leftLower > 0 && IsValid(colIndex + 1, leftUpper, leftLower - 1);
-                }
-
-                throw new NotImplementedException();
-            }
         }
 
         /// <summary>

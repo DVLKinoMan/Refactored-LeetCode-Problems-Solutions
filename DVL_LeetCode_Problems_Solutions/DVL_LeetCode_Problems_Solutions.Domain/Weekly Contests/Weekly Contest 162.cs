@@ -33,7 +33,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Reconstruct a 2-Row Binary Matrix (Not Working)
+        /// Reconstruct a 2-Row Binary Matrix (Mine)
         /// </summary>
         /// <param name="upper"></param>
         /// <param name="lower"></param>
@@ -63,20 +63,19 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 }
             }
 
-            if (count == lower + upper)
+            if (lower < 0 || upper < 0 || count != lower + upper) 
+                return new List<IList<int>>();
+
+            int c = 0;
+            foreach (var index in set)
             {
-                int c = 0;
-                foreach (var index in set)
-                {
-                    if (c < upper)
-                        arr[0][index] = 1;
-                    else arr[1][index] = 1;
-                    c++;
-                }
-                return arr;
+                if (c < upper)
+                    arr[0][index] = 1;
+                else arr[1][index] = 1;
+                c++;
             }
 
-            return new List<IList<int>>();
+            return arr;
         }
 
         /// <summary>

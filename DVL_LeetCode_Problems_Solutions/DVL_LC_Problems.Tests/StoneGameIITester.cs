@@ -17,6 +17,7 @@ namespace DVL_LC_Problems.Tests
             int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
             //CircularPermutation(2, 3);
             //MinRemoveToMakeValid("lee(t(c)o)de)");
+            //ReconstructMatrix(9, 2, new int[] {0, 1, 2, 0, 0, 0, 0, 0, 2, 1, 2, 1, 2});
 
             Assert.AreEqual(10, d);
         }

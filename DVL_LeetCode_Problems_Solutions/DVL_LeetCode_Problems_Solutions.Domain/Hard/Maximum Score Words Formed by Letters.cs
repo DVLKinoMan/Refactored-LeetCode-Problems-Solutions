@@ -37,8 +37,9 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }
 
             int res = 0;
+            MaxScore(0);
 
-            return MaxScore(0);
+            return res;
 
             int MaxScore(int currScore)
             {
@@ -77,7 +78,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 {
                     if (!dict.ContainsKey(ch.Key) || dict[ch.Key] < ch.Value)
                         return (false, -1);
-                    sum += (dict[ch.Key] * score[ch.Key - 'a']);
+                    sum += (ch.Value * score[ch.Key - 'a']);
                 }
 
                 return (true, sum);

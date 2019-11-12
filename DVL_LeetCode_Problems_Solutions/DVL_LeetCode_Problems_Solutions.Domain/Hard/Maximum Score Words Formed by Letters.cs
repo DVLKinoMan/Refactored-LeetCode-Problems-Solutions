@@ -7,7 +7,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     partial class ProblemSolver
     {
         /// <summary>
-        /// Maximum Score Words Formed by Letters (Not Working)
+        /// Maximum Score Words Formed by Letters (Mine)
         /// </summary>
         /// <param name="words"></param>
         /// <param name="letters"></param>
@@ -15,70 +15,66 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int MaxScoreWords(string[] words, char[] letters, int[] score)
         {
-            var dict = new Dictionary<char, int>();
+            var lettersCount = new int[26];
             foreach (var letter in letters)
+                lettersCount[letter - 'a']++;
+
+            var validWords = new List<(string word, int score)>();
+            foreach (var word in words)
             {
-                if (dict.ContainsKey(letter))
-                    dict[letter]++;
-                else dict.Add(letter, 1);
+                var (isValid, sc) = IsValidWord(word);
+                if (isValid)
+                    validWords.Add((word, sc));
             }
 
-            var listWords = words.ToList();
-            var listOfScores = new List<int>();
-            for (int i = 0; i < listWords.Count; i++)
-            {
-                var (isValid, sc) = IsValidWord(listWords[i]);
-                if (!isValid)
-                {
-                    listWords.RemoveAt(i);
-                    i--;
-                }
-                else listOfScores.Add(sc);
-            }
-
-            int res = 0;
-            MaxScore(0);
+            int res = MaxScore(0);
 
             return res;
 
-            int MaxScore(int currScore)
+            //dfs
+            int MaxScore(int prevScore)
             {
-                for (int i = 0; i < listWords.Count; i++)
+                int currScore = prevScore;
+                for (int i = 0; i < validWords.Count; i++)
                 {
-                    string currWord = listWords[i];
+                    var (currWord, sc) = validWords[i];
+                    bool cont = false;
                     foreach (var ch in currWord)
                     {
-                        if (dict[ch] == 0)
-                            return currScore;
-                        dict[ch]--;
+                        if (lettersCount[ch - 'a'] == 0)
+                            cont = true;
+                        lettersCount[ch - 'a']--;
                     }
-                    listWords.RemoveAt(i);
-                    int prevScore = listOfScores[i];
-                    listOfScores.RemoveAt(i);
-                    res = Math.Max(res, MaxScore(currScore + prevScore));
-                    listWords.Insert(i, currWord);
-                    listOfScores.Insert(i, prevScore);
+
+                    if (cont)
+                        goto end;
+
+                    validWords.RemoveAt(i);
+
+                    currScore = Math.Max(currScore, MaxScore(prevScore + sc));
+
+                    validWords.Insert(i, (currWord, sc));
+
+                    end:
+                    foreach (var ch in currWord)
+                        lettersCount[ch - 'a']++;
                 }
 
-                return res;
+                return currScore;
             }
 
+            //Returns if word letters is in letters array and words score
             (bool isValid, int sc) IsValidWord(string word)
             {
-                var dict2 = new Dictionary<char,int>();
-                foreach (var ch in word)
-                {
-                    if (dict2.ContainsKey(ch))
-                        dict2[ch]++;
-                    else dict2.Add(ch, 1);
-                }
+                var wordLetters = word.GroupBy(ch => ch)
+                                      .Select(gr => new {gr.Key, Count = gr.Count()});
 
                 int sum = 0;
-                foreach (var ch in dict2)
+                foreach (var ch in wordLetters)
                 {
-                    if (!dict.ContainsKey(ch.Key) || dict[ch.Key] < ch.Value)
-                        return (false, -1);
-                    sum += (ch.Value * score[ch.Key - 'a']);
+                    if (lettersCount[ch.Key - 'a'] < ch.Count)
+                        return (false, default);
+                    sum += (ch.Count * score[ch.Key - 'a']);
                 }
 
                 return (true, sum);

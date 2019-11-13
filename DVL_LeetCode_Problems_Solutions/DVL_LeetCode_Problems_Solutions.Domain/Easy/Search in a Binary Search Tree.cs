@@ -12,10 +12,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static TreeNode SearchBST(TreeNode root, int val)
         {
-            if (root == null)
-                return null;
-
-            if (root.val == val)
+            if (root == null || root.val == val)
                 return root;
 
             return SearchBST(root.left, val) ?? SearchBST(root.right, val);

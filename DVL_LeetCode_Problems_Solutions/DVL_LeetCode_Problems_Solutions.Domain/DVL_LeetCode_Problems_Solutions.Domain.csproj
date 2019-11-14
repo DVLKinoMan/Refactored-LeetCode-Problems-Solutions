@@ -245,6 +245,7 @@
     <Compile Include="Medium\Permutations II.cs" />
     <Compile Include="Medium\Permutations.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
+    <Compile Include="Medium\Product of Array Except Self.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />
     <Compile Include="Medium\Rectangle Area.cs" />

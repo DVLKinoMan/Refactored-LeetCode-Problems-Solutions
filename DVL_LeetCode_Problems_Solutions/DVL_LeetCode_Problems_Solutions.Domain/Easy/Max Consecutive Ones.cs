@@ -14,12 +14,15 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             int lastSeenOneIndex = -1, res = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] == 1 && lastSeenOneIndex == -1)
-                    lastSeenOneIndex = i;
-                else if (nums[i] == 0)
+                switch (nums[i])
                 {
-                    res = Math.Max(res, lastSeenOneIndex == -1 ? 0 : i - lastSeenOneIndex);
-                    lastSeenOneIndex = -1;
+                    case 1 when lastSeenOneIndex == -1:
+                        lastSeenOneIndex = i;
+                        break;
+                    case 0:
+                        res = Math.Max(res, lastSeenOneIndex == -1 ? 0 : i - lastSeenOneIndex);
+                        lastSeenOneIndex = -1;
+                        break;
                 }
             }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -13,19 +12,26 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int FindShortestSubArray(int[] nums)
         {
-            var dict = new Dictionary<int,List<int>>();
-            for (int i = 0; i< nums.Length;i++)
-            {
-                if (dict.ContainsKey(nums[i]))
-                    dict[nums[i]].Add(i);
-                else dict.Add(nums[i], new List<int> {i});
-            }
+            Dictionary<int, int> firstIndexes = new Dictionary<int, int>(), numCounts = new Dictionary<int, int>();
+            int degree = 0, minLen = int.MaxValue;
 
-            int maxDegree = dict.Max(d=>d.Value.Count);
-            var keys = dict.Where(d => d.Value.Count == maxDegree).Select(d => d.Key).ToList();
-            int minLen = int.MaxValue;
-            foreach (var key in keys)
-                minLen = Math.Min(minLen, dict[key][dict[key].Count - 1] - dict[key][0] + 1);
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if(!firstIndexes.ContainsKey(nums[i]))
+                    firstIndexes.Add(nums[i], i);
+
+                if (numCounts.ContainsKey(nums[i]))
+                    numCounts[nums[i]]++;
+                else numCounts.Add(nums[i], 1);
+
+                if (degree < numCounts[nums[i]])
+                {
+                    degree = numCounts[nums[i]];
+                    minLen = i - firstIndexes[nums[i]] + 1;
+                }
+                else if (numCounts[nums[i]] == degree)
+                    minLen = Math.Min(minLen, i - firstIndexes[nums[i]] + 1);
+            }
 
             return minLen;
         }

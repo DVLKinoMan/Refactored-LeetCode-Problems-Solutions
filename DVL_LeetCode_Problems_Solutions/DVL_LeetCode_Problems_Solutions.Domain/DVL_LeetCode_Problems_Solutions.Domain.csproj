@@ -280,6 +280,7 @@
     <Compile Include="Medium\Unique Paths.cs" />
     <Compile Include="Medium\Valid Parenthesis String.cs" />
     <Compile Include="Medium\Valid Square.cs" />
+    <Compile Include="Medium\Valid Triangle Number.cs" />
     <Compile Include="Medium\Validate Binary Search Tree.cs" />
     <Compile Include="Medium\Video Stitching.cs" />
     <Compile Include="ProblemSolver.cs" />

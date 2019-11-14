@@ -60,6 +60,7 @@
     <Compile Include="Easy\Binary Search.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />
+    <Compile Include="Easy\Contains Duplicate.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
     <Compile Include="Easy\Degree of an Array.cs" />

@@ -21,6 +21,7 @@ namespace DVL_LC_Problems.Tests
             //MaxScoreWords(new string[] {"xxxz", "ax", "bx", "cx"},
             //    new Char[] {'z', 'a', 'b', 'c', 'x', 'x', 'x'},
             //    new int[] {4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10});
+            //Subsets(new int[] {1, 2, 3});
 
             Assert.AreEqual(10, d);
         }

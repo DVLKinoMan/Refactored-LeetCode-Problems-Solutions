@@ -8,7 +8,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     partial class ProblemSolver
     {
         /// <summary>
-        /// 
+        /// Maximum Swap (Mine)
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>
@@ -19,30 +19,28 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             for (int i = 0; i < str.Length; i++)
                 list.Add((str[i], i));
 
-            int ind = 0, max = num;
-            bool foundAnswer = false;
-            StringBuilder builder;
-            foreach (var gr in list.OrderByDescending(l => l.num).GroupBy(l=>l.num))
+            list = list.OrderByDescending(l => l.num).ToList();
+            for (int i = 0; i < list.Count; i++)
             {
-                foreach (var (n, index) in gr)
+                var (n, ind) = list[i];
+                if (str[i] == n)
+                    continue;
+
+                int k = i, max = num;;
+                do
                 {
-                    if (str[ind] == n) 
-                        continue;
-                    foundAnswer = true;
-                    builder = new StringBuilder(str);
-                    char ch = str[ind];
-                    builder[ind] = (char) n;
-                    builder[index] = ch;
+                    var builder = new StringBuilder(str);
+                    builder[i] = (char) n;
+                    builder[ind] = str[i];
                     max = Math.Max(max, int.Parse(builder.ToString()));
-                }
+                    k++;
+                    (n, ind) = list[k];
+                } while (list[i].num == n);
 
-                if (foundAnswer)
-                    return max;
-
-                ind++;
+                return max;
             }
 
-            return max;
+            return num;
         }
     }
 }

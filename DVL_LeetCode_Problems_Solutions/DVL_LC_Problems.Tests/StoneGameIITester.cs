@@ -22,6 +22,7 @@ namespace DVL_LC_Problems.Tests
             //    new Char[] {'z', 'a', 'b', 'c', 'x', 'x', 'x'},
             //    new int[] {4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10});
             //Subsets(new int[] {1, 2, 3});
+            //MySqrt(11111111);
 
             Assert.AreEqual(10, d);
         }

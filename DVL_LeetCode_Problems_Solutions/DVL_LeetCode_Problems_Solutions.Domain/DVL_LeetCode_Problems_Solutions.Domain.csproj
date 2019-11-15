@@ -275,6 +275,7 @@
     <Compile Include="Medium\Stone Game II.cs" />
     <Compile Include="Medium\Subarray Sum Equals K.cs" />
     <Compile Include="Medium\Subarray Sums Divisible by K.cs" />
+    <Compile Include="Medium\Subsets II.cs" />
     <Compile Include="Medium\Subsets.cs" />
     <Compile Include="Medium\Sum of Subarray Minimums.cs" />
     <Compile Include="Medium\Sum Root to Leaf Numbers.cs" />

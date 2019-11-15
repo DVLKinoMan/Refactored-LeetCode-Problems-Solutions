@@ -186,6 +186,7 @@
     <Compile Include="Medium\Delete and Earn.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
     <Compile Include="Medium\Filling Bookcase Shelves.cs" />
+    <Compile Include="Medium\Find All Duplicates in an Array.cs" />
     <Compile Include="Medium\Find and Replace Pattern.cs" />
     <Compile Include="Medium\Find Bottom Left Tree Value.cs" />
     <Compile Include="Medium\Find Duplicate Subtrees.cs" />

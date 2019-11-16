@@ -245,6 +245,7 @@
     <Compile Include="Medium\Next Greater Node In Linked List.cs" />
     <Compile Include="Medium\Number of Dice Rolls With Target Sum.cs" />
     <Compile Include="Medium\Partition Labels.cs" />
+    <Compile Include="Medium\Partition to K Equal Sum Subsets.cs" />
     <Compile Include="Medium\Path Sum II.cs" />
     <Compile Include="Medium\Permutation Sequence.cs" />
     <Compile Include="Medium\Permutations II.cs" />

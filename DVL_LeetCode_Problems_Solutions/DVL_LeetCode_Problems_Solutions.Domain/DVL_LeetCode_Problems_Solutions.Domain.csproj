@@ -271,6 +271,7 @@
     <Compile Include="Medium\Single Element in a Sorted Array.cs" />
     <Compile Include="Medium\Smallest Range II.cs" />
     <Compile Include="Medium\Snapshot Array.cs" />
+    <Compile Include="Medium\Sort Characters By Frequency.cs" />
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />

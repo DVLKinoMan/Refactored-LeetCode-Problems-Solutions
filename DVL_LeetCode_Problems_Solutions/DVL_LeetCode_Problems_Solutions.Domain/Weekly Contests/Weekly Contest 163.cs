@@ -18,9 +18,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             int n = grid.Length, m = grid[0].Length;
             int[][] newGrid = new int[n][];
             for (int i = 0; i < n; i++)
-            {
                 newGrid[i] = new int[m];
-            }
 
             k = k % (n * m);
             for (int i = 0; i < n; i++)

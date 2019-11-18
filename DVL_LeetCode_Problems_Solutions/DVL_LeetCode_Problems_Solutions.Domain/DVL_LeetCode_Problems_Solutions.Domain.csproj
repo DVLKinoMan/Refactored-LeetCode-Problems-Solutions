@@ -148,6 +148,7 @@
     <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
     <Compile Include="Hard\Maximum Score Words Formed by Letters.cs" />
+    <Compile Include="Hard\Minimum Moves to Move a Box to Their Target Location.cs" />
     <Compile Include="Hard\Minimum Moves to Reach Target with Rotations.cs" />
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />

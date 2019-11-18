@@ -283,6 +283,7 @@
     <Compile Include="Medium\Sum of Subarray Minimums.cs" />
     <Compile Include="Medium\Sum Root to Leaf Numbers.cs" />
     <Compile Include="Medium\Swap For Longest Repeated Character Substring.cs" />
+    <Compile Include="Medium\Target Sum.cs" />
     <Compile Include="Medium\Unique Paths II.cs" />
     <Compile Include="Medium\Unique Paths.cs" />
     <Compile Include="Medium\Valid Parenthesis String.cs" />

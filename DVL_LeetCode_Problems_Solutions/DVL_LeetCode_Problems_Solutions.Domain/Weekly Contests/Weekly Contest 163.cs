@@ -37,68 +37,24 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return newGrid;
         }
 
+        /// <summary>
+        /// Greatest Sum Divisible by Three (Not Mine)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
         public static int MaxSumDivThree(int[] nums)
         {
-            var dict = new Dictionary<int, List<int>>()
-                {{0, new List<int>()}, {1, new List<int>()}, {2, new List<int>()}};
+            var dp = new int[]{0, int.MinValue, int.MinValue};
+
             foreach (var num in nums)
-                dict[num % 3].Add(num);
-            foreach (var list in dict.Values)
-                list.Sort();
-
-            int max = dict[0].Sum();
-            int rem = Math.Min(dict[1].Count / 3, dict[2].Count / 3) * 3;
-            if (rem != 0)
             {
-                max += dict[1].Skip(dict[1].Count - rem).Sum();
-                max += dict[2].Skip(dict[2].Count - rem).Sum();
-                dict[1].RemoveRange(dict[1].Count - rem - 1, rem);
-                dict[2].RemoveRange(dict[2].Count - rem - 1, rem);
+                var dp2 = new int[3];
+                for (int i = 0; i < 3; i++)
+                    dp2[(i + num) % 3] = Math.Max(dp[(i + num) % 3], dp[i] + num);
+                dp = dp2;
             }
 
-            if (dict[1].Count < 3 && dict[2].Count < 3)
-            {
-                while (dict[1].Count != 0 && dict[2].Count != 0)
-                {
-                    int f = dict[1].Count - 1, s = dict[2].Count - 1;
-                    max += dict[1][f] += dict[2][s];
-                    dict[1].RemoveAt(f);
-                    dict[2].RemoveAt(s);
-                }
-            }
-            else
-            {
-                if (dict[1].Count == 3)
-                {
-                    int sum = dict[1].Sum();
-                    int secondSum = 0;
-                    while (dict[1].Count != 0 && dict[2].Count != 0)
-                    {
-                        int f = dict[1].Count - 1, s = dict[2].Count - 1;
-                        secondSum += dict[1][f] += dict[2][s];
-                        dict[1].RemoveAt(f);
-                        dict[2].RemoveAt(s);
-                    }
-
-                    max += Math.Max(sum, secondSum);
-                }
-                else
-                {
-                    int sum = dict[2].Sum();
-                    int secondSum = 0;
-                    while (dict[1].Count != 0 && dict[2].Count != 0)
-                    {
-                        int f = dict[1].Count - 1, s = dict[2].Count - 1;
-                        secondSum += dict[1][f] += dict[2][s];
-                        dict[1].RemoveAt(f);
-                        dict[2].RemoveAt(s);
-                    }
-
-                    max += Math.Max(sum, secondSum);
-                }
-            }
-
-            return max;
+            return dp[0];
         }
 
         /// <summary>

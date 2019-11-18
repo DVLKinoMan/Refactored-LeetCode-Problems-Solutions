@@ -24,6 +24,8 @@ namespace DVL_LC_Problems.Tests
             //Subsets(new int[] {1, 2, 3});
             //MySqrt(11111111);
 
+            //MaxSumDivThree(new int[] {1, 1, 5, 4, 7});
+
             Assert.AreEqual(10, d);
         }
     }

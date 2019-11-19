@@ -245,6 +245,7 @@
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
     <Compile Include="Medium\Next Greater Node In Linked List.cs" />
+    <Compile Include="Medium\Non-overlapping Intervals.cs" />
     <Compile Include="Medium\Number of Dice Rolls With Target Sum.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />
     <Compile Include="Medium\Partition Labels.cs" />

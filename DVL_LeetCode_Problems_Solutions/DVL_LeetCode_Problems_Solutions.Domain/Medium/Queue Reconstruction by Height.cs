@@ -6,13 +6,13 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     partial class ProblemSolver
     {
         /// <summary>
-        /// Queue Reconstruction by Height (Not Working)
+        /// Queue Reconstruction by Height (Mine)
         /// </summary>
         /// <param name="people"></param>
         /// <returns></returns>
         public static int[][] ReconstructQueue(int[][] people)
         {
-            var list = people.ToList();
+            var list = people.OrderBy(p => p[1]).ToList();
             var result = new List<int[]>();
 
             while (list.Count != 0)
@@ -45,7 +45,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     else if (count > first[1])
                     {
                         hasFound = true;
-                        result.Insert(result.Count - 2, first);
+                        result.Insert(result.Count - 1, first);
                     }
                 }
 

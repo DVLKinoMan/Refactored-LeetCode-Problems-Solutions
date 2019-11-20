@@ -100,6 +100,7 @@
     <Compile Include="Easy\Non-decreasing Array.cs" />
     <Compile Include="Easy\Number Complement.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
+    <Compile Include="Easy\Path Sum III.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Play with Chips.cs" />
     <Compile Include="Easy\Plus One.cs" />

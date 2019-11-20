@@ -95,6 +95,7 @@
     <Compile Include="Easy\Move Zeros.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />
+    <Compile Include="Easy\Next Greater Element I.cs" />
     <Compile Include="Easy\Nim Game.cs" />
     <Compile Include="Easy\Non-decreasing Array.cs" />
     <Compile Include="Easy\Number Complement.cs" />

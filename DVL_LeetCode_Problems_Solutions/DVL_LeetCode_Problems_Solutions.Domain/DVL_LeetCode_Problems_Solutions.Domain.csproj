@@ -130,6 +130,7 @@
     <Compile Include="Easy\Valid Mountain Array.cs" />
     <Compile Include="Easy\Valid Palindrome II.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />
+    <Compile Include="Easy\Valid Perfect Square.cs" />
     <Compile Include="Easy\Verifying an Alien Dictionary.cs" />
     <Compile Include="Easy\Word Pattern.cs" />
     <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />

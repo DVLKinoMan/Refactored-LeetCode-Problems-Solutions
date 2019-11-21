@@ -198,6 +198,7 @@
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
+    <Compile Include="Medium\Increasing Subsequences.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Jump Game.cs" />
     <Compile Include="Medium\K Closest Points to Origin.cs" />

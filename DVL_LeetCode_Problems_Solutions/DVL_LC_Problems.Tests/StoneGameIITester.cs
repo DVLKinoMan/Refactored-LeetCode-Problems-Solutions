@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
 namespace DVL_LC_Problems.Tests
@@ -9,7 +10,7 @@ namespace DVL_LC_Problems.Tests
         [TestMethod]
         public void Method1()
         {
-            int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
+            int d = StoneGameII(new int[] {2, 7, 9, 4, 4});
             //CircularPermutation(2, 3);
             //MinRemoveToMakeValid("lee(t(c)o)de)");
             //ReconstructMatrix(9, 2, new int[] {0, 1, 2, 0, 0, 0, 0, 0, 2, 1, 2, 1, 2});
@@ -24,12 +25,18 @@ namespace DVL_LC_Problems.Tests
             //{
             //    new int[]{9, 0},new int[]{7, 0},new int[]{1, 9},new int[]{3, 0},new int[]{2, 7},new int[]{5, 3},new int[]{6, 0},new int[]{3, 4},new int[]{6, 2},new int[]{5, 2}
             //});
-            CanPartition(new int[]
-            {
-                1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-                1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 100
-            });
+            //CanPartition(new int[]
+            //{
+            //    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            //    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            //    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 100
+            //});
+            //GetSum(-1, 1);
+            //string maxString = System.Convert.ToString(int.MaxValue, 2);
+            //string minusString = System.Convert.ToString(-1, 2);
+            //bool b = maxString == minusString;
+            //int l = System.Convert.ToInt32(maxString, 2);
+            //int minusNum = System.Convert.ToInt32(minusString, 2);
 
             Assert.AreEqual(10, d);
         }

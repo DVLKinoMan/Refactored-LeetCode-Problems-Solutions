@@ -100,6 +100,7 @@
     <Compile Include="Easy\Non-decreasing Array.cs" />
     <Compile Include="Easy\Number Complement.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
+    <Compile Include="Easy\Path Sum III.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Play with Chips.cs" />
     <Compile Include="Easy\Plus One.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Easy\Subdomain Visit Count.cs" />
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />
     <Compile Include="Easy\Sum of Square Numbers.cs" />
+    <Compile Include="Easy\Sum of Two Integers.cs" />
     <Compile Include="Easy\Third Maximum Number.cs" />
     <Compile Include="Easy\To Lower Case.cs" />
     <Compile Include="Easy\Toeplitz Matrix.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Easy\Valid Mountain Array.cs" />
     <Compile Include="Easy\Valid Palindrome II.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />
+    <Compile Include="Easy\Valid Perfect Square.cs" />
     <Compile Include="Easy\Verifying an Alien Dictionary.cs" />
     <Compile Include="Easy\Word Pattern.cs" />
     <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />

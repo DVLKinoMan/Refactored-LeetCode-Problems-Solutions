@@ -38,6 +38,8 @@ namespace DVL_LC_Problems.Tests
             //int l = System.Convert.ToInt32(maxString, 2);
             //int minusNum = System.Convert.ToInt32(minusString, 2);
 
+            FindSubsequences(new int[] {4, 6, 7, 7});
+
             Assert.AreEqual(10, d);
         }
     }

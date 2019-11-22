@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Decode String (Mine)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static string DecodeString(string s)
         {
             var builder = new StringBuilder();
@@ -18,46 +21,38 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             bool isInner = false;
             foreach (var ch in s)
             {
-                if (ch == ']')
+                if (ch == ']' && count == 1)
                 {
                     count--;
-                    if (count == 0)
-                    {
-                        builder.Append(string.Join("", Enumerable.Repeat(DecodeString(innerBuilder.ToString()), stack.Pop())));
-                        isInner = false;
-                        innerBuilder.Clear();
-                    }
+                    builder.Append(string.Join("",
+                        Enumerable.Repeat(DecodeString(innerBuilder.ToString()), stack.Pop())));
+                    isInner = false;
+                    innerBuilder.Clear();
                 }
-                else if (isInner && count == 1)
+                else if (isInner)
+                {
                     innerBuilder.Append(ch);
+                    if (ch == ']')
+                        count--;
+                    else if (ch == '[')
+                        count++;
+                }
                 else if (char.IsLetter(ch))
-                {
-                    if (isInner)
-                        innerBuilder.Append(ch);
-                    else builder.Append(ch);
-                }
+                    builder.Append(ch);
                 else if (char.IsDigit(ch))
-                {
-                    if (isInner)
-                    {
-                        innerBuilder.Append(ch);
-                        continue;
-                    }
                     nums.Append(ch);
-                }
                 else if (ch == '[')
                 {
                     count++;
-                    if (count == 1)
-                    {
-                        stack.Push(int.Parse(nums.ToString()));
-                        nums.Clear();
-                        isInner = true;
-                    }
+                    if (count != 1) 
+                        continue;
+                    stack.Push(int.Parse(nums.ToString()));
+                    nums.Clear();
+                    isInner = true;
                 }
             }
 
-            return stack.Count!=0 ? string.Join("", Enumerable.Repeat(builder, stack.Pop())) : builder.ToString();
+            return stack.Count != 0 ? string.Join("", Enumerable.Repeat(builder, stack.Pop())) : builder.ToString();
         }
     }
 }

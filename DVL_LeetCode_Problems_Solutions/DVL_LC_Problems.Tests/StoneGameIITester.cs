@@ -1,4 +1,5 @@
 ﻿using System;
+using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
@@ -39,8 +40,21 @@ namespace DVL_LC_Problems.Tests
             //int minusNum = System.Convert.ToInt32(minusString, 2);
 
             //FindSubsequences(new int[] {4, 6, 7, 7});
-            DecodeString("3[a2[c]]");
+            //DecodeString("3[a2[c]]");
 
+            OddEvenList(new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(3)
+                    {
+                        next = new ListNode(4)
+                        {
+                            next = new ListNode(5)
+                        }
+                    }
+                }
+            });
 
             Assert.AreEqual(10, d);
         }

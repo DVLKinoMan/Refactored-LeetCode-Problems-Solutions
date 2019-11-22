@@ -110,6 +110,7 @@
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
     <Compile Include="Easy\Repeated Substring Pattern.cs" />
     <Compile Include="Easy\Reverse String.cs" />
+    <Compile Include="Easy\Reverse Vowels of a String.cs" />
     <Compile Include="Easy\Rotate Array.cs" />
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Search in a Binary Search Tree.cs" />

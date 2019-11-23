@@ -194,6 +194,7 @@
     <Compile Include="Medium\Construct Binary Tree from Preorder and Postorder Traversal.cs" />
     <Compile Include="Medium\Decode String.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
+    <Compile Include="Medium\Diagonal Traverse.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
     <Compile Include="Medium\Filling Bookcase Shelves.cs" />
     <Compile Include="Medium\Find All Duplicates in an Array.cs" />

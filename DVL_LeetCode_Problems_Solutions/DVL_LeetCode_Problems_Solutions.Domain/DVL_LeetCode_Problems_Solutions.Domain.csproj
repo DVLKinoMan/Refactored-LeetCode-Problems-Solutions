@@ -161,6 +161,7 @@
     <Compile Include="Hard\N-Queens II.cs" />
     <Compile Include="Hard\N-Queens.cs" />
     <Compile Include="Hard\Number of Submatrices That Sum to Target.cs" />
+    <Compile Include="Hard\Number of Ways to Stay in the Same Place After Some Steps.cs" />
     <Compile Include="Hard\Parsing A Boolean Expression.cs" />
     <Compile Include="Hard\Profitable Schemes.cs" />
     <Compile Include="Hard\Russian Doll Envelopes.cs" />

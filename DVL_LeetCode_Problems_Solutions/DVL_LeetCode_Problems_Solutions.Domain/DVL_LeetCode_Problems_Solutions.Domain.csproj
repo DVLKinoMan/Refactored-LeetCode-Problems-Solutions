@@ -105,6 +105,7 @@
     <Compile Include="Easy\Play with Chips.cs" />
     <Compile Include="Easy\Plus One.cs" />
     <Compile Include="Easy\Power of Four.cs" />
+    <Compile Include="Easy\Powerful Integers.cs" />
     <Compile Include="Easy\Range Sum of BST.cs" />
     <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Hard\Parsing A Boolean Expression.cs" />
     <Compile Include="Hard\Profitable Schemes.cs" />
     <Compile Include="Hard\Russian Doll Envelopes.cs" />
+    <Compile Include="Hard\Shortest Path to Get All Keys.cs" />
     <Compile Include="Hard\Shortest Subarray with Sum at Least K.cs" />
     <Compile Include="Hard\Smallest Sufficient Team.cs" />
     <Compile Include="Hard\Sort Items by Groups Respecting Dependencies.cs" />

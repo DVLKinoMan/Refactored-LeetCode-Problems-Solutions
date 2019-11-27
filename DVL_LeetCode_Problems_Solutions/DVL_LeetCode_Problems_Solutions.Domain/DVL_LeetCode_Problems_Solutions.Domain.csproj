@@ -181,6 +181,7 @@
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\All Paths From Source to Target.cs" />
     <Compile Include="Medium\Array Nesting.cs" />
+    <Compile Include="Medium\Array of Doubled Pairs.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />
     <Compile Include="Medium\Binary Tree Inorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Preorder Traversal.cs" />

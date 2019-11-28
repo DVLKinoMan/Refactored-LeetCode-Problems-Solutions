@@ -206,6 +206,7 @@
     <Compile Include="Medium\Find Bottom Left Tree Value.cs" />
     <Compile Include="Medium\Find Duplicate Subtrees.cs" />
     <Compile Include="Medium\Find Peak Element.cs" />
+    <Compile Include="Medium\Flatten Binary Tree to Linked List.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />

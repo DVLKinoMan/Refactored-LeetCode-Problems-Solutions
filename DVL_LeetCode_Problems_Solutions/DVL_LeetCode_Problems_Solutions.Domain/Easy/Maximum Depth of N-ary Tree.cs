@@ -10,7 +10,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
-        public static int MaxDepth(Node root)
+        public static int MaxDepth(DVL_LeetCode_Problems_Solutions.Domain.Classes.Node root)
         {
             if (root == null)
                 return 0;

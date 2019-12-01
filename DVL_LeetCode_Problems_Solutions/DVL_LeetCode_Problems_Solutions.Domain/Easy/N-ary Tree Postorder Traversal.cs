@@ -10,13 +10,13 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
-        public static IList<int> Postorder(Node root)
+        public static IList<int> Postorder(DVL_LeetCode_Problems_Solutions.Domain.Classes.Node root)
         {
             var list = new List<int>();
             if (root == null)
                 return list;
 
-            var stack = new Stack<Node>();
+            var stack = new Stack<DVL_LeetCode_Problems_Solutions.Domain.Classes.Node>();
             stack.Push(root);
 
             while (stack.Count!=0)

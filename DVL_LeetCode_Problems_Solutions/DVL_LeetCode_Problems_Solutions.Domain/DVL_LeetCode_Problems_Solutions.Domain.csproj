@@ -58,6 +58,7 @@
     <Compile Include="Easy\Binary Number with Alternating Bits.cs" />
     <Compile Include="Easy\Binary Prefix Divisible By 5.cs" />
     <Compile Include="Easy\Binary Search.cs" />
+    <Compile Include="Easy\Climbing Stairs.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />
     <Compile Include="Easy\Contains Duplicate.cs" />

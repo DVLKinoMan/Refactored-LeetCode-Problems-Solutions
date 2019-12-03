@@ -1,6 +1,6 @@
 ﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
-namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {

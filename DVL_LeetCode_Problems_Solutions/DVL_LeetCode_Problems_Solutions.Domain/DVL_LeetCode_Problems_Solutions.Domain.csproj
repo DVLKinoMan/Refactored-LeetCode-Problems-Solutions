@@ -209,6 +209,7 @@
     <Compile Include="Medium\Counting Bits.cs" />
     <Compile Include="Medium\Decode String.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
+    <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
     <Compile Include="Medium\Filling Bookcase Shelves.cs" />

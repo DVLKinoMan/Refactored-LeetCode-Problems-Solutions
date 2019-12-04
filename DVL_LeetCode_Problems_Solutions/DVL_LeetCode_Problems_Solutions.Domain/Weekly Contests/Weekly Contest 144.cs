@@ -36,7 +36,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Delete Nodes And Return Forest (Mine)
+        /// Delete Node And Return Forest (Mine)
         /// </summary>
         /// <param name="root"></param>
         /// <param name="to_delete"></param>

@@ -62,7 +62,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Insufficient Nodes in Root to Leaf Paths (Not Mine)
+        /// Insufficient Node in Root to Leaf Paths (Not Mine)
         /// </summary>
         /// <param name="root"></param>
         /// <param name="limit"></param>

@@ -1,24 +1,9 @@
 ﻿using System.Collections.Generic;
+using DVL_LeetCode_Problems_Solutions.Domain.Classes.NodeWithRandom;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
-    public class Node
-    {
-        public int val;
-        public Node next;
-        public Node random;
-
-        public Node()
-        {
-        }
-
-        public Node(int _val, Node _next, Node _random)
-        {
-            val = _val;
-            next = _next;
-            random = _random;
-        }
-    }
+    
 
     partial class ProblemSolver
     {

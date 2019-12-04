@@ -6,7 +6,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     partial class ProblemSolver
     {
         /// <summary>
-        ///  Remove Zero Sum Consecutive Nodes from Linked List (Mine)
+        ///  Remove Zero Sum Consecutive Node from Linked List (Mine)
         /// </summary>
         /// <param name="head"></param>
         /// <returns></returns>

@@ -1,4 +1,6 @@
-﻿namespace DVL_LeetCode_Problems_Solutions.Domain
+﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes.NodeWithNext;
+
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {

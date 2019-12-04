@@ -79,6 +79,7 @@
     <Compile Include="Easy\Intersection of Two Arrays.cs" />
     <Compile Include="Easy\Invert Binary Tree.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />
+    <Compile Include="Easy\Leaf-Similar Trees.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />

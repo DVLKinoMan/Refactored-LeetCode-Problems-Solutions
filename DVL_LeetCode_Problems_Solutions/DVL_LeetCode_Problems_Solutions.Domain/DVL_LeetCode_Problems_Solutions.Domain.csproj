@@ -192,6 +192,7 @@
     <Compile Include="Medium\Binary Tree Inorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Preorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Pruning.cs" />
+    <Compile Include="Medium\Binary Tree Right Side View.cs" />
     <Compile Include="Medium\Bitwise AND of Numbers Range.cs" />
     <Compile Include="Medium\Boats to Save People.cs" />
     <Compile Include="Medium\Broken Calculator.cs" />

@@ -300,6 +300,7 @@
     <Compile Include="Medium\Reordered Power of 2.cs" />
     <Compile Include="Medium\Replace the Substring for Balanced String.cs" />
     <Compile Include="Medium\Replace Words.cs" />
+    <Compile Include="Medium\Reveal Cards In Increasing Order.cs" />
     <Compile Include="Medium\Rotate Image.cs" />
     <Compile Include="Medium\Rotate List.cs" />
     <Compile Include="Medium\Satisfiability of Equality Equations.cs" />

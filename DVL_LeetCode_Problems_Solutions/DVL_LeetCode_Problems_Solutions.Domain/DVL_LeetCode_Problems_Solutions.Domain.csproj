@@ -138,6 +138,7 @@
     <Compile Include="Easy\Transpose Matrix.cs" />
     <Compile Include="Easy\Two Sum II - Input array is sorted.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
+    <Compile Include="Easy\Valid Anagram.cs" />
     <Compile Include="Easy\Valid Mountain Array.cs" />
     <Compile Include="Easy\Valid Palindrome II.cs" />
     <Compile Include="Easy\Valid Palindrome.cs" />

@@ -77,6 +77,7 @@
     <Compile Include="Easy\Find the Town Judge.cs" />
     <Compile Include="Easy\House Robber.cs" />
     <Compile Include="Easy\Increasing Order Search Tree.cs" />
+    <Compile Include="Easy\Intersection of Two Arrays II.cs" />
     <Compile Include="Easy\Intersection of Two Arrays.cs" />
     <Compile Include="Easy\Invert Binary Tree.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />

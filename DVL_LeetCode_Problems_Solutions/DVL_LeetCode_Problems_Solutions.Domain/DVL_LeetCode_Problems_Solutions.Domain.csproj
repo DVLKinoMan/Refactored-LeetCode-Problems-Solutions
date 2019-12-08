@@ -386,6 +386,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 163.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 164.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 165.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 166.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

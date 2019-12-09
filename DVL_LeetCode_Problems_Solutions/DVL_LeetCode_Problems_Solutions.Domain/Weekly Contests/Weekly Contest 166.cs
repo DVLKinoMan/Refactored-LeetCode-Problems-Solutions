@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
@@ -52,28 +53,27 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Find the Smallest Divisor Given a Threshold (Not Mine)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="threshold"></param>
+        /// <returns></returns>
         public static int SmallestDivisor(int[] nums, int threshold)
         {
-            int sum = nums.Sum();
-            int div = sum / threshold;
-            if (div == 0)
-                div = 1;
-            int ans = Func(div);
-            while (ans>threshold)
+            int left = 1, right = (int)Math.Pow(10,6);
+            while (left < right)
             {
-                div++;
-                ans = Func(div);
-            }
-
-            return div;
-
-            int Func(int d)
-            {
-                int res = 0;
+                int div = (left + right) / 2, sum = 0;
                 foreach (var num in nums)
-                    res += num / d + (num % d > 0 ? 1 : 0);
-                return res;
+                    sum += (num + div - 1) / div;
+                if (sum > threshold)
+                    left = div + 1;
+                else
+                    right = div;
             }
+
+            return left;
         }
     }
 }

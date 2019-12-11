@@ -79,6 +79,7 @@
     <Compile Include="Easy\Increasing Order Search Tree.cs" />
     <Compile Include="Easy\Intersection of Two Arrays II.cs" />
     <Compile Include="Easy\Intersection of Two Arrays.cs" />
+    <Compile Include="Easy\Intersection of Two Linked Lists.cs" />
     <Compile Include="Easy\Invert Binary Tree.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />
     <Compile Include="Easy\Leaf-Similar Trees.cs" />

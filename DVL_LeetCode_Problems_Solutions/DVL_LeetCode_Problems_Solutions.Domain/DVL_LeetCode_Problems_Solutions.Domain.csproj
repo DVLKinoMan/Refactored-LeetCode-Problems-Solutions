@@ -285,6 +285,7 @@
     <Compile Include="Medium\Non-overlapping Intervals.cs" />
     <Compile Include="Medium\Number of Dice Rolls With Target Sum.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
+    <Compile Include="Medium\Palindromic Substrings.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />
     <Compile Include="Medium\Partition Labels.cs" />
     <Compile Include="Medium\Partition to K Equal Sum Subsets.cs" />

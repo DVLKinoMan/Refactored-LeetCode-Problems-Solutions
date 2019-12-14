@@ -55,6 +55,7 @@
     <Compile Include="Easy\Array Partition I.cs" />
     <Compile Include="Easy\Average of Levels in Binary Tree.cs" />
     <Compile Include="Easy\Balanced Binary Tree.cs" />
+    <Compile Include="Easy\Best Time to Buy and Sell Stock.cs" />
     <Compile Include="Easy\Binary Gap.cs" />
     <Compile Include="Easy\Binary Number with Alternating Bits.cs" />
     <Compile Include="Easy\Binary Prefix Divisible By 5.cs" />

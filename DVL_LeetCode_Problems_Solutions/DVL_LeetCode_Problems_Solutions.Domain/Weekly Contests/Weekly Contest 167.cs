@@ -49,38 +49,44 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             return res;
         }
 
+        /// <summary>
+        /// Maximum Side Length of a Square with Sum Less than or Equal to Threshold (Not Mine)
+        /// </summary>
+        /// <param name="mat"></param>
+        /// <param name="threshold"></param>
+        /// <returns></returns>
         public static int MaxSideLength(int[][] mat, int threshold)
         {
-            int m = mat.Length, n = mat[0].Length;
-            var dp = new Dictionary<(int i, int j), int>();
-            for (int len = Math.Min(m, n); len > 0; len--)
-            for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++)
-                if (i + len <= m && j + len <= n)
-                {
-                    if (dp.ContainsKey((i, j)))
-                    {
-                        int outerLayer = 0;
-                        for (int k = j; k <= j + len; k++)
-                            outerLayer += mat[i + len][k];
-                        for (int k = i; k < i + len; k++)
-                            outerLayer += mat[k][j + len];
-                        dp[(i, j)] -= outerLayer;
-                    }
-                    else
-                    {
-                        int sum = 0;
-                        for (int i1 = i; i1 < i + len; i1++)
-                        for (int j1 = j; j1 < j + len; j1++)
-                            sum += mat[i1][j1];
-                        dp.Add((i, j), sum);
-                    }
+            int m = mat.Length;
+            int n = mat[0].Length;
+            var sum = new int[m + 1, n + 1];
 
-                    if (dp[(i, j)] <= threshold)
-                        return len;
-                }
+            for (int i = 1; i <= m; i++)
+            for (int j = 1; j <= n; j++)
+                sum[i, j] = sum[i - 1, j] + sum[i, j - 1] - sum[i - 1, j - 1] + mat[i - 1][j - 1];
 
-            return 0;
+            int lo = 0, hi = Math.Min(m, n);
+
+            while (lo <= hi)
+            {
+                int mid = (lo + hi) / 2;
+                if (isSquareExist(mid))
+                    lo = mid + 1;
+                else
+                    hi = mid - 1;
+            }
+
+            return hi;
+
+
+            bool isSquareExist(int len)
+            {
+                for (int i = len; i <= m; i++)
+                for (int j = len; j <= n; j++)
+                    if (sum[i, j] - sum[i - len, j] - sum[i, j - len] + sum[i - len, j - len] <= threshold)
+                        return true;
+                return false;
+            }
         }
 
         public static int ShortestPath(int[][] grid, int k)

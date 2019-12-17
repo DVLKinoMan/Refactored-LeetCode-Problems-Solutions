@@ -89,57 +89,40 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }
         }
 
+        /// <summary>
+        /// Shortest Path in a Grid with Obstacles Elimination (Not Mine)
+        /// </summary>
+        /// <param name="grid"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
         public static int ShortestPath(int[][] grid, int k)
         {
             int m = grid.Length, n = grid[0].Length;
-            var dict = new Dictionary<(int, int), int>();
-            int val = Dfs(0, 0, new HashSet<(int, int)>() {(0, 0)}, k);
-            return val == int.MaxValue ? -1 : val;
-
-            int Dfs(int i, int j, HashSet<(int, int)> set, int currK, int currCount = 0)
+            int[] dirs = { 0, 1, 0, -1, 0 };
+            var visited = new bool[m, n, m * n];
+            visited[0, 0, 0] = true;
+            Queue<(int r,int c,int k,int dist)> q = new Queue<(int, int, int,int)>();
+            q.Enqueue((0, 0, 0, 0));
+            while (q.Count!=0)
             {
-                if (dict.ContainsKey((i, j)))
-                    return dict[(i, j)];
-                if (i == m - 1 && j == n - 1)
-                    return currCount;
-
-                int min = int.MaxValue;
-                //Down
-                if (i + 1 < m && !set.Contains((i + 1, j)) && (grid[i+1][j] == 0 || currK > 0))
+                var top = q.Dequeue();
+                if (top.r == m - 1 && top.c == n - 1) 
+                    return top.dist;
+                for (int i = 0; i < 4; i++)
                 {
-                    set.Add((i + 1, j));
-                    min = Math.Min(min, Dfs(i + 1, j, set, grid[i + 1][j] == 1 ? currK - 1 : currK, currCount + 1));
-                    set.Remove((i + 1, j));
+                    int nr = top.r + dirs[i], nc = top.c + dirs[i + 1];
+                    if (nr >= 0 && nr < m && nc >= 0 && nc < n)
+                    {
+                        int nk = top.k + grid[nr][nc];
+                        if (nk <= k && !visited[nr, nc, nk])
+                        {
+                            visited[nr, nc, nk] = true;
+                            q.Enqueue((nr, nc, nk, top.dist + 1));
+                        }
+                    }
                 }
-
-                //Up
-                if (i - 1 >= 0 && !set.Contains((i - 1, j)) && (grid[i - 1][j] == 0 || currK > 0))
-                {
-                    set.Add((i - 1, j));
-                    min = Math.Min(min, Dfs(i - 1, j, set, grid[i - 1][j] == 1 ? currK - 1 : currK, currCount + 1));
-                    set.Remove((i - 1, j));
-                }
-
-                //Left
-                if (j - 1 >= 0 && !set.Contains((i, j - 1)) && (grid[i][j - 1] == 0 || currK > 0))
-                {
-                    set.Add((i, j - 1));
-                    min = Math.Min(min, Dfs(i, j - 1, set, grid[i][j - 1] == 1 ? currK - 1 : currK, currCount + 1));
-                    set.Remove((i, j- 1));
-                }
-
-
-                //Right
-                if (j + 1 < n && !set.Contains((i, j + 1)) && (grid[i][j + 1] == 0 || currK > 0))
-                {
-                    set.Add((i, j + 1));
-                    min = Math.Min(min, Dfs(i, j + 1, set, grid[i][j + 1] == 1 ? currK - 1 : currK, currCount + 1));
-                    set.Remove((i, j + 1));
-                }
-
-                dict.Add((i, j), min);
-                return min;
             }
+            return -1;
         }
     }
 }

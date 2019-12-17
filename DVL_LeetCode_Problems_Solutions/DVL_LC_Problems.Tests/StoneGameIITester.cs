@@ -11,7 +11,7 @@ namespace DVL_LC_Problems.Tests
         [TestMethod]
         public void Method1()
         {
-            int d = StoneGameII(new int[] {2, 7, 9, 4, 4});
+            int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
             //CircularPermutation(2, 3);
             //MinRemoveToMakeValid("lee(t(c)o)de)");
             //ReconstructMatrix(9, 2, new int[] {0, 1, 2, 0, 0, 0, 0, 0, 2, 1, 2, 1, 2});
@@ -64,9 +64,25 @@ namespace DVL_LC_Problems.Tests
             //FindDuplicate(new int[] { 3, 1, 3, 4, 2 });
             //DeckRevealedIncreasing(new int[] {17, 13, 11, 2, 3, 5, 7});
             //ValidTicTacToe(new string[] {"OXX", 
-                                         //"XOX", 
-                                         //"OXO"});
+            //"XOX", 
+            //"OXO"});
             //CountSubstrings("abcabc");
+
+            //MaxSideLength(new int[3][]
+            //{
+            //    new int[3] {1, 1, 1},
+            //    new int[3] {1, 1, 1},
+            //    new int[3] {1, 1, 1},
+            //}, 3);
+
+            ShortestPath(new int[][]
+                {
+                    new int[] {0, 1, 0, 0, 0, 1, 0, 0},
+                    new int[] {0, 1, 0, 1, 0, 1, 0, 1},
+                    new int[] {0, 0, 0, 1, 0, 0, 1, 0}
+                },
+                1);
+
 
             Assert.AreEqual(10, d);
         }

@@ -10,15 +10,29 @@
         /// <returns></returns>
         public static char NextGreatestLetter(char[] letters, char target)
         {
-            char minChar = char.MaxValue, firstMax = char.MaxValue;
-            foreach (var letter in letters)
+            //char minChar = char.MaxValue, firstMax = char.MaxValue;
+            //foreach (var letter in letters)
+            //{
+            //    minChar = minChar < letter ? minChar : letter;
+            //    if (letter > target && letter < firstMax)
+            //        firstMax = letter;
+            //}
+
+            //return firstMax != char.MaxValue ? firstMax : minChar;
+
+            int a = 0, b = letters.Length - 1;
+            while (a < b)
             {
-                minChar = minChar < letter ? minChar : letter;
-                if (letter > target && letter < firstMax)
-                    firstMax = letter;
+                int mid = (a + b) / 2;
+                if (letters[mid] > target)
+                    b = mid - 1;
+                else a = mid + 1;
             }
 
-            return firstMax != char.MaxValue ? firstMax : minChar;
+            if (b < 0)
+                return letters[0];
+
+            return letters[b] > target ? letters[b] : letters[b + 1 == letters.Length ? 0 : b + 1];
         }
     }
 }

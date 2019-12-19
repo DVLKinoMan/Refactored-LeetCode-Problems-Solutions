@@ -146,6 +146,7 @@
     <Compile Include="Easy\To Lower Case.cs" />
     <Compile Include="Easy\Toeplitz Matrix.cs" />
     <Compile Include="Easy\Transpose Matrix.cs" />
+    <Compile Include="Easy\Trim a Binary Search Tree.cs" />
     <Compile Include="Easy\Two Sum II - Input array is sorted.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Anagram.cs" />

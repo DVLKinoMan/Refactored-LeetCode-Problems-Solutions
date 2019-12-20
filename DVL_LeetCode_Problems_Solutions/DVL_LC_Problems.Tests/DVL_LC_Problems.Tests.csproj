@@ -63,6 +63,7 @@
     <Compile Include="Increasing Subsequences Tester.cs" />
     <Compile Include="Knight Dialer.cs" />
     <Compile Include="Longest Chunked Palindrome Decomposition Tester.cs" />
+    <Compile Include="Maximize Distance to Closest Person Tester.cs" />
     <Compile Include="Maximum Score Words Formed by Letters Tester.cs" />
     <Compile Include="Maximum Side Length of a Square with Sum Less than or Equal to Threshold Tester.cs" />
     <Compile Include="Minimum Moves to Reach Targest with Rotations Tester.cs" />

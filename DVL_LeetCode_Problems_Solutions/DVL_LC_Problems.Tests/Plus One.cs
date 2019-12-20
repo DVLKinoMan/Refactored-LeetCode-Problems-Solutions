@@ -1,9 +1,5 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
 namespace DVL_LC_Problems.Tests
@@ -12,9 +8,9 @@ namespace DVL_LC_Problems.Tests
     /// Summary description for Plus_One
     /// </summary>
     [TestClass]
-    public class Plus_One
+    public class PlusOne
     {
-        public Plus_One()
+        public PlusOne()
         {
             //
             // TODO: Add constructor logic here

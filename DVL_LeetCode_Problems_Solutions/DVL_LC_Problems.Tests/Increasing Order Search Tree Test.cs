@@ -1,12 +1,11 @@
-﻿using System;
+﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
-using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
 namespace DVL_LC_Problems.Tests
 {
     [TestClass]
-    public class Increasing_Order_Search_Tree_Test
+    public class IncreasingOrderSearchTreeTest
     {
         [TestMethod]
         public void TestMethod1()

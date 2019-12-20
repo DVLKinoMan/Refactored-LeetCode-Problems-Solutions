@@ -5,7 +5,7 @@ using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 namespace DVL_LC_Problems.Tests
 {
     [TestClass]
-    public class Knight_Dialer
+    public class KnightDialer
     {
         [TestMethod]
         public void TestMethod1()

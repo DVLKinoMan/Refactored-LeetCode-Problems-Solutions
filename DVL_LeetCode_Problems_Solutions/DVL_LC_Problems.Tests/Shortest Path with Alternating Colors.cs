@@ -1,16 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
 namespace DVL_LC_Problems.Tests
 {
     [TestClass]
-    public class Shortest_Path_with_Alternating_Colors
+    public class ShortestPathWithAlternatingColors
     {
         [TestMethod]
         public void TestMethod1()
@@ -28,11 +23,14 @@ namespace DVL_LC_Problems.Tests
             //new int[]{3,1 } });
 
             var arr = ShortestAlternatingPaths(3,
-new int[][]{
-    new int[]{0, 1 }
-},
-new int[][]{
-new int[]{1, 2 } });
+                new int[][]
+                {
+                    new int[] {0, 1}
+                },
+                new int[][]
+                {
+                    new int[] {1, 2}
+                });
 
             var expected = new int[] { 0, 1, 2, 3, 7 };
 

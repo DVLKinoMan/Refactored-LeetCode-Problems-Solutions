@@ -115,7 +115,10 @@ namespace DVL_LC_Problems.Tests
             //    }.Select(s => s[0]).ToArray(),
             //    'a');
 
-            SortedSquares(new int[] {-4, -1, 0, 3, 10});
+            //SortedSquares(new int[] {-4, -1, 0, 3, 10});
+            //NetworkDelayTime(new int[][] {new int[]{1, 2, 1},new int[]{2, 3, 2},new int[]{1, 3, 2}},
+            //    3,
+            //    1);
 
             Assert.AreEqual(10, d);
         }

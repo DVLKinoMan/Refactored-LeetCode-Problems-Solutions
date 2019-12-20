@@ -1,10 +1,13 @@
-﻿using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
-namespace DVL_LeetCode_Problems_Solutions.Console
+namespace DVL_LC_Problems.Tests
 {
-    partial class Tester
+    [TestClass]
+    public class SearchInMatrixIiTester
     {
-        public static void SearchA2DMatrixIITester()
+        [TestMethod]
+        public void TestMethod1()
         {
             var matrix = new int[,]
             {
@@ -15,7 +18,7 @@ namespace DVL_LeetCode_Problems_Solutions.Console
                 {18, 21, 23, 26, 30}
             };
             int target = 4;
-            System.Console.WriteLine(SearchMatrix(matrix, target));
+            SearchMatrix(matrix, target);
         }
     }
 }

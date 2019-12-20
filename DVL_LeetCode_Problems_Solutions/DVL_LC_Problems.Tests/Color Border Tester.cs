@@ -1,11 +1,13 @@
-﻿
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
-namespace DVL_LeetCode_Problems_Solutions.Console
+namespace DVL_LC_Problems.Tests
 {
-    partial class Tester
+    [TestClass]
+    public class ColorBorderTester
     {
-        public static void ColorBorderTester()
+        [TestMethod]
+        public void Method1()
         {
             ColorBorder(new int[][]
                 {

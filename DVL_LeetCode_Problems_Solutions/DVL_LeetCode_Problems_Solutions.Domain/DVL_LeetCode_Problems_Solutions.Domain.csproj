@@ -291,6 +291,7 @@
     <Compile Include="Medium\Most Frequent Subtree Sum.cs" />
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />
     <Compile Include="Medium\Multiply Strings.cs" />
+    <Compile Include="Medium\Network Delay Time.cs" />
     <Compile Include="Medium\Next Greater Node In Linked List.cs" />
     <Compile Include="Medium\Non-overlapping Intervals.cs" />
     <Compile Include="Medium\Number of Dice Rolls With Target Sum.cs" />

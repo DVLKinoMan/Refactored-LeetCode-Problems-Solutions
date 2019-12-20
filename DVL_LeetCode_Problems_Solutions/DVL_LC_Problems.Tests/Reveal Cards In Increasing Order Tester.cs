@@ -4,14 +4,12 @@ using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 namespace DVL_LC_Problems.Tests
 {
     [TestClass]
-    public class StoneGameIITester
+    public class RevealCardsInIncreasingOrderTester
     {
         [TestMethod]
         public void Method1()
         {
-            int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
-
-            Assert.AreEqual(10, d);
+            DeckRevealedIncreasing(new int[] { 17, 13, 11, 2, 3, 5, 7 });
         }
     }
 }

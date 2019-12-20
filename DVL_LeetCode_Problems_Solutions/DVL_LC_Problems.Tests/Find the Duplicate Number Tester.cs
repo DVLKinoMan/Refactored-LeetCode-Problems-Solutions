@@ -4,14 +4,12 @@ using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 namespace DVL_LC_Problems.Tests
 {
     [TestClass]
-    public class StoneGameIITester
+    public class FindTheDuplicateNumberTester
     {
         [TestMethod]
         public void Method1()
         {
-            int d = StoneGameII(new int[] { 2, 7, 9, 4, 4 });
-
-            Assert.AreEqual(10, d);
+            FindDuplicate(new int[] { 3, 1, 3, 4, 2 });
         }
     }
 }

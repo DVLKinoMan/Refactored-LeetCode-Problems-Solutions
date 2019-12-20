@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using static DVL_LeetCode_Problems_Solutions.Domain.ProblemSolver;
 
@@ -11,9 +8,9 @@ namespace DVL_LC_Problems.Tests
     /// Summary description for Broken_Calculator
     /// </summary>
     [TestClass]
-    public class Broken_Calculator
+    public class BrokenCalculator
     {
-        public Broken_Calculator()
+        public BrokenCalculator()
         {
             //
             // TODO: Add constructor logic here

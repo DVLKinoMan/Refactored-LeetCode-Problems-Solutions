@@ -30,14 +30,14 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 var newList = new List<int>();
                 foreach (var node in nodesList)
                     if (dict.ContainsKey(node))
-                        foreach (var neighbor in dict[node])
-                            if (!visited.ContainsKey(neighbor.node) ||
-                                visited[neighbor.node] > visited[node] + neighbor.time)
+                        foreach (var (neighbor, time) in dict[node])
+                            if (!visited.ContainsKey(neighbor) ||
+                                visited[neighbor] > visited[node] + time)
                             {
-                                if (visited.ContainsKey(neighbor.node))
-                                    visited[neighbor.node] = visited[node] + neighbor.time;
-                                else visited.Add(neighbor.node, visited[node] + neighbor.time);
-                                newList.Add(neighbor.node);
+                                if (visited.ContainsKey(neighbor))
+                                    visited[neighbor] = visited[node] + time;
+                                else visited.Add(neighbor, visited[node] + time);
+                                newList.Add(neighbor);
                             }
 
                 nodesList = newList;

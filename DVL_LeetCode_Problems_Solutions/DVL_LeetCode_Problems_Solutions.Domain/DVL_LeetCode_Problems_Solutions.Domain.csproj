@@ -296,6 +296,7 @@
     <Compile Include="Medium\Next Greater Node In Linked List.cs" />
     <Compile Include="Medium\Non-overlapping Intervals.cs" />
     <Compile Include="Medium\Number of Dice Rolls With Target Sum.cs" />
+    <Compile Include="Medium\Number of Islands.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
     <Compile Include="Medium\Palindromic Substrings.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />

@@ -27,7 +27,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Divide Array in Sets of K Consecutive Numbers (Not Working)
+        /// Divide Array in Sets of K Consecutive Numbers (Not Mine)
         /// </summary>
         /// <param name="nums"></param>
         /// <param name="k"></param>
@@ -38,10 +38,10 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             if (len % k != 0)
                 return false;
             var map = new Dictionary<int,int>();
-            Queue<int> pq = new Queue<int>();
+            var pq = new Queue<int>();
             foreach (int n in nums)
                 map[n] = map.ContainsKey(n) ? map[n] + 1 : 1;
-            foreach (int n in map.Keys)
+            foreach (int n in map.Keys.OrderBy(key=>key))
                 pq.Enqueue(n);
             while (pq.Count!=0)
             {

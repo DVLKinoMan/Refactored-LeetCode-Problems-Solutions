@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
@@ -33,43 +34,30 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static bool IsPossibleDivide(int[] nums, int k)
         {
-            if (nums.Length % k != 0)
+            int len = nums.Length;
+            if (len % k != 0)
                 return false;
-
-            var dict = new Dictionary<int, int>();
-            foreach (var num in nums)
-                dict[num] = dict.ContainsKey(num) ? dict[num] + 1 : 1;
-
-            var newDict = new Dictionary<int,int>();
-
-            foreach (var keyValue in dict.OrderBy(d => d.Key))
-                newDict.Add(keyValue.Key, keyValue.Value);
-
-            dict = newDict;
-
-            while (dict.Count != 0)
+            var map = new Dictionary<int,int>();
+            Queue<int> pq = new Queue<int>();
+            foreach (int n in nums)
+                map[n] = map.ContainsKey(n) ? map[n] + 1 : 1;
+            foreach (int n in map.Keys)
+                pq.Enqueue(n);
+            while (pq.Count!=0)
             {
-                var f = dict.First();
-                if (f.Value == 0)
-                {
-                    dict.Remove(f.Key);
+                int cur = pq.Dequeue();
+                if (map[cur] == 0)
                     continue;
-                }
-
-                int c = 1;
-                int key = f.Key;
-                dict[f.Key]--;
-                while (c != k)
+                int times = map[cur];
+                for (int i = 0; i < k; i++)
                 {
-                    if (!dict.ContainsKey(key + 1) || dict[key + 1] == 0)
+                    if (!map.ContainsKey(cur + i) || map[cur + i] < times)
                         return false;
-                    dict[key + 1]--;
-                    key++;
-                    c++;
+                    map[cur + i] -= times;
                 }
+                len -= k * times;
             }
-
-            return true;
+            return len == 0;
         }
     }
 }

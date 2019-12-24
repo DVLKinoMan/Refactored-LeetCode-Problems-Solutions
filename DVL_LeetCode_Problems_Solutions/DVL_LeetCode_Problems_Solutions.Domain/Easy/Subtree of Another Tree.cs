@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DVL_LeetCode_Problems_Solutions.Domain.Classes;
+﻿using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
-namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
+namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
         /// <summary>
-        /// Subtree of Another Tree (Not Working)
+        /// Subtree of Another Tree (Mine)
         /// </summary>
         /// <param name="s"></param>
         /// <param name="t"></param>
@@ -22,10 +17,10 @@ namespace DVL_LeetCode_Problems_Solutions.Domain.Easy
                 return true;
             if (s == null || t == null)
                 return false;
-            if (s.val == t.val && mustHaveEqualValues && IsSubtree(s.left, t.left) && IsSubtree(s.right, t.right))
+            if (s.val == t.val && IsSubtree(s.left, t.left, true) && IsSubtree(s.right, t.right, true))
                     return true;
 
-            return IsSubtree(s.left, t) || IsSubtree(s.right, t);
+            return !mustHaveEqualValues && (IsSubtree(s.left, t) || IsSubtree(s.right, t));
         }
     }
 }

@@ -140,6 +140,7 @@
     <Compile Include="Easy\Squares of a Sorted Array.cs" />
     <Compile Include="Easy\Student Attendance Record I.cs" />
     <Compile Include="Easy\Subdomain Visit Count.cs" />
+    <Compile Include="Easy\Subtree of Another Tree.cs" />
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />
     <Compile Include="Easy\Sum of Square Numbers.cs" />
     <Compile Include="Easy\Sum of Two Integers.cs" />

@@ -227,6 +227,7 @@
     <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
+    <Compile Include="Medium\Distribute Coins in Binary Tree.cs" />
     <Compile Include="Medium\Filling Bookcase Shelves.cs" />
     <Compile Include="Medium\Find All Duplicates in an Array.cs" />
     <Compile Include="Medium\Find and Replace Pattern.cs" />

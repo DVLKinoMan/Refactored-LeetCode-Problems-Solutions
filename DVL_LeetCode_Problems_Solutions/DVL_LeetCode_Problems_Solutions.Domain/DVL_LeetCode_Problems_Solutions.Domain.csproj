@@ -127,6 +127,7 @@
     <Compile Include="Easy\Repeated String Match.cs" />
     <Compile Include="Easy\Repeated Substring Pattern.cs" />
     <Compile Include="Easy\Reverse Linked List.cs" />
+    <Compile Include="Easy\Reverse Only Letters.cs" />
     <Compile Include="Easy\Reverse String.cs" />
     <Compile Include="Easy\Reverse Vowels of a String.cs" />
     <Compile Include="Easy\Rotate Array.cs" />

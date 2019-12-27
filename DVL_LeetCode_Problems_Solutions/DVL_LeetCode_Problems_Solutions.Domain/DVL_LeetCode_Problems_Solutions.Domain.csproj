@@ -131,6 +131,7 @@
     <Compile Include="Easy\Reverse String.cs" />
     <Compile Include="Easy\Reverse Vowels of a String.cs" />
     <Compile Include="Easy\Rotate Array.cs" />
+    <Compile Include="Easy\Rotate String.cs" />
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Search in a Binary Search Tree.cs" />
     <Compile Include="Easy\Second Minimum Node In a Binary Tree.cs" />

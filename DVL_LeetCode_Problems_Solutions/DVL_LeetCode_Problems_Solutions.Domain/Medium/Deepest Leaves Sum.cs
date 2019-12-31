@@ -4,6 +4,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Deepest Leaves Sum (Mine)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
         public static int DeepestLeavesSum(TreeNode root)
         {
             int maxHeight = 0, result = 0;

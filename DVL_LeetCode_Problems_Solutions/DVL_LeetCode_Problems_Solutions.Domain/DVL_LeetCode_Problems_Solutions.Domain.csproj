@@ -226,6 +226,7 @@
     <Compile Include="Medium\Count Square Submatrices with All Ones.cs" />
     <Compile Include="Medium\Counting Bits.cs" />
     <Compile Include="Medium\Decode String.cs" />
+    <Compile Include="Medium\Deepest Leaves Sum.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
     <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />

@@ -237,6 +237,7 @@
     <Compile Include="Medium\Find and Replace Pattern.cs" />
     <Compile Include="Medium\Find Bottom Left Tree Value.cs" />
     <Compile Include="Medium\Find Duplicate Subtrees.cs" />
+    <Compile Include="Medium\Find Largest Value in Each Tree Row.cs" />
     <Compile Include="Medium\Find Peak Element.cs" />
     <Compile Include="Medium\Find the Duplciate Number.cs" />
     <Compile Include="Medium\Flatten Binary Tree to Linked List.cs" />

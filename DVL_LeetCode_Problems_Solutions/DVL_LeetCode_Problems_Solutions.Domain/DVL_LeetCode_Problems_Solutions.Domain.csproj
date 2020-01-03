@@ -231,6 +231,7 @@
     <Compile Include="Medium\Deepest Leaves Sum.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
     <Compile Include="Medium\Delete Node in a BST.cs" />
+    <Compile Include="Medium\Delete Operation for Two Strings.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
     <Compile Include="Medium\Distribute Coins in Binary Tree.cs" />

@@ -138,6 +138,7 @@
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Search in a Binary Search Tree.cs" />
     <Compile Include="Easy\Second Minimum Node In a Binary Tree.cs" />
+    <Compile Include="Easy\Set Mismatch.cs" />
     <Compile Include="Easy\Shortest Distance to a Character.cs" />
     <Compile Include="Easy\Sort Array By Parity II.cs" />
     <Compile Include="Easy\Sort Array By Parity.cs" />

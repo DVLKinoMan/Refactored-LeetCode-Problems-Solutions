@@ -34,7 +34,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         }
 
         /// <summary>
-        /// Get Watched Videos by Your Friends (Not Working)
+        /// Get Watched Videos by Your Friends (Mine - but fix bug from other code)
         /// </summary>
         /// <param name="watchedVideos"></param>
         /// <param name="friends"></param>
@@ -45,7 +45,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             int level)
         {
             var result = new Dictionary<string,int>();
-            var visitedSet = new HashSet<int>();
+            var visitedSet = new HashSet<int>(){id};
             var openList = new List<int>() {id};
             int currLevel = 0;
 
@@ -54,12 +54,12 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             {
                 var newList = new List<int>();
                 foreach (var person in openList)
-                {
-                    visitedSet.Add(person);
-                    foreach (var friend in friends[person])
-                        if (!visitedSet.Contains(friend))
-                            newList.Add(friend);
-                }
+                foreach (var friend in friends[person])
+                    if (!visitedSet.Contains(friend))
+                    {
+                        newList.Add(friend);
+                        visitedSet.Add(friend);
+                    }
 
                 openList = newList;
                 currLevel++;

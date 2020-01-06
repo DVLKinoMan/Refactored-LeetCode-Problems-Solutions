@@ -368,6 +368,7 @@
     <Compile Include="Medium\Valid Triangle Number.cs" />
     <Compile Include="Medium\Validate Binary Search Tree.cs" />
     <Compile Include="Medium\Video Stitching.cs" />
+    <Compile Include="Medium\XOR Queries of a Subarray.cs" />
     <Compile Include="ProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted Array.cs" />

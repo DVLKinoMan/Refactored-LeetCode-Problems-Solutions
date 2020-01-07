@@ -202,6 +202,7 @@
     <Compile Include="Hard\Text Justification.cs" />
     <Compile Include="Hard\Tiling a Rectangle with the Fewest Squares.cs" />
     <Compile Include="Hard\Trapping Rain Water.cs" />
+    <Compile Include="Hard\Verbal Arithmetic Puzzle.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\132 Pattern.cs" />
     <Compile Include="Medium\4Sum II.cs" />

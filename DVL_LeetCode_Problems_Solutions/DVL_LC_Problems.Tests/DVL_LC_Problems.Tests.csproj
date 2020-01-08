@@ -98,6 +98,7 @@
     <Compile Include="SolveNQueens2 Tester.cs" />
     <Compile Include="Spiral Matrix II Tester.cs" />
     <Compile Include="Spiral Matrix Tester.cs" />
+    <Compile Include="Split Array into Consequtive Subsequences Tester.cs" />
     <Compile Include="Sqrt%28x%29 Tester.cs" />
     <Compile Include="Squares of a Sorted Array Tester.cs" />
     <Compile Include="StoneGameIITester.cs" />

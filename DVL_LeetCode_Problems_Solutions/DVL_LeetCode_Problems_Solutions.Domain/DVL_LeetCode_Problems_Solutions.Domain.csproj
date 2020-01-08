@@ -350,6 +350,7 @@
     <Compile Include="Medium\Sort List.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
+    <Compile Include="Medium\Split Array into Consecutive Subsequences.cs" />
     <Compile Include="Medium\Split Array into Fibonacci Sequence.cs" />
     <Compile Include="Medium\Stone Game II.cs" />
     <Compile Include="Medium\Subarray Sum Equals K.cs" />

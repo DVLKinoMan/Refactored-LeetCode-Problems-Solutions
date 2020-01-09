@@ -258,6 +258,7 @@
     <Compile Include="Medium\K-Concatenation Maximum Sum.cs" />
     <Compile Include="Medium\Knight Dialer.cs" />
     <Compile Include="Medium\Kth Largest Element in an Array.cs" />
+    <Compile Include="Medium\Kth Smallest Element in a BST.cs" />
     <Compile Include="Medium\Kth Smallest Element in a Sorted Matrix.cs" />
     <Compile Include="Medium\Largest Number.cs" />
     <Compile Include="Medium\Largest Time for Given Digits.cs" />

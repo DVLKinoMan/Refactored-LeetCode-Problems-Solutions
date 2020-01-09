@@ -10,7 +10,7 @@ namespace DVL_LC_Problems.Tests
         public void TestMethod1()
         {
             bool actual = IsPossible(new int[] {3, 4, 4, 5, 6, 7, 8, 9, 10, 11});
-            Assert.AreEqual(true, actual);
+            Assert.AreEqual(false, actual);
         }
     }
 }

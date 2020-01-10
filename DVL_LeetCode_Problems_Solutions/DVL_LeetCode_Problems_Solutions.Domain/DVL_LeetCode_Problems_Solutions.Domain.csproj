@@ -99,6 +99,7 @@
     <Compile Include="Easy\Majority Element.cs" />
     <Compile Include="Easy\Max Consecutive Ones.cs" />
     <Compile Include="Easy\Maximize Distance to Closest Person.cs" />
+    <Compile Include="Easy\Maximum Average Subarray I.cs" />
     <Compile Include="Easy\Maximum Depth of Binary Tree.cs" />
     <Compile Include="Easy\Maximum Depth of N-ary Tree.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />

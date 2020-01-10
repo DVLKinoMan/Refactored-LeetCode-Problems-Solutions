@@ -15,7 +15,7 @@ namespace DVL_LC_Problems.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            IsSolvable()
+            IsSolvable(new string[] {"LEET", "CODE"}, "SOME");
         }
     }
 }

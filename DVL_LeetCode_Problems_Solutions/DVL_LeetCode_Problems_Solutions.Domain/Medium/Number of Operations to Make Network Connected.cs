@@ -14,10 +14,10 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <param name="n"></param>
         /// <param name="connections"></param>
         /// <returns></returns>
-        public int MakeConnected(int n, int[][] connections)
+        public static int MakeConnected(int n, int[][] connections)
         {
             var dict = new Dictionary<int, int>();
-            int extra = 0;
+            int extra = 0, lastIndex = 0;
             foreach (var connection in connections)
             {
                 int a = connection[0], b = connection[1];
@@ -34,13 +34,47 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                                 dict[item.Key] = dict[a];
                         }
                     }
-                    else if ()
+                    else
+                        dict.Add(b, dict[a]);
                 }
                 else
                 {
-
+                    if (dict.ContainsKey(b))
+                    {
+                        if (dict.ContainsKey(a))
+                        {
+                            if (dict[a] == dict[b])
+                                extra++;
+                            else
+                            {
+                                int val = dict[a];
+                                var l = dict.Where(k => k.Value == val).ToList();
+                                foreach (var item in l)
+                                    dict[item.Key] = dict[b];
+                            }
+                        }
+                        else
+                            dict.Add(a, dict[b]);
+                    }
+                    else
+                    {
+                        dict.Add(a, lastIndex);
+                        dict.Add(b, lastIndex);
+                        lastIndex++;
+                    }
                 }
             }
+
+            int prevExtra = extra;
+            for (int i = 1; i < n; i++)
+                if (!dict.ContainsKey(i))
+                {
+                    if (extra > 0)
+                        extra--;
+                    else return -1;
+                }
+
+            return prevExtra - extra;
         }
     }
 }

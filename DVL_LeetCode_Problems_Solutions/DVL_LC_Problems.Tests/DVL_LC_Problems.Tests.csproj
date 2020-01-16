@@ -77,6 +77,7 @@
     <Compile Include="Minimum Remove to Make Valid Parentheses Tester.cs" />
     <Compile Include="Multiply Strings Tester.cs" />
     <Compile Include="Network Delay Time Tester.cs" />
+    <Compile Include="Number of Enclaves Tester.cs" />
     <Compile Include="Odd Even Linked List Tester.cs" />
     <Compile Include="Palindromic Substrings Tester.cs" />
     <Compile Include="Partition Equal Subset Sum Tester.cs" />

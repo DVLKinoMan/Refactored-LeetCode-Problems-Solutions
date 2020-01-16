@@ -5,7 +5,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
     partial class ProblemSolver
     {
         /// <summary>
-        /// Number of Enclaves (Not Working)
+        /// Number of Enclaves (Mine)
         /// </summary>
         /// <param name="A"></param>
         /// <returns></returns>
@@ -17,7 +17,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             for (int j = 0; j < n; j++)
             {
                 int c = 0;
-                if (A[i][j] != 0 && !visitedSet.Contains((i,j)) && !Dfs(i, j, ref c))
+                if (A[i][j] == 1 && !visitedSet.Contains((i, j)) && !Dfs(i, j, ref c))
                     count += c;
             }
 
@@ -25,15 +25,25 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             bool Dfs(int i, int j, ref int co)
             {
-                if (A[i][j]==1 && (i == 0 || j == 0 || i == m - 1 || j == n - 1))
+                if (A[i][j] == 1 && (i == 0 || j == 0 || i == m - 1 || j == n - 1))
                     return true;
-                if (i <= 0 || j <= 0 || i >= m - 1 || j >= n - 1 || A[i][j] == 0 || visitedSet.Contains((i, j)))
+                if (i < 0 || j < 0 || i > m - 1 || j > n - 1 || A[i][j] == 0 || visitedSet.Contains((i, j)))
                     return false;
 
-                visitedSet.Add((i, j));
                 co++;
+                visitedSet.Add((i, j));
+                bool res = false;
 
-                return Dfs(i + 1, j, ref co) || Dfs(i, j + 1, ref co) || Dfs(i - 1, j, ref co) || Dfs(i, j - 1, ref co);
+                if (Dfs(i + 1, j, ref co))
+                    res = true;
+                if (Dfs(i, j + 1, ref co))
+                    res = true;
+                if (Dfs(i - 1, j, ref co))
+                    res = true;
+                if (Dfs(i, j - 1, ref co))
+                    res = true;
+
+                return res;
             }
         }
     }

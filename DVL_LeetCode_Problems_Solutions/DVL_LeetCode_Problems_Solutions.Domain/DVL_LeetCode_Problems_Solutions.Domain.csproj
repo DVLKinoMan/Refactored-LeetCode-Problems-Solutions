@@ -103,6 +103,7 @@
     <Compile Include="Easy\Maximum Average Subarray I.cs" />
     <Compile Include="Easy\Maximum Depth of Binary Tree.cs" />
     <Compile Include="Easy\Maximum Depth of N-ary Tree.cs" />
+    <Compile Include="Easy\Maximum Product of Three Numbers.cs" />
     <Compile Include="Easy\Merge Sorted Array.cs" />
     <Compile Include="Easy\Merge Two Binary Trees.cs" />
     <Compile Include="Easy\Middle of the Linked List.cs" />

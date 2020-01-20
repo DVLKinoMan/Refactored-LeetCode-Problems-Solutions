@@ -332,6 +332,7 @@
     <Compile Include="Medium\Populating Next Right Pointers in Each Node II.cs" />
     <Compile Include="Medium\Populating Next Right Pointers in Each Node.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
+    <Compile Include="Medium\Print Words Vertically.cs" />
     <Compile Include="Medium\Product of Array Except Self.cs" />
     <Compile Include="Medium\Queue Reconstruction by Height.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />

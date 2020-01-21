@@ -237,6 +237,7 @@
     <Compile Include="Medium\Decode String.cs" />
     <Compile Include="Medium\Deepest Leaves Sum.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
+    <Compile Include="Medium\Delete Leaves With a Given Value.cs" />
     <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Delete Operation for Two Strings.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />

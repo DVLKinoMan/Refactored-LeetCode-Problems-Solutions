@@ -90,6 +90,7 @@
     <Compile Include="Easy\Invert Binary Tree.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />
     <Compile Include="Easy\Isomorphic Strings.cs" />
+    <Compile Include="Easy\Largest Triangle Area.cs" />
     <Compile Include="Easy\Leaf-Similar Trees.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Easy\Move Zeros.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />
     <Compile Include="Easy\N-ary Tree Postorder Traversal.cs" />
+    <Compile Include="Easy\N-ary Tree Preorder Traversal.cs" />
     <Compile Include="Easy\Next Greater Element I.cs" />
     <Compile Include="Easy\Nim Game.cs" />
     <Compile Include="Easy\Non-decreasing Array.cs" />
@@ -237,6 +239,7 @@
     <Compile Include="Medium\Decode String.cs" />
     <Compile Include="Medium\Deepest Leaves Sum.cs" />
     <Compile Include="Medium\Delete and Earn.cs" />
+    <Compile Include="Medium\Delete Leaves With a Given Value.cs" />
     <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Delete Operation for Two Strings.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />
@@ -332,6 +335,7 @@
     <Compile Include="Medium\Populating Next Right Pointers in Each Node II.cs" />
     <Compile Include="Medium\Populating Next Right Pointers in Each Node.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
+    <Compile Include="Medium\Print Words Vertically.cs" />
     <Compile Include="Medium\Product of Array Except Self.cs" />
     <Compile Include="Medium\Queue Reconstruction by Height.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />
@@ -434,6 +438,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 168.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 169.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 170.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 172.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -213,6 +213,7 @@
     <Compile Include="Hard\Verbal Arithmetic Puzzle.cs" />
     <Compile Include="Hard\Wildcard Matching.cs" />
     <Compile Include="Medium\132 Pattern.cs" />
+    <Compile Include="Medium\3Sum With Multiplicity.cs" />
     <Compile Include="Medium\4Sum II.cs" />
     <Compile Include="Medium\Accounts Merge.cs" />
     <Compile Include="Medium\Additive Number.cs" />

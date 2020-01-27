@@ -338,6 +338,7 @@
     <Compile Include="Medium\Populating Next Right Pointers in Each Node II.cs" />
     <Compile Include="Medium\Populating Next Right Pointers in Each Node.cs" />
     <Compile Include="Medium\Pow%28x,n%29.cs" />
+    <Compile Include="Medium\Predict the Winner.cs" />
     <Compile Include="Medium\Print Words Vertically.cs" />
     <Compile Include="Medium\Product of Array Except Self.cs" />
     <Compile Include="Medium\Queue Reconstruction by Height.cs" />
@@ -442,6 +443,7 @@
     <Compile Include="Weekly Contests\Weekly Contest 169.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 170.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 172.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 173.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

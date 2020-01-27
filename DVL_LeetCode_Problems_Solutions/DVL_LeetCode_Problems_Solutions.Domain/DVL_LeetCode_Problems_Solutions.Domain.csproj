@@ -133,6 +133,7 @@
     <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
+    <Compile Include="Easy\Remove Palindromic Subsequences.cs" />
     <Compile Include="Easy\Repeated String Match.cs" />
     <Compile Include="Easy\Repeated Substring Pattern.cs" />
     <Compile Include="Easy\Reverse Linked List.cs" />

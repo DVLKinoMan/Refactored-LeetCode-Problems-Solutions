@@ -55,6 +55,7 @@
     <Compile Include="Broken Calculator.cs" />
     <Compile Include="Circular Permutation in Binary Representation Tester.cs" />
     <Compile Include="Color Border Tester.cs" />
+    <Compile Include="CombinationIteratorTester.cs" />
     <Compile Include="Decode String Tester.cs" />
     <Compile Include="Find Smallest Letter Greater Than Target Tester.cs" />
     <Compile Include="Find the Duplicate Number Tester.cs" />

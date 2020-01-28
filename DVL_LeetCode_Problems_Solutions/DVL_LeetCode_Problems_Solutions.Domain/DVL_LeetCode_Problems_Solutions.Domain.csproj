@@ -264,6 +264,7 @@
     <Compile Include="Medium\Increasing Subsequences.cs" />
     <Compile Include="Medium\Integer Replacement.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />
+    <Compile Include="Medium\Iterator for Combination.cs" />
     <Compile Include="Medium\Jump Game.cs" />
     <Compile Include="Medium\K Closest Points to Origin.cs" />
     <Compile Include="Medium\K-Concatenation Maximum Sum.cs" />

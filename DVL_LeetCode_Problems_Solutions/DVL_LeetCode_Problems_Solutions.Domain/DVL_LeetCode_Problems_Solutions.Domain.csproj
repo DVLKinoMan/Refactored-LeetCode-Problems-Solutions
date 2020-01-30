@@ -137,6 +137,7 @@
     <Compile Include="Easy\Remove Palindromic Subsequences.cs" />
     <Compile Include="Easy\Repeated String Match.cs" />
     <Compile Include="Easy\Repeated Substring Pattern.cs" />
+    <Compile Include="Easy\Replace Elements with Greatest Element on Right Side.cs" />
     <Compile Include="Easy\Reverse Linked List.cs" />
     <Compile Include="Easy\Reverse Only Letters.cs" />
     <Compile Include="Easy\Reverse String.cs" />

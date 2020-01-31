@@ -353,6 +353,7 @@
     <Compile Include="Medium\Remove Zero Sum Consecutive Nodes from Linked List.cs" />
     <Compile Include="Medium\Reorder List.cs" />
     <Compile Include="Medium\Reordered Power of 2.cs" />
+    <Compile Include="Medium\Repeated DNA Sequences.cs" />
     <Compile Include="Medium\Replace the Substring for Balanced String.cs" />
     <Compile Include="Medium\Replace Words.cs" />
     <Compile Include="Medium\Reveal Cards In Increasing Order.cs" />

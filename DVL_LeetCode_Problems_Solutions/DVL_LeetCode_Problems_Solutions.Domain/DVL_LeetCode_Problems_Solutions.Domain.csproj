@@ -94,6 +94,7 @@
     <Compile Include="Easy\Largest Triangle Area.cs" />
     <Compile Include="Easy\Leaf-Similar Trees.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
+    <Compile Include="Easy\Letter Case Permutation.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Longest Univalue Path.cs" />

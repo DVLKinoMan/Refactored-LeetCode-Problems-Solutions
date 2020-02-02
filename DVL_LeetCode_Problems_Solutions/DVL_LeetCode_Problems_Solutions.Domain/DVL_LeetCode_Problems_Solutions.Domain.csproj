@@ -408,6 +408,7 @@
     <Compile Include="Medium\String to Integer %28atoi%29.cs" />
     <Compile Include="Medium\Swap Nodes in Pairs.cs" />
     <Compile Include="Medium\ZigZag Conversion.cs" />
+    <Compile Include="Weekly Contests\Weekly Contest 174.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 129.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 133.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 134.cs" />

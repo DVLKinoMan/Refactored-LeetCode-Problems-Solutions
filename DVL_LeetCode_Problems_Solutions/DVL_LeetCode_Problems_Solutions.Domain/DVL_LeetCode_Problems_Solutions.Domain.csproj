@@ -314,6 +314,7 @@
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Cost For Tickets.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />
+    <Compile Include="Medium\Minimum Falling Path Sum.cs" />
     <Compile Include="Medium\Minimum Flips to Make a OR b Equal to c.cs" />
     <Compile Include="Medium\Minimum Increment to Make Array Unique.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />

@@ -14,7 +14,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         public static IList<IList<int>> CombinationSum3(int k, int n)
         {
             var result = new List<IList<int>>();
-            var visitedSet = new HashSet<int>();
+            var stack = new Stack<int>();
             var arr = Enumerable.Range(1, 9).ToArray();
             Dfs();
             
@@ -22,10 +22,10 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             void Dfs(int index = 0, int currSum = 0)
             {
-                if (visitedSet.Count == k)
+                if (stack.Count == k)
                 {
                     if (currSum == n)
-                        result.Add(visitedSet.ToList());
+                        result.Add(stack.ToList());
                     return;
                 }
 
@@ -33,12 +33,11 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     return;
 
                 for (int i = index; i < arr.Length; i++)
-                    if (!visitedSet.Contains(arr[i]))
-                    {
-                        visitedSet.Add(arr[i]);
-                        Dfs(i + 1, currSum + arr[i]);
-                        visitedSet.Remove(arr[i]);
-                    }
+                {
+                    stack.Push(arr[i]);
+                    Dfs(i + 1, currSum + arr[i]);
+                    stack.Pop();
+                }
             }
         }
     }

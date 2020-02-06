@@ -69,6 +69,7 @@
     <Compile Include="Easy\Convert Integer to the Sum of Two No-Zero Integers.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
+    <Compile Include="Easy\Cousins in Binary Tree.cs" />
     <Compile Include="Easy\Degree of an Array.cs" />
     <Compile Include="Easy\Design HashMap.cs" />
     <Compile Include="Easy\Design HashSet.cs" />

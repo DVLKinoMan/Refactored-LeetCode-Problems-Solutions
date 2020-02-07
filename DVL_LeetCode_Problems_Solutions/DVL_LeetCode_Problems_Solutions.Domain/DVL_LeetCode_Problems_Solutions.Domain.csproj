@@ -168,6 +168,7 @@
     <Compile Include="Easy\Transpose Matrix.cs" />
     <Compile Include="Easy\Trim a Binary Search Tree.cs" />
     <Compile Include="Easy\Two Sum II - Input array is sorted.cs" />
+    <Compile Include="Easy\Two Sum IV - Input is a BST.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Anagram.cs" />
     <Compile Include="Easy\Valid Mountain Array.cs" />

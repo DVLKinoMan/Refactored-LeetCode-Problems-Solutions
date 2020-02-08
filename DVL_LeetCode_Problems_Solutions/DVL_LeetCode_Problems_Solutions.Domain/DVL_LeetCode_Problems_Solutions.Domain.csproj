@@ -69,6 +69,7 @@
     <Compile Include="Easy\Convert Integer to the Sum of Two No-Zero Integers.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
+    <Compile Include="Easy\Cousins in Binary Tree.cs" />
     <Compile Include="Easy\Degree of an Array.cs" />
     <Compile Include="Easy\Design HashMap.cs" />
     <Compile Include="Easy\Design HashSet.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Easy\Reverse Vowels of a String.cs" />
     <Compile Include="Easy\Rotate Array.cs" />
     <Compile Include="Easy\Rotate String.cs" />
+    <Compile Include="Easy\Rotting Oranges.cs" />
     <Compile Include="Easy\Same Tree.cs" />
     <Compile Include="Easy\Search in a Binary Search Tree.cs" />
     <Compile Include="Easy\Second Minimum Node In a Binary Tree.cs" />
@@ -167,6 +169,7 @@
     <Compile Include="Easy\Transpose Matrix.cs" />
     <Compile Include="Easy\Trim a Binary Search Tree.cs" />
     <Compile Include="Easy\Two Sum II - Input array is sorted.cs" />
+    <Compile Include="Easy\Two Sum IV - Input is a BST.cs" />
     <Compile Include="Easy\Ugly Number.cs" />
     <Compile Include="Easy\Valid Anagram.cs" />
     <Compile Include="Easy\Valid Mountain Array.cs" />
@@ -238,6 +241,7 @@
     <Compile Include="Medium\Check Completeness of a Binary Tree.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Coin Change 2.cs" />
+    <Compile Include="Medium\Combination Sum III.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Construct Binary Tree from Preorder and Postorder Traversal.cs" />
     <Compile Include="Medium\Copy List with Random Pointer.cs" />
@@ -307,6 +311,7 @@
     <Compile Include="Medium\Maximum Nesting Depth of Two Valid Parentheses Strings.cs" />
     <Compile Include="Medium\Maximum Number of Occurrences of a Substring.cs" />
     <Compile Include="Medium\Maximum of Absolute Value Expression.cs" />
+    <Compile Include="Medium\Maximum Product of Splitted Binary Tree.cs" />
     <Compile Include="Medium\Maximum Sum of Two Non-Overlapping Subarrays.cs" />
     <Compile Include="Medium\Maximum Swap.cs" />
     <Compile Include="Medium\Maximum Width of Binary Tree.cs" />
@@ -314,6 +319,7 @@
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Cost For Tickets.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />
+    <Compile Include="Medium\Minimum Falling Path Sum.cs" />
     <Compile Include="Medium\Minimum Flips to Make a OR b Equal to c.cs" />
     <Compile Include="Medium\Minimum Increment to Make Array Unique.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />

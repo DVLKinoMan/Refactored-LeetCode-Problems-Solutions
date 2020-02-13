@@ -228,6 +228,7 @@
     <Compile Include="Medium\Accounts Merge.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\All Paths From Source to Target.cs" />
+    <Compile Include="Medium\Angle Between Hands of a Clock.cs" />
     <Compile Include="Medium\Array Nesting.cs" />
     <Compile Include="Medium\Array of Doubled Pairs.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />

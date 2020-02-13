@@ -340,6 +340,7 @@
     <Compile Include="Medium\Number of Enclaves.cs" />
     <Compile Include="Medium\Number of Islands.cs" />
     <Compile Include="Medium\Number of Operations to Make Network Connected.cs" />
+    <Compile Include="Medium\Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
     <Compile Include="Medium\Palindromic Substrings.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />

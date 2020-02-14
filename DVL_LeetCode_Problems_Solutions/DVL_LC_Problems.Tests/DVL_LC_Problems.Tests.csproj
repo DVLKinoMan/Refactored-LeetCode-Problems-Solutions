@@ -88,6 +88,7 @@
     <Compile Include="Increasing Order Search Tree Test.cs" />
     <Compile Include="Increasing Subsequences Tester.cs" />
     <Compile Include="Insert Interval Tester.cs" />
+    <Compile Include="Jump Game 4 Tester.cs" />
     <Compile Include="Jump Game II Tester.cs" />
     <Compile Include="Knight Dialer.cs" />
     <Compile Include="Length of Last Word Tester.cs" />

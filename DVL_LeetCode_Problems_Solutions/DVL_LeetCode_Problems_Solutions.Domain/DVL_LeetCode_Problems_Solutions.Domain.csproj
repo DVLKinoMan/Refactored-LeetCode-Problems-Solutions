@@ -97,6 +97,7 @@
     <Compile Include="Easy\Leaf-Similar Trees.cs" />
     <Compile Include="Easy\Length of Last Word.cs" />
     <Compile Include="Easy\Letter Case Permutation.cs" />
+    <Compile Include="Easy\Linked List Cycle.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Longest Univalue Path.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Easy\Non-decreasing Array.cs" />
     <Compile Include="Easy\Number Complement.cs" />
     <Compile Include="Easy\Number of 1 Bits.cs" />
+    <Compile Include="Easy\Number of Steps to Reduce a Number to Zero.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Path Sum III.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
@@ -193,6 +195,7 @@
     <Compile Include="Hard\Interleaving String.cs" />
     <Compile Include="Hard\Jump Game II.cs" />
     <Compile Include="Hard\Jump Game V.cs" />
+    <Compile Include="Hard\Jump Game IV.cs" />
     <Compile Include="Hard\Largest Rectangle in Histogram.cs" />
     <Compile Include="Hard\Last Substring in Lexicographical Order.cs" />
     <Compile Include="Hard\Longest Duplicate Substring.cs" />
@@ -227,6 +230,7 @@
     <Compile Include="Medium\Accounts Merge.cs" />
     <Compile Include="Medium\Additive Number.cs" />
     <Compile Include="Medium\All Paths From Source to Target.cs" />
+    <Compile Include="Medium\Angle Between Hands of a Clock.cs" />
     <Compile Include="Medium\Array Nesting.cs" />
     <Compile Include="Medium\Array of Doubled Pairs.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />
@@ -324,6 +328,7 @@
     <Compile Include="Medium\Minimum Flips to Make a OR b Equal to c.cs" />
     <Compile Include="Medium\Minimum Increment to Make Array Unique.cs" />
     <Compile Include="Medium\Minimum Moves to Equal Array Elements II.cs" />
+    <Compile Include="Medium\Minimum Number of Steps to Make Two Strings Anagram.cs" />
     <Compile Include="Medium\Minimum Path Sum.cs" />
     <Compile Include="Medium\Minimum Remove to Make Valid Parentheses.cs" />
     <Compile Include="Medium\Minimum Swaps To Make Sequences Increasing.cs" />
@@ -338,6 +343,7 @@
     <Compile Include="Medium\Number of Enclaves.cs" />
     <Compile Include="Medium\Number of Islands.cs" />
     <Compile Include="Medium\Number of Operations to Make Network Connected.cs" />
+    <Compile Include="Medium\Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
     <Compile Include="Medium\Palindromic Substrings.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />

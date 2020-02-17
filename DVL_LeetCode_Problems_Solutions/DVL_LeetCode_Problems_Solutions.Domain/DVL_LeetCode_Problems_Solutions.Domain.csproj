@@ -69,6 +69,7 @@
     <Compile Include="Easy\Convert Integer to the Sum of Two No-Zero Integers.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
+    <Compile Include="Easy\Count Negative Numbers in a Sorted Matrix.cs" />
     <Compile Include="Easy\Cousins in Binary Tree.cs" />
     <Compile Include="Easy\Degree of an Array.cs" />
     <Compile Include="Easy\Design HashMap.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Hard\Insert Interval.cs" />
     <Compile Include="Hard\Interleaving String.cs" />
     <Compile Include="Hard\Jump Game II.cs" />
+    <Compile Include="Hard\Jump Game V.cs" />
     <Compile Include="Hard\Jump Game IV.cs" />
     <Compile Include="Hard\Largest Rectangle in Histogram.cs" />
     <Compile Include="Hard\Last Substring in Lexicographical Order.cs" />

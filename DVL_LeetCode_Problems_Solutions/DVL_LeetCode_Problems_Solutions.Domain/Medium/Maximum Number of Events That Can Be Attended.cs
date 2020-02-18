@@ -12,7 +12,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static int MaxEvents(int[][] events)
         {
-            var visitedSet = new HashSet<int>();
+            var visitedSet = new HashSet<int>(); 
 
             foreach (var arr in events.OrderBy(ev => ev[1]).ThenBy(ev => ev[0]))
             {

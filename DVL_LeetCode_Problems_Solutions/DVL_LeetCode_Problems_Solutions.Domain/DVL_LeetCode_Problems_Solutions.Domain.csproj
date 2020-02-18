@@ -315,6 +315,7 @@
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />
     <Compile Include="Medium\Maximum Length of Repeated Subarray.cs" />
     <Compile Include="Medium\Maximum Nesting Depth of Two Valid Parentheses Strings.cs" />
+    <Compile Include="Medium\Maximum Number of Events That Can Be Attended.cs" />
     <Compile Include="Medium\Maximum Number of Occurrences of a Substring.cs" />
     <Compile Include="Medium\Maximum of Absolute Value Expression.cs" />
     <Compile Include="Medium\Maximum Product of Splitted Binary Tree.cs" />

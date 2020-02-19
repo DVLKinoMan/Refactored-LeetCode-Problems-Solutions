@@ -25,11 +25,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
                 int i1 = i, j1 = j;
                 while (i1 < m && j1 < n)
-                {
-                    list.Add(mat[i1][j1]);
-                    i1++;
-                    j1++;
-                }
+                    list.Add(mat[i1++][j1++]);
                 
                 list.Sort();
 
@@ -37,12 +33,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 j1 = j;
                 int index = 0;
                 while (index < list.Count)
-                {
-                    mat[i1][j1] = list[index];
-                    i1++;
-                    j1++;
-                    index++;
-                }
+                    mat[i1++][j1++] = list[index++];
             }
         }
     }

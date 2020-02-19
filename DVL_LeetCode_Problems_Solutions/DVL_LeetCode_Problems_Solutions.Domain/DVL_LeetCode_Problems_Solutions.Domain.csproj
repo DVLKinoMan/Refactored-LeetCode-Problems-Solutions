@@ -388,6 +388,7 @@
     <Compile Include="Medium\Sort Characters By Frequency.cs" />
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Sort List.cs" />
+    <Compile Include="Medium\Sort the Matrix Diagonally.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
     <Compile Include="Medium\Split Array into Consecutive Subsequences.cs" />

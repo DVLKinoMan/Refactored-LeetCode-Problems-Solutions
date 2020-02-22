@@ -102,6 +102,7 @@
     <Compile Include="Easy\Linked List Cycle.cs" />
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
+    <Compile Include="Easy\Longest Harmonious Subsequence.cs" />
     <Compile Include="Easy\Longest Univalue Path.cs" />
     <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
     <Compile Include="Easy\Magic Squares in Grid.cs" />
@@ -287,6 +288,7 @@
     <Compile Include="Medium\Kth Largest Element in an Array.cs" />
     <Compile Include="Medium\Kth Smallest Element in a BST.cs" />
     <Compile Include="Medium\Kth Smallest Element in a Sorted Matrix.cs" />
+    <Compile Include="Medium\Largest Divisible Subset.cs" />
     <Compile Include="Medium\Largest Number.cs" />
     <Compile Include="Medium\Largest Time for Given Digits.cs" />
     <Compile Include="Medium\Letter Combinations of a Phone Number.cs" />
@@ -316,6 +318,7 @@
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />
     <Compile Include="Medium\Maximum Length of Repeated Subarray.cs" />
     <Compile Include="Medium\Maximum Nesting Depth of Two Valid Parentheses Strings.cs" />
+    <Compile Include="Medium\Maximum Number of Events That Can Be Attended.cs" />
     <Compile Include="Medium\Maximum Number of Occurrences of a Substring.cs" />
     <Compile Include="Medium\Maximum of Absolute Value Expression.cs" />
     <Compile Include="Medium\Maximum Product of Splitted Binary Tree.cs" />
@@ -361,6 +364,7 @@
     <Compile Include="Medium\Predict the Winner.cs" />
     <Compile Include="Medium\Print Words Vertically.cs" />
     <Compile Include="Medium\Product of Array Except Self.cs" />
+    <Compile Include="Medium\Product of the Last K Numbers.cs" />
     <Compile Include="Medium\Queue Reconstruction by Height.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />
@@ -387,6 +391,7 @@
     <Compile Include="Medium\Sort Characters By Frequency.cs" />
     <Compile Include="Medium\Sort Colors.cs" />
     <Compile Include="Medium\Sort List.cs" />
+    <Compile Include="Medium\Sort the Matrix Diagonally.cs" />
     <Compile Include="Medium\Spiral Matrix II.cs" />
     <Compile Include="Medium\Spiral Matrix.cs" />
     <Compile Include="Medium\Split Array into Consecutive Subsequences.cs" />

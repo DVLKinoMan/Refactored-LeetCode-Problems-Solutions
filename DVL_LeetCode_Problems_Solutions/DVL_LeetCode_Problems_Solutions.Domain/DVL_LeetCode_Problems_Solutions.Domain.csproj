@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
+    <Compile Include="Biweekly Contests\Biweekly Contest 20.cs" />
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\MountainArray.cs" />
     <Compile Include="Classes\Node.cs" />
@@ -128,6 +129,7 @@
     <Compile Include="Easy\Non-decreasing Array.cs" />
     <Compile Include="Easy\Number Complement.cs" />
     <Compile Include="Easy\Number of 1 Bits.cs" />
+    <Compile Include="Easy\Number of Days Between Two Dates.cs" />
     <Compile Include="Easy\Number of Steps to Reduce a Number to Zero.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Path Sum III.cs" />

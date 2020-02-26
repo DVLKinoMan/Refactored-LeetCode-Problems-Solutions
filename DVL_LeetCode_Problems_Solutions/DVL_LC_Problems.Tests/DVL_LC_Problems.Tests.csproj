@@ -137,6 +137,7 @@
     <Compile Include="Trapping Rain Water Tester.cs" />
     <Compile Include="UniquePathII Tester.cs" />
     <Compile Include="Valid Tic-Tac-Toe State Tester.cs" />
+    <Compile Include="Validate Stack Sequences Tester.cs" />
     <Compile Include="Verbal Arithmetic Puzzle Tester.cs" />
     <Compile Include="Video Stitching Tester.cs" />
     <Compile Include="Wild Card Matching Tester.cs" />

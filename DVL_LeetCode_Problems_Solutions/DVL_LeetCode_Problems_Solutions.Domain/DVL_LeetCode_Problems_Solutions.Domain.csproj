@@ -76,6 +76,7 @@
     <Compile Include="Easy\Design HashMap.cs" />
     <Compile Include="Easy\Design HashSet.cs" />
     <Compile Include="Easy\Detect Capital.cs" />
+    <Compile Include="Easy\DI String Match.cs" />
     <Compile Include="Easy\Diameter of Binary Tree.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
     <Compile Include="Easy\Element Appearing More Than 25 Percent In Sorted Array.cs" />

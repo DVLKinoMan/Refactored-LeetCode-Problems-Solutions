@@ -75,6 +75,7 @@
     <Compile Include="Additive Number Tester.cs" />
     <Compile Include="Array of Doubled Pairs Tester.cs" />
     <Compile Include="Broken Calculator.cs" />
+    <Compile Include="BuddyStringsTester.cs" />
     <Compile Include="Circular Permutation in Binary Representation Tester.cs" />
     <Compile Include="Color Border Tester.cs" />
     <Compile Include="CombinationIteratorTester.cs" />

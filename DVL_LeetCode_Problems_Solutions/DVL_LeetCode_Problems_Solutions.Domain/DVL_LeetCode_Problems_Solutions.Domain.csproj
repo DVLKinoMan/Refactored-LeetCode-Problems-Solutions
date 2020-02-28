@@ -77,6 +77,7 @@
     <Compile Include="Easy\Design HashMap.cs" />
     <Compile Include="Easy\Design HashSet.cs" />
     <Compile Include="Easy\Detect Capital.cs" />
+    <Compile Include="Easy\DI String Match.cs" />
     <Compile Include="Easy\Diameter of Binary Tree.cs" />
     <Compile Include="Easy\Divisor Game.cs" />
     <Compile Include="Easy\Element Appearing More Than 25 Percent In Sorted Array.cs" />
@@ -249,6 +250,7 @@
     <Compile Include="Medium\Bulls and Cows.cs" />
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Check Completeness of a Binary Tree.cs" />
+    <Compile Include="Medium\Closest Divisor.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Coin Change 2.cs" />
     <Compile Include="Medium\Combination Sum III.cs" />
@@ -416,6 +418,8 @@
     <Compile Include="Medium\Valid Tic-Tac-Toe State.cs" />
     <Compile Include="Medium\Valid Triangle Number.cs" />
     <Compile Include="Medium\Validate Binary Search Tree.cs" />
+    <Compile Include="Medium\Validate Binary Tree Nodes.cs" />
+    <Compile Include="Medium\Validate Stack Sequences.cs" />
     <Compile Include="Medium\Video Stitching.cs" />
     <Compile Include="Medium\XOR Queries of a Subarray.cs" />
     <Compile Include="ProblemSolver.cs" />

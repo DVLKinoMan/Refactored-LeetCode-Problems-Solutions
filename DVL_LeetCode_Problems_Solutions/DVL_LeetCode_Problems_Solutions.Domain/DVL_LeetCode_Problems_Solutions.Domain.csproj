@@ -62,6 +62,7 @@
     <Compile Include="Easy\Binary Prefix Divisible By 5.cs" />
     <Compile Include="Easy\Binary Search.cs" />
     <Compile Include="Easy\Binary Tree Tilt.cs" />
+    <Compile Include="Easy\Buddy Strings.cs" />
     <Compile Include="Easy\Climbing Stairs.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />

@@ -235,6 +235,7 @@
     <Compile Include="Medium\4Sum II.cs" />
     <Compile Include="Medium\Accounts Merge.cs" />
     <Compile Include="Medium\Additive Number.cs" />
+    <Compile Include="Medium\All Nodes Distance K in Binary Tree.cs" />
     <Compile Include="Medium\All Paths From Source to Target.cs" />
     <Compile Include="Medium\Angle Between Hands of a Clock.cs" />
     <Compile Include="Medium\Array Nesting.cs" />

@@ -142,6 +142,7 @@
     <Compile Include="Easy\Powerful Integers.cs" />
     <Compile Include="Easy\Range Addition II.cs" />
     <Compile Include="Easy\Range Sum of BST.cs" />
+    <Compile Include="Easy\Rank Transform of an Array.cs" />
     <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />

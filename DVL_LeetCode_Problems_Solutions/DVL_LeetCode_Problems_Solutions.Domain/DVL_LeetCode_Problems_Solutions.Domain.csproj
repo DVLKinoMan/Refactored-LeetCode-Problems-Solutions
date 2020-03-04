@@ -332,6 +332,7 @@
     <Compile Include="Medium\Maximum Swap.cs" />
     <Compile Include="Medium\Maximum Width of Binary Tree.cs" />
     <Compile Include="Medium\Maximum Width Ramp.cs" />
+    <Compile Include="Medium\Maximum XOR of Two Numbers in an Array.cs" />
     <Compile Include="Medium\Merge Intervals.cs" />
     <Compile Include="Medium\Minimum Cost For Tickets.cs" />
     <Compile Include="Medium\Minimum Domino Rotations For Equal Row.cs" />

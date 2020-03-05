@@ -321,6 +321,7 @@
     <Compile Include="Medium\Matrix Block Sum.cs" />
     <Compile Include="Medium\Max Area of Island.cs" />
     <Compile Include="Medium\Max Increase to Keep City Skyline.cs" />
+    <Compile Include="Medium\Maximal Square.cs" />
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />
     <Compile Include="Medium\Maximum Length of Repeated Subarray.cs" />
     <Compile Include="Medium\Maximum Nesting Depth of Two Valid Parentheses Strings.cs" />

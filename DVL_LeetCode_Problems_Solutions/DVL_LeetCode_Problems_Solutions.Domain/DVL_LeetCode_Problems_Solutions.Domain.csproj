@@ -284,6 +284,7 @@
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Increasing Subsequences.cs" />
+    <Compile Include="Medium\Integer Break.cs" />
     <Compile Include="Medium\Integer Replacement.cs" />
     <Compile Include="Medium\Interval List Intersections.cs" />
     <Compile Include="Medium\Iterator for Combination.cs" />

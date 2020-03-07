@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
     <Compile Include="Biweekly Contests\Biweekly Contest 20.cs" />
+    <Compile Include="Biweekly Contests\Biweekly Contest 21.cs" />
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\MountainArray.cs" />
     <Compile Include="Classes\Node.cs" />
@@ -363,6 +364,7 @@
     <Compile Include="Medium\Palindromic Substrings.cs" />
     <Compile Include="Medium\Partition Equal Subset Sum.cs" />
     <Compile Include="Medium\Partition Labels.cs" />
+    <Compile Include="Medium\Partition List.cs" />
     <Compile Include="Medium\Partition to K Equal Sum Subsets.cs" />
     <Compile Include="Medium\Path Sum II.cs" />
     <Compile Include="Medium\Permutation Sequence.cs" />

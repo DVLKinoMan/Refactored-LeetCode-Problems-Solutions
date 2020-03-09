@@ -312,6 +312,7 @@
     <Compile Include="Easy\Merge Two Sorted Lists.cs" />
     <Compile Include="Easy\Palindrome Number.cs" />
     <Compile Include="Hard\Merge k Sorted Lists.cs" />
+    <Compile Include="Medium\Lexicographical Numbers.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Longest Common Subsequence.cs" />
     <Compile Include="Medium\Longest Increasing Subsequence.cs" />

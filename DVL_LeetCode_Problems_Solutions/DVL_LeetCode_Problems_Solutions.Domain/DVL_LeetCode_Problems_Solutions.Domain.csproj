@@ -123,6 +123,7 @@
     <Compile Include="Easy\Minimum Absolute Difference in BST.cs" />
     <Compile Include="Easy\Minimum Index Sum of Two Lists.cs" />
     <Compile Include="Easy\Minimum Swaps to Make Strings Equal.cs" />
+    <Compile Include="Easy\Missing Number.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
     <Compile Include="Easy\Move Zeros.cs" />
     <Compile Include="Easy\N-ary Tree Level Order Traversal.cs" />

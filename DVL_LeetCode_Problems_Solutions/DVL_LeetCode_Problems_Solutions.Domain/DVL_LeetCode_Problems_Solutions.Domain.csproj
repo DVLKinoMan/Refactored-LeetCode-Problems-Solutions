@@ -371,6 +371,7 @@
     <Compile Include="Medium\Partition List.cs" />
     <Compile Include="Medium\Partition to K Equal Sum Subsets.cs" />
     <Compile Include="Medium\Path Sum II.cs" />
+    <Compile Include="Medium\Perfect Squares.cs" />
     <Compile Include="Medium\Permutation Sequence.cs" />
     <Compile Include="Medium\Permutations II.cs" />
     <Compile Include="Medium\Permutations.cs" />

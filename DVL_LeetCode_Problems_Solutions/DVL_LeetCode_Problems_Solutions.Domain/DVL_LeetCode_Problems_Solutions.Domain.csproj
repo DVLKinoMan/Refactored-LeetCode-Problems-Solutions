@@ -246,6 +246,7 @@
     <Compile Include="Medium\Angle Between Hands of a Clock.cs" />
     <Compile Include="Medium\Array Nesting.cs" />
     <Compile Include="Medium\Array of Doubled Pairs.cs" />
+    <Compile Include="Medium\Balance a Binary Search Tree.cs" />
     <Compile Include="Medium\Binary Tree Coloring Game.cs" />
     <Compile Include="Medium\Binary Tree Inorder Traversal.cs" />
     <Compile Include="Medium\Binary Tree Preorder Traversal.cs" />

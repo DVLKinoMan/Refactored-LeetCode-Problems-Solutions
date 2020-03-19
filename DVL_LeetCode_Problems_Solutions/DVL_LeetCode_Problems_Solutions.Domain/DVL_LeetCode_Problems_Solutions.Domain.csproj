@@ -167,6 +167,7 @@
     <Compile Include="Easy\Second Minimum Node In a Binary Tree.cs" />
     <Compile Include="Easy\Set Mismatch.cs" />
     <Compile Include="Easy\Shortest Distance to a Character.cs" />
+    <Compile Include="Easy\Smallest Range I.cs" />
     <Compile Include="Easy\Sort Array By Parity II.cs" />
     <Compile Include="Easy\Sort Array By Parity.cs" />
     <Compile Include="Easy\Sqrt%28x%29.cs" />
@@ -213,6 +214,7 @@
     <Compile Include="Hard\Longest Duplicate Substring.cs" />
     <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
+    <Compile Include="Hard\Maximum Performance of a Team.cs" />
     <Compile Include="Hard\Maximum Score Words Formed by Letters.cs" />
     <Compile Include="Hard\Minimum Insertion Steps to Make a String Palindrome.cs" />
     <Compile Include="Hard\Minimum Moves to Move a Box to Their Target Location.cs" />

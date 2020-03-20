@@ -293,6 +293,7 @@
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
+    <Compile Include="Medium\Implement Trie (Prefix Tree).cs" />
     <Compile Include="Medium\Increasing Subsequences.cs" />
     <Compile Include="Medium\Integer Break.cs" />
     <Compile Include="Medium\Integer Replacement.cs" />

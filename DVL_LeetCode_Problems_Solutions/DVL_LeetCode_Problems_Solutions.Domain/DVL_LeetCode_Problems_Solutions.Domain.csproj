@@ -74,6 +74,7 @@
     <Compile Include="Easy\Count and Say.cs" />
     <Compile Include="Easy\Count Negative Numbers in a Sorted Matrix.cs" />
     <Compile Include="Easy\Cousins in Binary Tree.cs" />
+    <Compile Include="Easy\Create Target Array in the Given Order.cs" />
     <Compile Include="Easy\Degree of an Array.cs" />
     <Compile Include="Easy\Design HashMap.cs" />
     <Compile Include="Easy\Design HashSet.cs" />

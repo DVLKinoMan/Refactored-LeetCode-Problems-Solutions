@@ -89,6 +89,7 @@
     <Compile Include="Easy\Find All Numbers Disappeared in an Array.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Find Smallest Letter Greater Than Target.cs" />
+    <Compile Include="Easy\Find the Distance Value Between Two Arrays.cs" />
     <Compile Include="Easy\Find the Town Judge.cs" />
     <Compile Include="Easy\Fizz Buzz.cs" />
     <Compile Include="Easy\Generate a String With Characters That Have Odd Counts.cs" />

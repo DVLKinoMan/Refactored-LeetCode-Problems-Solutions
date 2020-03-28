@@ -89,6 +89,7 @@
     <Compile Include="Easy\Find All Numbers Disappeared in an Array.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Find Smallest Letter Greater Than Target.cs" />
+    <Compile Include="Easy\Find the Distance Value Between Two Arrays.cs" />
     <Compile Include="Easy\Find the Town Judge.cs" />
     <Compile Include="Easy\Fizz Buzz.cs" />
     <Compile Include="Easy\Generate a String With Characters That Have Odd Counts.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="Easy\Sum of Even Numbers After Queries.cs" />
     <Compile Include="Easy\Sum of Square Numbers.cs" />
     <Compile Include="Easy\Sum of Two Integers.cs" />
+    <Compile Include="Easy\Symmetric Tree.cs" />
     <Compile Include="Easy\Third Maximum Number.cs" />
     <Compile Include="Easy\To Lower Case.cs" />
     <Compile Include="Easy\Toeplitz Matrix.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Hard\Largest Rectangle in Histogram.cs" />
     <Compile Include="Hard\Last Substring in Lexicographical Order.cs" />
     <Compile Include="Hard\Longest Duplicate Substring.cs" />
+    <Compile Include="Hard\Longest Happy Prefix.cs" />
     <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
     <Compile Include="Hard\Maximum Performance of a Team.cs" />
@@ -263,6 +266,7 @@
     <Compile Include="Medium\Bulls and Cows.cs" />
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Check Completeness of a Binary Tree.cs" />
+    <Compile Include="Medium\Check if There is a Valid Path in a Grid.cs" />
     <Compile Include="Medium\Closest Divisor.cs" />
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Coin Change 2.cs" />
@@ -294,6 +298,7 @@
     <Compile Include="Medium\Flatten Binary Tree to Linked List.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />
+    <Compile Include="Medium\Four Divisors.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\Implement Trie (Prefix Tree).cs" />

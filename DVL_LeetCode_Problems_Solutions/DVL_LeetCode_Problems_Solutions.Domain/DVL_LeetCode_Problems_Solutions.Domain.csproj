@@ -111,6 +111,7 @@
     <Compile Include="Easy\Long Pressed Name.cs" />
     <Compile Include="Easy\Longest Continuous Increasing Subsequence.cs" />
     <Compile Include="Easy\Longest Harmonious Subsequence.cs" />
+    <Compile Include="Easy\Longest Palindrome.cs" />
     <Compile Include="Easy\Longest Univalue Path.cs" />
     <Compile Include="Easy\Lowest Common Ancestor of a Binary Search Tree.cs" />
     <Compile Include="Easy\Lucky Numbers in a Matrix.cs" />

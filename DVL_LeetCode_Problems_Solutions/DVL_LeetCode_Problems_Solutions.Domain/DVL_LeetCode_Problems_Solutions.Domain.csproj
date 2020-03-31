@@ -276,6 +276,7 @@
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Construct Binary Tree from Preorder and Postorder Traversal.cs" />
     <Compile Include="Medium\Copy List with Random Pointer.cs" />
+    <Compile Include="Medium\Count Number of Teams.cs" />
     <Compile Include="Medium\Count Square Submatrices with All Ones.cs" />
     <Compile Include="Medium\Counting Bits.cs" />
     <Compile Include="Medium\Decode String.cs" />

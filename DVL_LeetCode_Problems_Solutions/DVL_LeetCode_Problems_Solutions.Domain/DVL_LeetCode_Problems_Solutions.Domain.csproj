@@ -146,6 +146,7 @@
     <Compile Include="Easy\Number of Steps to Reduce a Number to Zero.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Path Sum III.cs" />
+    <Compile Include="Easy\Path Sum.cs" />
     <Compile Include="Easy\Peak Index in a Mountain Array.cs" />
     <Compile Include="Easy\Play with Chips.cs" />
     <Compile Include="Easy\Plus One.cs" />

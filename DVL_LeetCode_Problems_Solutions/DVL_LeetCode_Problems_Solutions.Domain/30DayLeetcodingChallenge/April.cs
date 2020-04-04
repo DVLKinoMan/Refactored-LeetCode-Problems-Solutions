@@ -62,5 +62,25 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return maxSum;
         }
+        
+        // public static void MoveZeroes(int[] nums) {
+        //     int lastZeroIndex = nums.Length;
+        //     for (int i = 0; i < lastZeroIndex; i++)
+        //         if (nums[i] == 0)
+        //         {
+        //             int i2 = i;
+        //             while (i2 != lastZeroIndex - 1)
+        //             {
+        //                 //swap
+        //                 nums[i2 + 1] += nums[i2];
+        //                 nums[i2] = nums[i2 + 1] - nums[i2];
+        //                 nums[i2 + 1] -= nums[i2];
+        //                 i2++;
+        //             }
+        //
+        //             lastZeroIndex--;
+        //             i--;
+        //         }
+        // }
     }
 }

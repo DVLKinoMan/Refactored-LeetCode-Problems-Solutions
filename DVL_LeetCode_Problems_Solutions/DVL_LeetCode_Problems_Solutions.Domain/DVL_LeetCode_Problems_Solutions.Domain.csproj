@@ -159,6 +159,7 @@
     <Compile Include="Easy\Rank Transform of an Array.cs" />
     <Compile Include="Easy\Rectangle Overlap.cs" />
     <Compile Include="Easy\Remove Duplicates from Sorted List.cs" />
+    <Compile Include="Easy\Remove Linked List Elements.cs" />
     <Compile Include="Easy\Remove Outermost Parentheses.cs" />
     <Compile Include="Easy\Remove Palindromic Subsequences.cs" />
     <Compile Include="Easy\Repeated String Match.cs" />

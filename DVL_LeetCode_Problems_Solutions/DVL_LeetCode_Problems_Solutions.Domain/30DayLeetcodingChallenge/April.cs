@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -97,5 +98,22 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return total;
         }
+        
+        // public static IList<IList<string>> GroupAnagrams(string[] strs) {
+        //     var dic=new Dictionary<string, List<string>>();
+        //     foreach (var str in strs)
+        //     {
+        //         var strSorted = String.Concat(str.OrderBy(s => s));
+        //         if (dic.ContainsKey(strSorted))
+        //             dic[strSorted].Add(str);
+        //         else dic.Add(strSorted, new List<string> { str });
+        //     }
+        //
+        //     var result = new List<IList<string>>();
+        //     foreach (var d in dic)
+        //         result.Add(d.Value);
+        //
+        //     return result;
+        // }
     }
 }

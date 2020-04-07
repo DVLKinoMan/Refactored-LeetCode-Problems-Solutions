@@ -388,6 +388,7 @@
     <Compile Include="Medium\Number of Islands.cs" />
     <Compile Include="Medium\Number of Matching Subsequences.cs" />
     <Compile Include="Medium\Number of Operations to Make Network Connected.cs" />
+    <Compile Include="Medium\Number of Steps to Reduce a Number in Binary Representation to One.cs" />
     <Compile Include="Medium\Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
     <Compile Include="Medium\Palindromic Substrings.cs" />

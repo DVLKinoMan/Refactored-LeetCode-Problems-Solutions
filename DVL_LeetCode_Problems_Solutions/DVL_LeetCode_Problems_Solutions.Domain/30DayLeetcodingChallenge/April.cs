@@ -98,7 +98,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return total;
         }
-        
+
         // public static IList<IList<string>> GroupAnagrams(string[] strs) {
         //     var dic=new Dictionary<string, List<string>>();
         //     foreach (var str in strs)
@@ -115,5 +115,24 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         //
         //     return result;
         // }
+
+        /// <summary>
+        /// Counting Elements (Mine)
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static int CountElements(int[] arr)
+        {
+            var counts = new int[1001];
+            foreach (var num in arr)
+                counts[num]++;
+
+            int count = 0;
+            for (int i = 0; i < counts.Length - 1; i++)
+                if (counts[i] != 0 && counts[i + 1] != 0)
+                    count += counts[i];
+
+            return count;
+        }
     }
 }

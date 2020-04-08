@@ -344,6 +344,7 @@
     <Compile Include="Medium\Lexicographical Numbers.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Longest Common Subsequence.cs" />
+    <Compile Include="Medium\Longest Happy String.cs" />
     <Compile Include="Medium\Longest Increasing Subsequence.cs" />
     <Compile Include="Medium\Longest Mountain in Array.cs" />
     <Compile Include="Medium\Longest Turbulent Subarray.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -133,6 +134,34 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     count += counts[i];
 
             return count;
+        }
+
+        /// <summary>
+        /// Backspace String Compare (Mine)
+        /// </summary>
+        /// <param name="S"></param>
+        /// <param name="T"></param>
+        /// <returns></returns>
+        public static bool BackspaceCompare(string S, string T)
+        {
+
+            return GetString(S) == GetString(T);
+
+            string GetString(string str)
+            {
+                var builder = new StringBuilder();
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (str[i] == '#')
+                    {
+                        if (builder.Length != 0)
+                            builder.Remove(builder.Length - 1, 1);
+                    }
+                    else builder.Append(str[i]);
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }

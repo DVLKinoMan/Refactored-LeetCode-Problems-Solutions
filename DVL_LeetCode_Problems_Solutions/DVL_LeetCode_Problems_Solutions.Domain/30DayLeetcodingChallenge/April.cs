@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -98,32 +98,41 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return total;
         }
-        
-        /// <summary>
-        /// Backspace String Compare (Mine)
-        /// </summary>
-        /// <param name="S"></param>
-        /// <param name="T"></param>
-        /// <returns></returns>
-        public static bool BackspaceCompare(string S, string T)
-        {
-            return GetString(S) == GetString(T);
-            
-            string GetString(string str)
-            {
-                var builder = new StringBuilder();
-                for (int i = 0; i < str.Length; i++)
-                {
-                    if (str[i] == '#')
-                    {
-                        if (builder.Length != 0)
-                            builder.Remove(builder.Length - 1, 1);
-                    }
-                    else builder.Append(str[i]);
-                }
 
-                return builder.ToString();
-            }
+        // public static IList<IList<string>> GroupAnagrams(string[] strs) {
+        //     var dic=new Dictionary<string, List<string>>();
+        //     foreach (var str in strs)
+        //     {
+        //         var strSorted = String.Concat(str.OrderBy(s => s));
+        //         if (dic.ContainsKey(strSorted))
+        //             dic[strSorted].Add(str);
+        //         else dic.Add(strSorted, new List<string> { str });
+        //     }
+        //
+        //     var result = new List<IList<string>>();
+        //     foreach (var d in dic)
+        //         result.Add(d.Value);
+        //
+        //     return result;
+        // }
+
+        /// <summary>
+        /// Counting Elements (Mine)
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static int CountElements(int[] arr)
+        {
+            var counts = new int[1001];
+            foreach (var num in arr)
+                counts[num]++;
+
+            int count = 0;
+            for (int i = 0; i < counts.Length - 1; i++)
+                if (counts[i] != 0 && counts[i + 1] != 0)
+                    count += counts[i];
+
+            return count;
         }
     }
 }

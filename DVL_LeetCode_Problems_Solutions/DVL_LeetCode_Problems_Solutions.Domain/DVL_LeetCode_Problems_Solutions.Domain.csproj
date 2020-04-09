@@ -133,6 +133,7 @@
     <Compile Include="Easy\Minimum Absolute Difference in BST.cs" />
     <Compile Include="Easy\Minimum Depth of Binary Tree.cs" />
     <Compile Include="Easy\Minimum Index Sum of Two Lists.cs" />
+    <Compile Include="Easy\Minimum Subsequence in Non-Increasing Order.cs" />
     <Compile Include="Easy\Minimum Swaps to Make Strings Equal.cs" />
     <Compile Include="Easy\Missing Number.cs" />
     <Compile Include="Easy\Monotonic Array.cs" />
@@ -343,6 +344,7 @@
     <Compile Include="Medium\Lexicographical Numbers.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Longest Common Subsequence.cs" />
+    <Compile Include="Medium\Longest Happy String.cs" />
     <Compile Include="Medium\Longest Increasing Subsequence.cs" />
     <Compile Include="Medium\Longest Mountain in Array.cs" />
     <Compile Include="Medium\Longest Turbulent Subarray.cs" />
@@ -387,6 +389,7 @@
     <Compile Include="Medium\Number of Islands.cs" />
     <Compile Include="Medium\Number of Matching Subsequences.cs" />
     <Compile Include="Medium\Number of Operations to Make Network Connected.cs" />
+    <Compile Include="Medium\Number of Steps to Reduce a Number in Binary Representation to One.cs" />
     <Compile Include="Medium\Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold.cs" />
     <Compile Include="Medium\Odd Even Linked List.cs" />
     <Compile Include="Medium\Palindromic Substrings.cs" />

@@ -144,7 +144,6 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         /// <returns></returns>
         public static bool BackspaceCompare(string S, string T)
         {
-
             return GetString(S) == GetString(T);
 
             string GetString(string str)
@@ -161,6 +160,44 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 }
 
                 return builder.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Min Stack (Mine)
+        /// </summary>
+        public class MinStack
+        {
+            private Stack<int> _originalStack;
+            private Stack<int> _minStack;
+
+            /** initialize your data structure here. */
+            public MinStack()
+            {
+                _originalStack = new Stack<int>();
+                _minStack = new Stack<int>();
+            }
+
+            public void Push(int x)
+            {
+                _originalStack.Push(x);
+                _minStack.Push(_minStack.Count == 0 ? x : Math.Min(_minStack.Peek(), x));
+            }
+
+            public void Pop()
+            {
+                _originalStack.Pop();
+                _minStack.Pop();
+            }
+
+            public int Top()
+            {
+                return _originalStack.Peek();
+            }
+
+            public int GetMin()
+            {
+                return _minStack.Peek();
             }
         }
     }

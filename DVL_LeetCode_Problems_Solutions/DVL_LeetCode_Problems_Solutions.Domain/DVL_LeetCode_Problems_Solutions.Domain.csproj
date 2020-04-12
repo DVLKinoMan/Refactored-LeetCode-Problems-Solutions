@@ -185,6 +185,7 @@
     <Compile Include="Easy\Sort Array By Parity.cs" />
     <Compile Include="Easy\Sqrt%28x%29.cs" />
     <Compile Include="Easy\Squares of a Sorted Array.cs" />
+    <Compile Include="Easy\String Matching in an Array.cs" />
     <Compile Include="Easy\Student Attendance Record I.cs" />
     <Compile Include="Easy\Subdomain Visit Count.cs" />
     <Compile Include="Easy\Subtree of Another Tree.cs" />

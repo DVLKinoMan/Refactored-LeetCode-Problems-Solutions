@@ -200,5 +200,31 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 return _minStack.Peek();
             }
         }
+
+        /// <summary>
+        ///  Contiguous Array (Not Mine)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public static int FindMaxLength(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+                if (nums[i] == 0)
+                    nums[i] = -1;
+
+            var sumToIndex = new Dictionary<int, int> {{0, -1}};
+            int sum = 0, max = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                sum += nums[i];
+                if (sumToIndex.ContainsKey(sum))
+                    max = Math.Max(max, i - sumToIndex[sum]);
+                else
+                    sumToIndex[sum] = i;
+            }
+
+            return max;
+        }
     }
 }

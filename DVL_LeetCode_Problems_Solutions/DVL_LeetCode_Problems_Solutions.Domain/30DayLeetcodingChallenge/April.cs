@@ -226,5 +226,36 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return max;
         }
+        
+        /// <summary>
+        /// Perform String Shifts (Mine)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="shift"></param>
+        /// <returns></returns>
+        public static string StringShift(string s, int[][] shift)
+        {
+            int shiftNum = 0;
+            foreach (var sh in shift)
+            {
+                if (sh[0] == 0)
+                    shiftNum -= sh[1];
+                else shiftNum += sh[1];
+            }
+
+            if (shiftNum % s.Length == 0)
+                return s;
+            
+            var builder = new StringBuilder();
+            int ind = shiftNum < 0 ? Math.Abs(shiftNum) % s.Length : s.Length - shiftNum % s.Length;
+            int j = ind;
+            do
+            {
+                builder.Append(s[j]);
+                j = j == s.Length - 1 ? 0 : j + 1;
+            } while (j != ind);
+
+            return builder.ToString();
+        }
     }
 }

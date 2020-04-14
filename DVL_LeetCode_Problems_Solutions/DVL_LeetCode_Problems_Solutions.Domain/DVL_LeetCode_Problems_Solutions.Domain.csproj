@@ -149,6 +149,7 @@
     <Compile Include="Easy\Number of 1 Bits.cs" />
     <Compile Include="Easy\Number of Days Between Two Dates.cs" />
     <Compile Include="Easy\Number of Steps to Reduce a Number to Zero.cs" />
+    <Compile Include="Easy\Pairs of Songs With Total Durations Divisible by 60.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Path Sum III.cs" />
     <Compile Include="Easy\Path Sum.cs" />

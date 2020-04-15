@@ -412,6 +412,7 @@
     <Compile Include="Medium\Print Words Vertically.cs" />
     <Compile Include="Medium\Product of Array Except Self.cs" />
     <Compile Include="Medium\Product of the Last K Numbers.cs" />
+    <Compile Include="Medium\Queries on a Permutation With Key.cs" />
     <Compile Include="Medium\Queue Reconstruction by Height.cs" />
     <Compile Include="Medium\Rabbits in Forest.cs" />
     <Compile Include="Medium\Random Point in Non-overlapping Rectangles.cs" />

@@ -74,6 +74,7 @@
     <Compile Include="Easy\Convert Integer to the Sum of Two No-Zero Integers.cs" />
     <Compile Include="Easy\Convert Sorted Array to Binary Search Tree.cs" />
     <Compile Include="Easy\Count and Say.cs" />
+    <Compile Include="Easy\Count Largest Group.cs" />
     <Compile Include="Easy\Count Negative Numbers in a Sorted Matrix.cs" />
     <Compile Include="Easy\Cousins in Binary Tree.cs" />
     <Compile Include="Easy\Create Target Array in the Given Order.cs" />

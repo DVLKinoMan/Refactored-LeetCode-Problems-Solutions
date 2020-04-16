@@ -257,5 +257,34 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return builder.ToString();
         }
+        
+        /// <summary>
+        /// Valid Parenthesis String (Mine)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool CheckValidString(string s)
+        {
+            return Check();
+            
+            bool Check(int index = 0, int k = 0)
+            {
+                if (index == s.Length)
+                    return k == 0;
+
+                if (s[index] == ')')
+                {
+                    if (k <= 0)
+                        return false;
+                    return Check(index + 1, k - 1);
+                }
+                if (s[index] == '(')
+                    return Check(index + 1, k + 1);
+
+                return Check(index + 1, k - 1) || 
+                       Check(index + 1, k + 1) || 
+                       Check(index + 1, k);
+            }
+        }
     }
 }

@@ -315,6 +315,7 @@
     <Compile Include="Medium\Four Divisors.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
+    <Compile Include="Medium\HTML Entity Parser.cs" />
     <Compile Include="Medium\Implement Trie (Prefix Tree).cs" />
     <Compile Include="Medium\Increasing Subsequences.cs" />
     <Compile Include="Medium\Integer Break.cs" />

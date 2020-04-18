@@ -93,6 +93,7 @@
     <Compile Include="Easy\Find All Numbers Disappeared in an Array.cs" />
     <Compile Include="Easy\Find Common Characters.cs" />
     <Compile Include="Easy\Find Lucky Integer in an Array.cs" />
+    <Compile Include="Easy\Find Pivot Index.cs" />
     <Compile Include="Easy\Find Smallest Letter Greater Than Target.cs" />
     <Compile Include="Easy\Find the Distance Value Between Two Arrays.cs" />
     <Compile Include="Easy\Find the Town Judge.cs" />

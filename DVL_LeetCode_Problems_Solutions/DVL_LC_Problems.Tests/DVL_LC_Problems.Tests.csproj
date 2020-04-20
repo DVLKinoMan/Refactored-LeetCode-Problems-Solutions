@@ -85,6 +85,7 @@
     <Compile Include="Find Smallest Letter Greater Than Target Tester.cs" />
     <Compile Include="Find the Duplicate Number Tester.cs" />
     <Compile Include="Find Winner on a Tic Tac Toe Game Tester.cs" />
+    <Compile Include="FindMinFibonacciNumbersTester.cs" />
     <Compile Include="First Missing Positive Tester.cs" />
     <Compile Include="Get Equal Substrings Within Budget Tester.cs" />
     <Compile Include="Greatest Sum Divisible by Three Tester.cs" />

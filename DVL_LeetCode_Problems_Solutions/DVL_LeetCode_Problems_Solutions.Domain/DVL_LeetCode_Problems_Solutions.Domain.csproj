@@ -311,6 +311,7 @@
     <Compile Include="Medium\Find Largest Value in Each Tree Row.cs" />
     <Compile Include="Medium\Find Peak Element.cs" />
     <Compile Include="Medium\Find the Duplciate Number.cs" />
+    <Compile Include="Medium\Find the Minimum Number of Fibonacci Numbers Whose Sum Is K.cs" />
     <Compile Include="Medium\Flatten Binary Tree to Linked List.cs" />
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />

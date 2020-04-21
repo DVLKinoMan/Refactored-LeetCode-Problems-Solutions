@@ -49,6 +49,7 @@
     <Compile Include="Biweekly Contests\Biweekly Contest 1.cs" />
     <Compile Include="Biweekly Contests\Biweekly Contest 20.cs" />
     <Compile Include="Biweekly Contests\Biweekly Contest 21.cs" />
+    <Compile Include="Classes\BinaryMatrix.cs" />
     <Compile Include="Classes\Interval.cs" />
     <Compile Include="Classes\MountainArray.cs" />
     <Compile Include="Classes\Node.cs" />

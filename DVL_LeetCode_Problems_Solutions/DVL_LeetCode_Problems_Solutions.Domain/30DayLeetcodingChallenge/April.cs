@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
 {
@@ -226,7 +227,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return max;
         }
-        
+
         /// <summary>
         /// Perform String Shifts (Mine)
         /// </summary>
@@ -245,7 +246,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             if (shiftNum % s.Length == 0)
                 return s;
-            
+
             var builder = new StringBuilder();
             int ind = shiftNum < 0 ? Math.Abs(shiftNum) % s.Length : s.Length - shiftNum % s.Length;
             int j = ind;
@@ -257,7 +258,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 
             return builder.ToString();
         }
-        
+
         /// <summary>
         /// Valid Parenthesis String (Mine)
         /// </summary>
@@ -266,7 +267,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
         public static bool CheckValidString(string s)
         {
             return Check();
-            
+
             bool Check(int index = 0, int k = 0)
             {
                 if (index == s.Length)
@@ -278,14 +279,47 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                         return false;
                     return Check(index + 1, k - 1);
                 }
+
                 if (s[index] == '(')
                     return Check(index + 1, k + 1);
 
-                return Check(index + 1, k - 1) || 
-                       Check(index + 1, k + 1) || 
+                return Check(index + 1, k - 1) ||
+                       Check(index + 1, k + 1) ||
                        Check(index + 1, k);
             }
         }
-        
+
+        /// <summary>
+        /// Leftmost Column with at Least a One (Mine)
+        /// </summary>
+        /// <param name="binaryMatrix"></param>
+        /// <returns></returns>
+        public static int LeftMostColumnWithOne(BinaryMatrix binaryMatrix)
+        {
+            var list = binaryMatrix.Dimensions();
+            int m = list[0], n = list[1];
+            int st = 0, end = n - 1, res = int.MaxValue;
+            while (st <= end)
+            {
+                int mid = (st + end) / 2;
+                if (RightColumn(mid))
+                {
+                    end = mid - 1;
+                    res = mid;
+                }
+                else st = mid + 1;
+            }
+
+            return res == int.MaxValue ? -1 : res;
+
+            bool RightColumn(int col)
+            {
+                for (int i = 0; i < m; i++)
+                    if (binaryMatrix.Get(i, col) == 1)
+                        return true;
+
+                return false;
+            }
+        }
     }
 }

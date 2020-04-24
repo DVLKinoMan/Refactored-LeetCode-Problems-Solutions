@@ -321,5 +321,49 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 return false;
             }
         }
+
+        /// <summary>
+        /// LRU Cache (Mine)
+        /// </summary>
+        public class LRUCache
+        {
+            private Dictionary<int, int> _dict;
+            private int _capacity;
+            private int _currSize;
+            private List<int> _recentlyUsedKeys;
+
+            public LRUCache(int capacity)
+            {
+                _capacity = capacity;
+                _currSize = 0;
+                _recentlyUsedKeys = new List<int>();
+                _dict = new Dictionary<int, int>();
+            }
+
+            public int Get(int key)
+            {
+                if (!_dict.ContainsKey(key))
+                    return -1;
+                _recentlyUsedKeys.Remove(key);
+                _recentlyUsedKeys.Add(key);
+                return _dict[key];
+            }
+
+            public void Put(int key, int value)
+            {
+                if (_capacity == _currSize && !_dict.ContainsKey(key))
+                {
+                    _currSize--;
+                    _dict.Remove(_recentlyUsedKeys[0]);
+                    _recentlyUsedKeys.RemoveAt(0);
+                }
+
+                if (!_dict.ContainsKey(key))
+                    _currSize++;
+                _dict[key] = value;
+                _recentlyUsedKeys.Remove(key);
+                _recentlyUsedKeys.Add(key);
+            }
+        }
     }
 }

@@ -370,6 +370,7 @@
     <Compile Include="Medium\Maximum Number of Events That Can Be Attended.cs" />
     <Compile Include="Medium\Maximum Number of Occurrences of a Substring.cs" />
     <Compile Include="Medium\Maximum of Absolute Value Expression.cs" />
+    <Compile Include="Medium\Maximum Points You Can Obtain from Cards.cs" />
     <Compile Include="Medium\Maximum Product of Splitted Binary Tree.cs" />
     <Compile Include="Medium\Maximum Sum of Two Non-Overlapping Subarrays.cs" />
     <Compile Include="Medium\Maximum Swap.cs" />

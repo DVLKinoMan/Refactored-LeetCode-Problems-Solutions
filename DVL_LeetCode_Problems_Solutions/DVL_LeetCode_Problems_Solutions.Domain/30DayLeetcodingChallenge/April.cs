@@ -365,5 +365,22 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 _recentlyUsedKeys.Add(key);
             }
         }
+        
+        public static bool CanJump2(int[] nums)
+        {
+            if (nums.Length <= 1)
+                return true;
+
+            int zeroIndex = -1;
+            for (int i = nums.Length-2; i >= 0; i--)
+            {
+                if (zeroIndex == -1 && nums[i] == 0)
+                    zeroIndex = i;
+                else if (zeroIndex != -1 && nums[i] > zeroIndex - i)
+                    zeroIndex = -1;
+            }
+
+            return zeroIndex == -1;
+        }
     }
 }

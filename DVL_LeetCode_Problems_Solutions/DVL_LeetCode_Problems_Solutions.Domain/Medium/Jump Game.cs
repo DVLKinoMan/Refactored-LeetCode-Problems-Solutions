@@ -11,7 +11,7 @@
         {
             if (nums.Length <= 1)
                 return true;
-
+    
             int zeroIndex = -1;
             for (int i = nums.Length - 2; i >= 0; i--)
             {

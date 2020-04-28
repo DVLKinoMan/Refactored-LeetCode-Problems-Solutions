@@ -365,14 +365,14 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                 _recentlyUsedKeys.Add(key);
             }
         }
-        
+
         public static bool CanJump2(int[] nums)
         {
             if (nums.Length <= 1)
                 return true;
 
             int zeroIndex = -1;
-            for (int i = nums.Length-2; i >= 0; i--)
+            for (int i = nums.Length - 2; i >= 0; i--)
             {
                 if (zeroIndex == -1 && nums[i] == 0)
                     zeroIndex = i;
@@ -381,6 +381,37 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             }
 
             return zeroIndex == -1;
+        }
+
+        /// <summary>
+        ///   First Unique Number (Mine)
+        /// </summary>
+        public class FirstUnique
+        {
+            private Queue<int> _queue = new Queue<int>();
+            private HashSet<int> _notUniqueSet = new HashSet<int>();
+            private HashSet<int> _addedNums = new HashSet<int>();
+
+            public FirstUnique(int[] nums)
+            {
+                foreach (var num in nums)
+                    Add(num);
+            }
+
+            public int ShowFirstUnique()
+            {
+                while (_queue.Count != 0 && _notUniqueSet.Contains(_queue.Peek()))
+                    _queue.Dequeue();
+
+                return _queue.Count == 0 ? -1 : _queue.Peek();
+            }
+
+            public void Add(int value)
+            {
+                _queue.Enqueue(value);
+                if (!_addedNums.Add(value))
+                    _notUniqueSet.Add(value);
+            }
         }
     }
 }

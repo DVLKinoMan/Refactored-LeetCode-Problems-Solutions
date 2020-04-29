@@ -413,5 +413,30 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     _notUniqueSet.Add(value);
             }
         }
+        
+        /// <summary>
+        /// Binary Tree Maximum Path Sum (Not Mine)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public static int MaxPathSum(TreeNode root)
+        {
+            int maxValue = 0;
+            MaxSum(root);
+            return maxValue;
+
+            int MaxSum(TreeNode node)
+            {
+                if (node == null)
+                    return 0;
+                
+                int left = Math.Max(0, MaxSum(node.left));
+                int right = Math.Max(0, MaxSum(node.right));
+
+                maxValue = Math.Max(maxValue, left + right + node.val);
+
+                return Math.Max(left, right) + node.val;
+            }
+        }
     }
 }

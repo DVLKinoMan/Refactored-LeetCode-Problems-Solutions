@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
 using DVL_LeetCode_Problems_Solutions.Domain.Classes;
 
 namespace DVL_LeetCode_Problems_Solutions.Domain
@@ -413,7 +414,7 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
                     _notUniqueSet.Add(value);
             }
         }
-        
+
         /// <summary>
         /// Binary Tree Maximum Path Sum (Not Mine)
         /// </summary>
@@ -429,13 +430,33 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
             {
                 if (node == null)
                     return 0;
-                
+
                 int left = Math.Max(0, MaxSum(node.left));
                 int right = Math.Max(0, MaxSum(node.right));
 
                 maxValue = Math.Max(maxValue, left + right + node.val);
 
                 return Math.Max(left, right) + node.val;
+            }
+        }
+
+        /// <summary>
+        /// Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree (Mine)
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static bool IsValidSequence(TreeNode root, int[] arr)
+        {
+            return root?.val == arr[0] && IsValid(root);
+            
+            bool IsValid(TreeNode node, int index = 0)
+            {
+                if (node == null || index == arr.Length)
+                    return false;
+                if (node.left == null && node.right == null)
+                    return index == arr.Length - 1;
+                return node.val == arr[index] && (IsValid(node.left, index + 1) || IsValid(node.right, index + 1));
             }
         }
     }

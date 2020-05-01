@@ -303,6 +303,7 @@
     <Compile Include="Medium\Delete Node in a BST.cs" />
     <Compile Include="Medium\Delete Operation for Two Strings.cs" />
     <Compile Include="Medium\Design a Stack With Increment Operation.cs" />
+    <Compile Include="Medium\Diagonal Traverse II.cs" />
     <Compile Include="Medium\Diagonal Traverse.cs" />
     <Compile Include="Medium\Dice Roll Simulation.cs" />
     <Compile Include="Medium\Distribute Coins in Binary Tree.cs" />

@@ -110,6 +110,7 @@
     <Compile Include="Easy\Is Subsequence.cs" />
     <Compile Include="Easy\Island Perimeter.cs" />
     <Compile Include="Easy\Isomorphic Strings.cs" />
+    <Compile Include="Easy\Kids With the Greatest Number of Candies.cs" />
     <Compile Include="Easy\Largest Perimeter Triangle.cs" />
     <Compile Include="Easy\Largest Triangle Area.cs" />
     <Compile Include="Easy\Leaf-Similar Trees.cs" />

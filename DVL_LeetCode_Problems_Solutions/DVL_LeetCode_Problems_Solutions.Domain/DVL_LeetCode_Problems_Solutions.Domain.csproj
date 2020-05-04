@@ -365,6 +365,7 @@
     <Compile Include="Medium\Lowest Common Ancestor of a Binary Tree.cs" />
     <Compile Include="Medium\Matrix Block Sum.cs" />
     <Compile Include="Medium\Max Area of Island.cs" />
+    <Compile Include="Medium\Max Difference You Can Get From Changing an Integer.cs" />
     <Compile Include="Medium\Max Increase to Keep City Skyline.cs" />
     <Compile Include="Medium\Maximal Square.cs" />
     <Compile Include="Medium\Maximum Difference Between Node and Ancestor.cs" />

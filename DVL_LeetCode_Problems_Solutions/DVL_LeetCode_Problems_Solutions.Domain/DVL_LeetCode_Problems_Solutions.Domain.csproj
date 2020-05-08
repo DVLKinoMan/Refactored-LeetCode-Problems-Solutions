@@ -289,6 +289,7 @@
     <Compile Include="Medium\Camelcase Matching.cs" />
     <Compile Include="Medium\Check Completeness of a Binary Tree.cs" />
     <Compile Include="Medium\Check If a String Can Break Another String.cs" />
+    <Compile Include="Medium\Check If All 1's Are at Least Length K Places Away.cs" />
     <Compile Include="Medium\Check if There is a Valid Path in a Grid.cs" />
     <Compile Include="Medium\Circle and Rectangle Overlapping.cs" />
     <Compile Include="Medium\Closest Divisor.cs" />

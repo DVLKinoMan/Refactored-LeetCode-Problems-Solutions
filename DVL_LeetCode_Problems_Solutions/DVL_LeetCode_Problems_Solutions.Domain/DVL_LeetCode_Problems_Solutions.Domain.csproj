@@ -67,6 +67,7 @@
     <Compile Include="Easy\Binary Search.cs" />
     <Compile Include="Easy\Binary Tree Tilt.cs" />
     <Compile Include="Easy\Buddy Strings.cs" />
+    <Compile Include="Easy\Build an Array With Stack Operations.cs" />
     <Compile Include="Easy\Climbing Stairs.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />
@@ -364,6 +365,7 @@
     <Compile Include="Medium\Lexicographical Numbers.cs" />
     <Compile Include="Medium\Longest Arithmetic Sequence.cs" />
     <Compile Include="Medium\Longest Common Subsequence.cs" />
+    <Compile Include="Medium\Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.cs" />
     <Compile Include="Medium\Longest Happy String.cs" />
     <Compile Include="Medium\Longest Increasing Subsequence.cs" />
     <Compile Include="Medium\Longest Mountain in Array.cs" />

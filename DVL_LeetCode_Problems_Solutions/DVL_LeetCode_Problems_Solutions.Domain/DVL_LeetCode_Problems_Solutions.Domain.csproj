@@ -301,6 +301,7 @@
     <Compile Include="Medium\Copy List with Random Pointer.cs" />
     <Compile Include="Medium\Count Number of Teams.cs" />
     <Compile Include="Medium\Count Square Submatrices with All Ones.cs" />
+    <Compile Include="Medium\Count Triplets That Can Form Two Arrays of Equal XOR.cs" />
     <Compile Include="Medium\Counting Bits.cs" />
     <Compile Include="Medium\Decode String.cs" />
     <Compile Include="Medium\Deepest Leaves Sum.cs" />

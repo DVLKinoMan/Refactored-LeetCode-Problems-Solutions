@@ -402,6 +402,7 @@
     <Compile Include="Medium\Minimum Path Sum.cs" />
     <Compile Include="Medium\Minimum Remove to Make Valid Parentheses.cs" />
     <Compile Include="Medium\Minimum Swaps To Make Sequences Increasing.cs" />
+    <Compile Include="Medium\Minimum Time to Collect All Apples in a Tree.cs" />
     <Compile Include="Medium\Mirror Reflection.cs" />
     <Compile Include="Medium\Most Frequent Subtree Sum.cs" />
     <Compile Include="Medium\Moving Stones Until Consecutive II.cs" />

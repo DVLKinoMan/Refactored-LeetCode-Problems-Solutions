@@ -297,6 +297,7 @@
     <Compile Include="Medium\Clumsy Factorial.cs" />
     <Compile Include="Medium\Coin Change 2.cs" />
     <Compile Include="Medium\Combination Sum III.cs" />
+    <Compile Include="Medium\Combinations.cs" />
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Construct Binary Tree from Preorder and Postorder Traversal.cs" />
     <Compile Include="Medium\Copy List with Random Pointer.cs" />

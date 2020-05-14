@@ -372,6 +372,7 @@
     <Compile Include="Medium\Longest Mountain in Array.cs" />
     <Compile Include="Medium\Longest Turbulent Subarray.cs" />
     <Compile Include="Medium\Longest Well-Performing Interval.cs" />
+    <Compile Include="Medium\Longest Word in Dictionary through Deleting.cs" />
     <Compile Include="Medium\Lowest Common Ancestor of a Binary Tree.cs" />
     <Compile Include="Medium\Matrix Block Sum.cs" />
     <Compile Include="Medium\Max Area of Island.cs" />

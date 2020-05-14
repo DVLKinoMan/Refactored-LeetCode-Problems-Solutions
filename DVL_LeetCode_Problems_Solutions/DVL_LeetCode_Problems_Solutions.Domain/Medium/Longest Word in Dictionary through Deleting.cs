@@ -4,6 +4,12 @@ namespace DVL_LeetCode_Problems_Solutions.Domain
 {
     partial class ProblemSolver
     {
+        /// <summary>
+        /// Longest Word in Dictionary through Deleting (Mine)
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
         public static string FindLongestWord(string s, IList<string> d)
         {
             string res = string.Empty;

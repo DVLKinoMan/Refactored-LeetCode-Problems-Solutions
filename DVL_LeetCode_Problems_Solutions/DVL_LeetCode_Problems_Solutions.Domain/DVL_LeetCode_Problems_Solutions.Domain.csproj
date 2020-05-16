@@ -331,6 +331,7 @@
     <Compile Include="Medium\Flip Equivalent Binary Trees.cs" />
     <Compile Include="Medium\Flip String to Monotone Increasing.cs" />
     <Compile Include="Medium\Four Divisors.cs" />
+    <Compile Include="Medium\Friends Of Appropriate Ages.cs" />
     <Compile Include="Medium\Get Equal Substrings Within Budget.cs" />
     <Compile Include="Medium\Group Anagrams.cs" />
     <Compile Include="Medium\HTML Entity Parser.cs" />

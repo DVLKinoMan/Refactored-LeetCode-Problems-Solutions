@@ -70,6 +70,7 @@
     <Compile Include="Easy\Build an Array With Stack Operations.cs" />
     <Compile Include="Easy\Climbing Stairs.cs" />
     <Compile Include="Easy\Complement of Base 10 Integer.cs" />
+    <Compile Include="Easy\Consecutive Characters.cs" />
     <Compile Include="Easy\Construct String from Binary Tree.cs" />
     <Compile Include="Easy\Contains Duplicate II.cs" />
     <Compile Include="Easy\Contains Duplicate.cs" />

@@ -158,6 +158,7 @@
     <Compile Include="Easy\Number of 1 Bits.cs" />
     <Compile Include="Easy\Number of Days Between Two Dates.cs" />
     <Compile Include="Easy\Number of Steps to Reduce a Number to Zero.cs" />
+    <Compile Include="Easy\Number of Students Doing Homework at a Given Time.cs" />
     <Compile Include="Easy\Pairs of Songs With Total Durations Divisible by 60.cs" />
     <Compile Include="Easy\Palindrome Linked List.cs" />
     <Compile Include="Easy\Path Sum III.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Hard\Find in Mountain Array.cs" />
     <Compile Include="Hard\Find Minimum in Rotated Sorted Array II.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
+    <Compile Include="Hard\Form Largest Integer With Digits That Add up to Target.cs" />
     <Compile Include="Hard\Insert Interval.cs" />
     <Compile Include="Hard\Interleaving String.cs" />
     <Compile Include="Hard\Jump Game II.cs" />
@@ -303,6 +305,7 @@
     <Compile Include="Medium\Construct Binary Search Tree from Preorder Traversal.cs" />
     <Compile Include="Medium\Construct Binary Tree from Preorder and Postorder Traversal.cs" />
     <Compile Include="Medium\Copy List with Random Pointer.cs" />
+    <Compile Include="Medium\Count Good Nodes in Binary Tree.cs" />
     <Compile Include="Medium\Count Number of Teams.cs" />
     <Compile Include="Medium\Count Square Submatrices with All Ones.cs" />
     <Compile Include="Medium\Count Triplets That Can Form Two Arrays of Equal XOR.cs" />
@@ -460,6 +463,7 @@
     <Compile Include="Medium\Search a 2D Matrix II.cs" />
     <Compile Include="Medium\Search a 2D Matrix.cs" />
     <Compile Include="Medium\Set Matrix Zeroes.cs" />
+    <Compile Include="Medium\Simplified Fractions.cs" />
     <Compile Include="Medium\Single Element in a Sorted Array.cs" />
     <Compile Include="Medium\Smallest Range II.cs" />
     <Compile Include="Medium\Snapshot Array.cs" />

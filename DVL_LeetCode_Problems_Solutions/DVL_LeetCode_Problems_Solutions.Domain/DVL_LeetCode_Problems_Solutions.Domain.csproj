@@ -514,6 +514,7 @@
     <Compile Include="Medium\Swap Nodes in Pairs.cs" />
     <Compile Include="Medium\ZigZag Conversion.cs" />
     <Compile Include="Top Interview Questions\Remove Duplicates from Sorted Array.cs" />
+    <Compile Include="Top Interview Questions\Reverse Integer.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 174.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 129.cs" />
     <Compile Include="Weekly Contests\Weekly Contest 133.cs" />

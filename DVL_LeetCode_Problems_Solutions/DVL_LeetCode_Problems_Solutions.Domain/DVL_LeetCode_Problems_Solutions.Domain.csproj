@@ -265,6 +265,7 @@
     <Compile Include="Hard\Russian Doll Envelopes.cs" />
     <Compile Include="Hard\Shortest Path to Get All Keys.cs" />
     <Compile Include="Hard\Shortest Subarray with Sum at Least K.cs" />
+    <Compile Include="Hard\Sliding Window Maximum.cs" />
     <Compile Include="Hard\Smallest Sufficient Team.cs" />
     <Compile Include="Hard\Sort Items by Groups Respecting Dependencies.cs" />
     <Compile Include="Hard\Sudoku Solver.cs" />

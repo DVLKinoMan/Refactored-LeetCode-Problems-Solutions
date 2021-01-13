@@ -232,6 +232,7 @@
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />
     <Compile Include="Hard\Find in Mountain Array.cs" />
+    <Compile Include="Hard\Find Median from Data Stream.cs" />
     <Compile Include="Hard\Find Minimum in Rotated Sorted Array II.cs" />
     <Compile Include="Hard\First Missing Positive.cs" />
     <Compile Include="Hard\Form Largest Integer With Digits That Add up to Target.cs" />

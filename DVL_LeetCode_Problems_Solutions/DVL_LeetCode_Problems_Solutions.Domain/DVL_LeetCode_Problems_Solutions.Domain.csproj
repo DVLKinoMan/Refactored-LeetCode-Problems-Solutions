@@ -229,6 +229,7 @@
     <Compile Include="Hard\Count Vowels Permutation.cs" />
     <Compile Include="Hard\Cracking the Safe.cs" />
     <Compile Include="Hard\Critical Connections in a Network.cs" />
+    <Compile Include="Hard\Distinct Subsequences.cs" />
     <Compile Include="Hard\Edit Distance.cs" />
     <Compile Include="Hard\Excape a Large Maze.cs" />
     <Compile Include="Hard\Find in Mountain Array.cs" />

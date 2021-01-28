@@ -250,6 +250,7 @@
     <Compile Include="Hard\Longest Happy Prefix.cs" />
     <Compile Include="Hard\Make Array Strictly Increasing.cs" />
     <Compile Include="Hard\Maximal Rectangle.cs" />
+    <Compile Include="Hard\Maximum Gap.cs" />
     <Compile Include="Hard\Maximum Performance of a Team.cs" />
     <Compile Include="Hard\Maximum Score Words Formed by Letters.cs" />
     <Compile Include="Hard\Minimum Insertion Steps to Make a String Palindrome.cs" />

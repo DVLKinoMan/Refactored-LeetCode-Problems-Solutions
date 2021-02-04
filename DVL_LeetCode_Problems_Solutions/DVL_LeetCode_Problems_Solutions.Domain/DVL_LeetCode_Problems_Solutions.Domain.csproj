@@ -222,6 +222,7 @@
     <Compile Include="Easy\Valid Perfect Square.cs" />
     <Compile Include="Easy\Verifying an Alien Dictionary.cs" />
     <Compile Include="Easy\Word Pattern.cs" />
+    <Compile Include="Hard\All O`one Data Structure.cs" />
     <Compile Include="Hard\Basic Calculator.cs" />
     <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />
     <Compile Include="Hard\Candy.cs" />

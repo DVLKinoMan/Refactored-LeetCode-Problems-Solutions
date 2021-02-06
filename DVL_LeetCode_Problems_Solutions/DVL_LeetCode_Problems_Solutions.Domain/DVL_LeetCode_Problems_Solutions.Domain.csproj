@@ -225,6 +225,7 @@
     <Compile Include="Hard\All O`one Data Structure.cs" />
     <Compile Include="Hard\Basic Calculator.cs" />
     <Compile Include="Hard\Binary Tree Postorder Traversal.cs" />
+    <Compile Include="Hard\Burst Balloons.cs" />
     <Compile Include="Hard\Candy.cs" />
     <Compile Include="Hard\Check If It Is a Good Array.cs" />
     <Compile Include="Hard\Constrained Subsequence Sum.cs" />

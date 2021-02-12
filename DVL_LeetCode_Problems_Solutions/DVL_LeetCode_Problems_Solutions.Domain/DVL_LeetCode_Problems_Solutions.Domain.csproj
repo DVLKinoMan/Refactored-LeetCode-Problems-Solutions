@@ -274,6 +274,7 @@
     <Compile Include="Hard\Parsing A Boolean Expression.cs" />
     <Compile Include="Hard\Profitable Schemes.cs" />
     <Compile Include="Hard\Recover Binary Search Tree.cs" />
+    <Compile Include="Hard\Remove Invalid Parentheses.cs" />
     <Compile Include="Hard\Russian Doll Envelopes.cs" />
     <Compile Include="Hard\Shortest Palindrome.cs" />
     <Compile Include="Hard\Shortest Path to Get All Keys.cs" />

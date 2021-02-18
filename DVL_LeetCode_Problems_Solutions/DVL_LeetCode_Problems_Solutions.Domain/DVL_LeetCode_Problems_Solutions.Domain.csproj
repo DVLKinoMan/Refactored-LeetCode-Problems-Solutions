@@ -230,6 +230,7 @@
     <Compile Include="Hard\Check If It Is a Good Array.cs" />
     <Compile Include="Hard\Constrained Subsequence Sum.cs" />
     <Compile Include="Hard\Count Different Palindromic Subsequences.cs" />
+    <Compile Include="Hard\Count of Range Sum.cs" />
     <Compile Include="Hard\Count Vowels Permutation.cs" />
     <Compile Include="Hard\Cracking the Safe.cs" />
     <Compile Include="Hard\Critical Connections in a Network.cs" />
